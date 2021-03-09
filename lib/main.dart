@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'GridViewHomePage.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -11,17 +13,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: GridViewHomePage(),
       debugShowCheckedModeBanner: false,
-    );
-  }
-}
-
-class GridViewHomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        child: Text("Home Page created"),
-      ),
     );
   }
 }
