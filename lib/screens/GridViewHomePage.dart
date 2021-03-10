@@ -49,12 +49,27 @@ class ElementBlock extends StatelessWidget {
 
 
     String elementSymbol = ListOfElements().getElementSymbol(elementNumber);
+    String elementFullName = ListOfElements().getElementFullName(elementNumber);
+    int getElementNumber = ListOfElements().getElementNumber(elementNumber);
 
     return Container(
+      alignment: Alignment.center,
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Text("$elementSymbol",style: TextStyle(
-          color: Colors.white,),),
+        padding: const EdgeInsets.only(top: 10,right: 2,left: 2,bottom: 2),
+        child:
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text("$getElementNumber",style: TextStyle(
+              fontSize: 8,
+              color: Colors.white,),),
+            Text("$elementSymbol",style: TextStyle(
+              color: Colors.white,),),
+            Text("$elementFullName",style: TextStyle(
+              fontSize: 8,
+              color: Colors.white,),),
+          ],
+        )
       ),
       decoration: BoxDecoration(
           color: Colors.black,
@@ -341,6 +356,16 @@ class Row7 extends StatelessWidget {
         ElementBlock(106),
         ElementBlock(107),
         ElementBlock(108),
+        ElementBlock(109),
+        ElementBlock(110),
+        ElementBlock(111),
+        ElementBlock(112),
+        ElementBlock(113),
+        ElementBlock(114),
+        ElementBlock(115),
+        ElementBlock(116),
+        ElementBlock(117),
+        ElementBlock(118),
       ],
     );
   }

@@ -10,6 +10,14 @@ String  getElementSymbol(int elementNumber) {
     return elementList[elementNumber].elementNameSymbol;
 }
 
+String  getElementFullName(int elementNumber) {
+    return elementList[elementNumber].elementFullName;
+}
+
+int  getElementNumber(int elementNumber) {
+    return elementList[elementNumber].elementNumber;
+}
+
 
   List elementList = [
 
@@ -93,7 +101,7 @@ String  getElementSymbol(int elementNumber) {
 
     ElementDetailConstructor(72, "Hf", "Hafnium"),
     ElementDetailConstructor(73, "Ta", "Tantalum"),
-    ElementDetailConstructor(74, "W	", "Tungsten"),
+    ElementDetailConstructor(74, "W", "Tungsten"),
     ElementDetailConstructor(75, "Re", "Rhenium"),
     ElementDetailConstructor(76, "Os", "Osmium"),
     ElementDetailConstructor(77, "Ir", "Iridium"),
