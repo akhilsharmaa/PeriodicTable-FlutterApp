@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:periodic_table/Backend/ElementDetailConstructor.dart';
+import 'package:periodic_table/Backend/ListOfElements.dart';
 
 class GridViewHomePage extends StatelessWidget {
   @override
@@ -13,25 +15,22 @@ class GridViewHomePage extends StatelessWidget {
         color: Colors.grey.shade900,
         child: ListView(
           scrollDirection: Axis.horizontal,
-            children:[Column(
             children: [
-              ColumnSeries(),
-              Padding(
-                padding: const EdgeInsets.only(top :40.0),
-              ),
-              Row1(),
-              Row2(),
-              Row3(),
-              Row4(),
-              Row5(),
-              Row6(),
-              Row7(),
-              Padding(
-                padding: const EdgeInsets.only(top :40.0),
-              ),
-              BlockF()
+              Column(
+                children: [
+                  ColumnSeries(),
+                  Row1(),
+                  Row2(),
+                  Row3(),
+                  Row4(),
+                  Row5(),
+                  Row6(),
+                  Row7(),
+                  Padding(padding: EdgeInsets.only(top: 30)),
+                  BlockF()
+                ],
+              )
             ],
-          )],
         )
       ),
     );
@@ -40,14 +39,21 @@ class GridViewHomePage extends StatelessWidget {
 
 class ElementBlock extends StatelessWidget {
 
-  String elementName;
-  ElementBlock(this.elementName);
+
+  var elementNumber = 0;
+  ElementBlock(this.elementNumber);
+
+
   @override
   Widget build(BuildContext context) {
+
+
+    String elementSymbol = ListOfElements().getElementSymbol(elementNumber);
+
     return Container(
       child: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Text("$elementName",style: TextStyle(
+        child: Text("$elementSymbol",style: TextStyle(
           color: Colors.white,),),
       ),
       decoration: BoxDecoration(
@@ -137,7 +143,7 @@ class Row1 extends StatelessWidget {
     return  Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        ElementBlock("H"),
+        ElementBlock(1),
         EmptyBox(),
         EmptyBox(),
         EmptyBox(),
@@ -154,7 +160,7 @@ class Row1 extends StatelessWidget {
         EmptyBox(),
         EmptyBox(),
         EmptyBox(),
-        ElementBlock("He"),
+        ElementBlock(2),
       ],
     );
   }
@@ -168,8 +174,8 @@ class Row2 extends StatelessWidget {
       children: [
         Row(
           children: [
-            ElementBlock("Li"),
-            ElementBlock("Be"),
+            ElementBlock(3),
+            ElementBlock(4),
           ],
         ),
         EmptyBox(),
@@ -184,12 +190,12 @@ class Row2 extends StatelessWidget {
         EmptyBox(),
         Row(
           children: [
-            ElementBlock("B"),
-            ElementBlock("C"),
-            ElementBlock("N"),
-            ElementBlock("O"),
-            ElementBlock("F"),
-            ElementBlock("Ne"),
+            ElementBlock(5),
+            ElementBlock(6),
+            ElementBlock(7),
+            ElementBlock(8),
+            ElementBlock(9),
+            ElementBlock(10),
           ],
         )
       ],
@@ -205,8 +211,8 @@ class Row3 extends StatelessWidget {
       children: [
         Row(
           children: [
-            ElementBlock("Na"),
-            ElementBlock("Mg")
+            ElementBlock(11),
+            ElementBlock(12)
           ],
         ),
         EmptyBox(),
@@ -221,12 +227,12 @@ class Row3 extends StatelessWidget {
         EmptyBox(),
         Row(
           children: [
-            ElementBlock("Al"),
-            ElementBlock("Si"),
-            ElementBlock("P"),
-            ElementBlock("S"),
-            ElementBlock("Cl"),
-            ElementBlock("Ar"),
+            ElementBlock(13),
+            ElementBlock(14),
+            ElementBlock(15),
+            ElementBlock(16),
+            ElementBlock(17),
+            ElementBlock(18),
           ],
         )
       ],
@@ -240,24 +246,24 @@ class Row4 extends StatelessWidget {
     return  Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        ElementBlock("K"),
-        ElementBlock("Ca"),
-        ElementBlock("Sc"),
-        ElementBlock("Ti"),
-        ElementBlock("V"),
-        ElementBlock("Cr"),
-        ElementBlock("Mn"),
-        ElementBlock("Fe"),
-        ElementBlock("Co"),
-        ElementBlock("Ni"),
-        ElementBlock("Cu"),
-        ElementBlock("Zn"),
-        ElementBlock("Ga"),
-        ElementBlock("Ge"),
-        ElementBlock("As"),
-        ElementBlock("Se"),
-        ElementBlock("Br"),
-        ElementBlock("Kr"),
+        ElementBlock(19),
+        ElementBlock(20),
+        ElementBlock(21),
+        ElementBlock(22),
+        ElementBlock(23),
+        ElementBlock(24),
+        ElementBlock(25),
+        ElementBlock(26),
+        ElementBlock(27),
+        ElementBlock(28),
+        ElementBlock(29),
+        ElementBlock(30),
+        ElementBlock(31),
+        ElementBlock(32),
+        ElementBlock(33),
+        ElementBlock(34),
+        ElementBlock(35),
+        ElementBlock(36),
       ],
     );
   }
@@ -269,24 +275,24 @@ class Row5 extends StatelessWidget {
     return  Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        ElementBlock("Rb"),
-        ElementBlock("Sr"),
-        ElementBlock("Y"),
-        ElementBlock("Zr"),
-        ElementBlock("Nb"),
-        ElementBlock("Mo"),
-        ElementBlock("Tc"),
-        ElementBlock("Ru"),
-        ElementBlock("Rh"),
-        ElementBlock("Rn"),
-        ElementBlock("Pd"),
-        ElementBlock("Ag"),
-        ElementBlock("Cd"),
-        ElementBlock("In"),
-        ElementBlock("Sn"),
-        ElementBlock("Sb"),
-        ElementBlock("Te"),
-        ElementBlock("I"),
+        ElementBlock(37),
+        ElementBlock(38),
+        ElementBlock(39),
+        ElementBlock(40),
+        ElementBlock(41),
+        ElementBlock(42),
+        ElementBlock(43),
+        ElementBlock(44),
+        ElementBlock(45),
+        ElementBlock(46),
+        ElementBlock(47),
+        ElementBlock(48),
+        ElementBlock(49),
+        ElementBlock(50),
+        ElementBlock(51),
+        ElementBlock(52),
+        ElementBlock(53),
+        ElementBlock(54),
       ],
     );
   }
@@ -298,24 +304,24 @@ class Row6 extends StatelessWidget {
     return  Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        ElementBlock("Cs"),
-        ElementBlock("Ba"),
-        ElementBlock("La"),
-        ElementBlock("Hf"),
-        ElementBlock("Ta"),
-        ElementBlock("W"),
-        ElementBlock("Re"),
-        ElementBlock("Os"),
-        ElementBlock("Ir"),
-        ElementBlock("Pt"),
-        ElementBlock("Au"),
-        ElementBlock("Hg"),
-        ElementBlock("Tl"),
-        ElementBlock("Pb"),
-        ElementBlock("Bi"),
-        ElementBlock("Po"),
-        ElementBlock("At"),
-        ElementBlock("Rn"),
+        ElementBlock(55),
+        ElementBlock(56),
+        ElementBlock(57),
+        ElementBlock(72),
+        ElementBlock(73),
+        ElementBlock(74),
+        ElementBlock(75),
+        ElementBlock(76),
+        ElementBlock(77),
+        ElementBlock(78),
+        ElementBlock(79),
+        ElementBlock(80),
+        ElementBlock(81),
+        ElementBlock(82),
+        ElementBlock(83),
+        ElementBlock(84),
+        ElementBlock(85),
+        ElementBlock(86),
       ],
     );
   }
@@ -327,28 +333,19 @@ class Row7 extends StatelessWidget {
     return  Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        ElementBlock("Fr"),
-        ElementBlock("Ra"),
-        ElementBlock("Ac"),
-        ElementBlock("Rf"),
-        ElementBlock("Db"),
-        ElementBlock("Sg"),
-        ElementBlock("Bh"),
-        ElementBlock("Hs"),
-        ElementBlock("Mt"),
-        ElementBlock("Uun"),
-        ElementBlock("Uuu"),
-        ElementBlock("Uub"),
-        ElementBlock(" "),
-        ElementBlock("Uuq"),
-        ElementBlock(" "),
-        ElementBlock("Uuh"),
-        ElementBlock(" "),
-        ElementBlock(" "),
+        ElementBlock(87),
+        ElementBlock(88),
+        ElementBlock(89),
+        ElementBlock(104),
+        ElementBlock(105),
+        ElementBlock(106),
+        ElementBlock(107),
+        ElementBlock(108),
       ],
     );
   }
 }
+
 
 
 class BlockF extends StatelessWidget {
@@ -358,39 +355,37 @@ class BlockF extends StatelessWidget {
       children: [
         Row(
           children: [
-            ElementBlock("Ce"),
-            ElementBlock("Pr"),
-            ElementBlock("Nd"),
-            ElementBlock("Pm"),
-            ElementBlock("Sm"),
-            ElementBlock("Sm"),
-            ElementBlock("Eu"),
-            ElementBlock("Gd"),
-            ElementBlock("Tb"),
-            ElementBlock("Dy"),
-            ElementBlock("Ho"),
-            ElementBlock("Er"),
-            ElementBlock("Tm"),
-            ElementBlock("Yb"),
-            ElementBlock("Lu"),
+            ElementBlock(58),
+            ElementBlock(59),
+            ElementBlock(60),
+            ElementBlock(61),
+            ElementBlock(62),
+            ElementBlock(63),
+            ElementBlock(64),
+            ElementBlock(65),
+            ElementBlock(66),
+            ElementBlock(67),
+            ElementBlock(68),
+            ElementBlock(69),
+            ElementBlock(70),
+            ElementBlock(71),
           ],
         ),
         Row( children:[
-          ElementBlock("Ce"),
-          ElementBlock("Pr"),
-          ElementBlock("Nd"),
-          ElementBlock("Pm"),
-          ElementBlock("Sm"),
-          ElementBlock("Sm"),
-          ElementBlock("Eu"),
-          ElementBlock("Gd"),
-          ElementBlock("Tb"),
-          ElementBlock("Dy"),
-          ElementBlock("Ho"),
-          ElementBlock("Er"),
-          ElementBlock("Tm"),
-          ElementBlock("Yb"),
-          ElementBlock("Lu"),
+          ElementBlock(90),
+          ElementBlock(91),
+          ElementBlock(92),
+          ElementBlock(93),
+          ElementBlock(94),
+          ElementBlock(95),
+          ElementBlock(96),
+          ElementBlock(97),
+          ElementBlock(98),
+          ElementBlock(99),
+          ElementBlock(100),
+          ElementBlock(101),
+          ElementBlock(102),
+          ElementBlock(103),
         ])
       ],
     );
