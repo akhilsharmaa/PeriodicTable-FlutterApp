@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'DetailedPage.dart';
 import 'GridViewHomePage.dart';
 
 void main() {
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: GridViewHomePage(),
+      home: DetailedPage(),
       debugShowCheckedModeBanner: false,
     );
   }
