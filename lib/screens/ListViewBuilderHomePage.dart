@@ -17,33 +17,97 @@ class ListViewBuilderHomePage extends StatelessWidget {
         child: ListView.builder(
           itemCount: listOfElements.elementList.length-=2,
           itemBuilder: (context, index){
-            return Padding(
-              padding: const EdgeInsets.only(top : 15,bottom: 15 , left: 15),
-              child: Column(
-                children: [
-                  Row(
+            return Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 5,top: 5),
+                  child: Row(
                     children: [
+                      SizedBox(
+                        width: 10,
+                      ),
+
+
 
                       Container(
+                        alignment: Alignment.center,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("${listOfElements.getElementNumber(index)}",style: TextStyle(
+                              fontSize: 8,
+                              color: Colors.grey,),),
+                            Text("${listOfElements.getElementSymbol(index)}",style: TextStyle(
+                              color: Colors.white,),),
+                            Text("${listOfElements.getElementFullName(index)}",style: TextStyle(
+                              fontSize: 9,
+                              color: Colors.grey,),),
+                          ],
+                        ),
+                        decoration: BoxDecoration(
+                            color: Colors.black,
+                          border: Border.all(
+                                    color: Colors.white10,
+                                    width: 0.5
+                                  ),
+                            borderRadius: BorderRadius.only(
+                              bottomLeft: Radius.circular(1),
+                              bottomRight:  Radius.circular(1),
+                              topLeft: Radius.circular(1),
+                              topRight:  Radius.circular(1),)
+                        ),
+                        height: 60,
+                        width: 60,
+                      )
 
-                        width: 70,
-                        child: Text("$index",style: TextStyle(fontSize:20 ,color: Colors.white),)),
-                      // SizedBox(width: 20,),
 
-                      Container(
-                        width: 70,
-                          child: Text("${listOfElements.getElementSymbol(index)}",style: TextStyle(fontSize: 24 ,color: Colors.yellow),)),
-                      // SizedBox(width: 20,),
+                      
+                      // Leading Icon
+                      // Container(
+                      //   decoration: BoxDecoration(
+                      //       border: Border.all(
+                      //         color: Colors.red,
+                      //         width: 0.5
+                      //       )
+                      //   ),
+                      //   child: Padding(
+                      //     padding: const EdgeInsets.all(4),
+                      //     child: Column(
+                      //       crossAxisAlignment: CrossAxisAlignment.start,
+                      //       mainAxisAlignment: MainAxisAlignment.center,
+                      //       children: [
+                      //
+                      //       //
+                      //       Text("$index",style: TextStyle(fontSize:14 ,color: Colors.white),),
+                      //         Padding(
+                      //           padding: const EdgeInsets.only(right: 10,left: 10),
+                      //           child: Container(
+                      //             height: 40,
+                      //
+                      //             //Text List of Elements
+                      //             width: 40, child: Text("${listOfElements.getElementSymbol(index)}",
+                      //             style: TextStyle(fontSize: 24 ,color: Colors.yellow),)),
+                      //         ),
+                      //       ],
+                      //     ),
+                      //   ),
+                      // ),
+                      
+                      ,
+                      
+                      SizedBox(width: 20,),
+
+                      // Full Name
                       Text("${listOfElements.getElementFullName(index)}",style: TextStyle(fontSize: 18,color: Colors.grey.shade700),),
                     ],
                   ),
-                  Container(
-                    margin: EdgeInsets.only(top: 5,),
-                    color: Colors.grey.shade700,
-                    height: 0.3,
-                  )
-                ],
-              ),
+                ),
+                Container(
+                  color: Colors.grey.shade700,
+                  height: 0.3,
+                )
+              ],
             );
           },
         ),
