@@ -45,24 +45,7 @@ class ListViewBuilderHomePage extends StatelessWidget {
                               color: Colors.grey,),),
                           ],
                         ),
-                        decoration: BoxDecoration(
-                            color: Colors.black,
-                          border: Border.all(
-                                    color: Colors.white10,
-                                    width: 0.5
-                                  ),
-                            borderRadius: BorderRadius.only(
-                              bottomLeft: Radius.circular(1),
-                              bottomRight:  Radius.circular(1),
-                              topLeft: Radius.circular(1),
-                              topRight:  Radius.circular(1),)
-                        ),
-                        height: 60,
-                        width: 60,
-                      )
 
-
-                      
                       // Leading Icon
                       // Container(
                       //   decoration: BoxDecoration(
@@ -93,9 +76,25 @@ class ListViewBuilderHomePage extends StatelessWidget {
                       //     ),
                       //   ),
                       // ),
-                      
+
+                        decoration: BoxDecoration(
+                            color: Colors.black,
+                          border: Border.all(
+                                    color: Colors.white10,
+                                    width: 0.5
+                                  ),
+                            borderRadius: BorderRadius.only(
+                              bottomLeft: Radius.circular(1),
+                              bottomRight:  Radius.circular(1),
+                              topLeft: Radius.circular(1),
+                              topRight:  Radius.circular(1),)
+                        ),
+                        height: 60,
+                        width: 60,
+                      )
+
                       ,
-                      
+
                       SizedBox(width: 20,),
 
                       // Full Name
