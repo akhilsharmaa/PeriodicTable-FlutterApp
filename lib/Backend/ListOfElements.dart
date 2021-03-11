@@ -7,29 +7,29 @@ class ListOfElements{
   }
 
 String  getElementSymbol(int elementNumber) {
-    // return elementList[elementNumber+1].elementNameSymbol;
-    return elementList[elementNumber].elementNameSymbol;
+    return elementList[elementNumber+1].elementNameSymbol;
+    // return elementList[elementNumber].elementNameSymbol;
 }
 
 String  getElementFullName(int elementNumber) {
-    // return elementList[elementNumber+1].elementFullName;
-    return elementList[elementNumber].elementFullName;
+    return elementList[elementNumber+1].elementFullName;
+    // return elementList[elementNumber].elementFullName;
 }
 
 int  getElementNumber(int elementNumber) {
-    // return elementList[elementNumber+1].elementNumber;
-    return elementList[elementNumber].elementNumber;
+    return elementList[elementNumber+1].elementNumber;
+    // return elementList[elementNumber].elementNumber;
 }
 
 
   String  getElementElectronNumber(int elementNumber) {
-    // return elementList[elementNumber+1].imageLink;
-    return elementList[elementNumber].imageLink;
+    return elementList[elementNumber+1].imageLink;
+    // return elementList[elementNumber].imageLink;
   }
 
   String  getElementImageLink(int elementNumber) {
-    // return elementList[elementNumber+1].imageLink;
-    return elementList[elementNumber].imageLink;
+    return elementList[elementNumber+1].imageLink;
+    // return elementList[elementNumber].imageLink;
   }
 
   List elementList = [
