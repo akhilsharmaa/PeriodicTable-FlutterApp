@@ -15,7 +15,7 @@ class ListViewBuilderHomePage extends StatelessWidget {
       body: Container(
         color: Colors.black,
         child: ListView.builder(
-          itemCount: listOfElements.elementList.length-=2,
+          itemCount: listOfElements.elementList.length-1,
           itemBuilder: (context, index){
             return Column(
               children: [
