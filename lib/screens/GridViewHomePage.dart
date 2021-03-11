@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 import 'package:periodic_table/Backend/ElementDetailConstructor.dart';
 import 'package:periodic_table/Backend/ListOfElements.dart';
 
@@ -54,22 +55,19 @@ class ElementBlock extends StatelessWidget {
 
     return Container(
       alignment: Alignment.center,
-      child: Padding(
-        padding: const EdgeInsets.only(top: 10,right: 2,left: 2,bottom: 2),
-        child:
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text("$getElementNumber",style: TextStyle(
-              fontSize: 8,
-              color: Colors.white,),),
-            Text("$elementSymbol",style: TextStyle(
-              color: Colors.white,),),
-            Text("$elementFullName",style: TextStyle(
-              fontSize: 8,
-              color: Colors.white,),),
-          ],
-        )
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text("$getElementNumber",style: TextStyle(
+            fontSize: 8,
+            color: Colors.grey,),),
+          Text("$elementSymbol",style: TextStyle(
+            color: Colors.white,),),
+          Text("$elementFullName",style: TextStyle(
+            fontSize: 9,
+            color: Colors.grey,),),
+        ],
       ),
       decoration: BoxDecoration(
           color: Colors.black,
@@ -95,20 +93,43 @@ class ColumnNumber extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Center(
-        child: Text("$coloumNumber",style: TextStyle(
-          fontSize: 16,
-          color: Colors.white,),),
-      ),
+      alignment: Alignment.center,
+      child: Text("$coloumNumber",style: TextStyle(
+        fontSize: 16,
+        color: Colors.white,),),
 
       decoration: BoxDecoration(
-          color: Colors.red
+          color: Colors.red.shade600
       ),
       height: 30,
       width: 60,
     );
   }
 }
+
+
+class RowNumber extends StatelessWidget {
+
+  var rowNumber;
+  RowNumber(this.rowNumber);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      alignment: Alignment.center,
+      child: Text("$rowNumber",style: TextStyle(
+        fontSize: 16,
+        color: Colors.white,),),
+
+      decoration: BoxDecoration(
+          color: Colors.red.shade600
+      ),
+      height: 60,
+      width: 20,
+    );
+  }
+}
+
 
 // EMPTY BOX
 class EmptyBox extends StatelessWidget {
@@ -128,7 +149,15 @@ class ColumnSeries extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
+        Container(
+      height: 30,
+          width: 20
+          ,decoration: BoxDecoration(
+
+          color: Colors.red.shade600
+        ),),
         ColumnNumber(1),
         ColumnNumber(2),
         ColumnNumber(3),
@@ -158,6 +187,7 @@ class Row1 extends StatelessWidget {
     return  Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
+        RowNumber(1),
         ElementBlock(1),
         EmptyBox(),
         EmptyBox(),
@@ -187,6 +217,7 @@ class Row2 extends StatelessWidget {
     return  Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
+        RowNumber(2),
         Row(
           children: [
             ElementBlock(3),
@@ -224,6 +255,7 @@ class Row3 extends StatelessWidget {
     return  Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
+        RowNumber(3),
         Row(
           children: [
             ElementBlock(11),
@@ -261,6 +293,7 @@ class Row4 extends StatelessWidget {
     return  Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
+        RowNumber(4),
         ElementBlock(19),
         ElementBlock(20),
         ElementBlock(21),
@@ -290,6 +323,7 @@ class Row5 extends StatelessWidget {
     return  Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
+        RowNumber(5),
         ElementBlock(37),
         ElementBlock(38),
         ElementBlock(39),
@@ -319,6 +353,7 @@ class Row6 extends StatelessWidget {
     return  Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
+        RowNumber(6),
         ElementBlock(55),
         ElementBlock(56),
         ElementBlock(57),
@@ -348,6 +383,7 @@ class Row7 extends StatelessWidget {
     return  Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
+        RowNumber(7),
         ElementBlock(87),
         ElementBlock(88),
         ElementBlock(89),
