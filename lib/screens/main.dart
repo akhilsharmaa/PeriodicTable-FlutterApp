@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 
 import 'DetailedPage.dart';
 import 'GridViewHomePage.dart';
+import 'ListViewBuilderHomePage.dart';
 
 void main() {
   runApp(MaterialApp(
     home: MyApp(),
+    debugShowCheckedModeBanner: false,
   ));
 }
 
@@ -23,8 +25,8 @@ class _MyAppState extends State<MyApp> {
 
     final tabs = [
       Center(child: GridViewHomePage()),
+      Center(child: ListViewBuilderHomePage()),
       Center(child: DetailedPage()),
-      Center(child: GridViewHomePage()),
 
     ];
 
