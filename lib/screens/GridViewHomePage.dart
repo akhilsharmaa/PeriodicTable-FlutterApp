@@ -49,9 +49,9 @@ class ElementBlock extends StatelessWidget {
   Widget build(BuildContext context) {
 
 
-    String elementSymbol = ListOfElements().getElementSymbol(elementNumber);
-    String elementFullName = ListOfElements().getElementFullName(elementNumber);
-    int getElementNumber = ListOfElements().getElementNumber(elementNumber);
+    String elementSymbol = ListOfElements().getElementSymbol(elementNumber-1);
+    String elementFullName = ListOfElements().getElementFullName(elementNumber-1);
+    int getElementNumber = ListOfElements().getElementNumber(elementNumber-1);
 
     return Container(
       alignment: Alignment.center,
