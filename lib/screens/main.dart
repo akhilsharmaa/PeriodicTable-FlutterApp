@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 import 'DetailedPage.dart';
 import 'GridViewHomePage.dart';
 import 'ListViewBuilderHomePage.dart';
+import 'PageViewBuilderHomePage.dart';
 
 void main() {
   runApp(MaterialApp(
+    themeMode: ThemeMode.dark,
     home: MyApp(),
     debugShowCheckedModeBanner: false,
   ));
@@ -25,6 +27,7 @@ class _MyAppState extends State<MyApp> {
 
     final tabs = [
       Center(child: GridViewHomePage()),
+      Center(child: PageViewBuilderHomePage()),
       Center(child: ListViewBuilderHomePage()),
       Center(child: DetailedPage()),
 
@@ -33,6 +36,7 @@ class _MyAppState extends State<MyApp> {
     return Scaffold(
       body: tabs[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
+
         selectedItemColor: Colors.white,
         backgroundColor: Colors.red,
         currentIndex: _currentIndex,
@@ -40,9 +44,16 @@ class _MyAppState extends State<MyApp> {
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             title: Text("Grid"),
-            backgroundColor: Colors.white
+            backgroundColor: Colors.red
+          ),
 
-          ),BottomNavigationBarItem(
+          BottomNavigationBarItem(
+              icon: Icon(Icons.phone_android_sharp ),
+              title: Text("Pages"),
+              backgroundColor: Colors.red
+          ),
+
+          BottomNavigationBarItem(
             icon: Icon(Icons.height),
             title: Text("list"),
             backgroundColor: Colors.blue
