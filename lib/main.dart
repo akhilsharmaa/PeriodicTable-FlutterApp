@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'DetailedPage.dart';
-import 'GridViewHomePage.dart';
-import 'ListViewBuilderHomePage.dart';
-import 'PageViewBuilderHomePage.dart';
+import 'screens/DetailedPage.dart';
+import 'screens/GridViewHomePage.dart';
+import 'screens/ListViewBuilderHomePage.dart';
+import 'screens/PageViewBuilderHomePage.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -50,7 +50,7 @@ class _MyAppState extends State<MyApp> {
           BottomNavigationBarItem(
               icon: Icon(Icons.phone_android_sharp ),
               title: Text("Pages"),
-              backgroundColor: Colors.red
+              backgroundColor: Colors.grey.shade900
           ),
 
           BottomNavigationBarItem(
