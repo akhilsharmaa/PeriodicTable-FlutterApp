@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
 
 class DetailedPage extends StatelessWidget {
+
+  int elementNumber;
+DetailedPage(this.elementNumber);
+
+int getElementNumber(){
+  return elementNumber;
+}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,7 +51,7 @@ class DetailedPage extends StatelessWidget {
                       padding: const EdgeInsets.only(top :14 ,bottom: 14),
                       child: Column(
                         children: [
-                          Text("20",style: TextStyle(
+                          Text("$elementNumber",style: TextStyle(
                               color: Colors.white,
                               fontSize: 24
                           ),),
@@ -208,7 +216,7 @@ class DetailedPage extends StatelessWidget {
           ), //
 
 
-          // Atomic Number
+          // Electronic Configuration
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
