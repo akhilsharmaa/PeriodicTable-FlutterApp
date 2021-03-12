@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:periodic_table/Backend/ElementDetailConstructor.dart';
 import 'package:periodic_table/Backend/ListOfElements.dart';
+import 'package:periodic_table/screens/DetailedPage.dart';
 
 class GridViewHomePage extends StatelessWidget {
   @override
@@ -40,7 +41,6 @@ class GridViewHomePage extends StatelessWidget {
 
 class ElementBlock extends StatelessWidget {
 
-
   var elementNumber = 0;
   ElementBlock(this.elementNumber);
 
@@ -53,33 +53,40 @@ class ElementBlock extends StatelessWidget {
     String elementFullName = ListOfElements().getElementFullName(elementNumber-1);
     int getElementNumber = ListOfElements().getElementNumber(elementNumber-1);
 
-    return Container(
-      alignment: Alignment.center,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text("$getElementNumber",style: TextStyle(
-            fontSize: 8,
-            color: Colors.grey,),),
-          Text("$elementSymbol",style: TextStyle(
-            color: Colors.white,),),
-          Text("$elementFullName",style: TextStyle(
-            fontSize: 9,
-            color: Colors.grey,),),
-        ],
-      ),
-      decoration: BoxDecoration(
-          color: Colors.black,
+    return InkWell(
+      onTap: (){
+        Navigator.of(context).push(MaterialPageRoute(builder:
+        (context) => DetailedPage(elementNumber),
+        ));
+      },
+      child: Container(
+        alignment: Alignment.center,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text("$getElementNumber",style: TextStyle(
+              fontSize: 8,
+              color: Colors.grey,),),
+            Text("$elementSymbol",style: TextStyle(
+              color: Colors.white,),),
+            Text("$elementFullName",style: TextStyle(
+              fontSize: 9,
+              color: Colors.grey,),),
+          ],
+        ),
+        decoration: BoxDecoration(
+            color: Colors.black,
 
-        borderRadius: BorderRadius.only(
-            bottomLeft: Radius.circular(1),
-            bottomRight:  Radius.circular(1),
-            topLeft: Radius.circular(1),
-            topRight:  Radius.circular(1),)
+          borderRadius: BorderRadius.only(
+              bottomLeft: Radius.circular(1),
+              bottomRight:  Radius.circular(1),
+              topLeft: Radius.circular(1),
+              topRight:  Radius.circular(1),)
+        ),
+        height: 60,
+        width: 60,
       ),
-      height: 60,
-      width: 60,
     );
   }
 }
