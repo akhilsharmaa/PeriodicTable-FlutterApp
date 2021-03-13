@@ -29,7 +29,7 @@ class _MyAppState extends State<MyApp> {
       Center(child: GridViewHomePage()),
       Center(child: PageViewBuilderHomePage()),
       Center(child: ListViewBuilderHomePage()),
-      Center(child: DetailedPage()),
+      Center(child: DetailedPage(1)),
 
     ];
 
@@ -56,9 +56,9 @@ class _MyAppState extends State<MyApp> {
           BottomNavigationBarItem(
             icon: Icon(Icons.height),
             title: Text("list"),
-            backgroundColor: Colors.blue
+            backgroundColor: Colors.red)
 
-          ),BottomNavigationBarItem(
+          ,BottomNavigationBarItem(
             icon: Icon(Icons.settings ),
             title: Text("detailed"),
             backgroundColor: Colors.blue
