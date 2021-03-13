@@ -1,22 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:periodic_table/Backend/ListOfElements.dart';
+import 'package:periodic_table/screens/GridViewHomePage.dart';
+
+import 'DetailedPage.dart';
 
 
 class PageViewBuilderHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
+    final screenHeight = MediaQuery.of(context).size.height;
+    final screenWidth = MediaQuery.of(context).size.width;
+
     ListOfElements listOfElements  = ListOfElements();
 
-
     return Scaffold(
+
       body: Container(
         decoration: BoxDecoration(),
         child: PageView.builder(
           scrollDirection: Axis.vertical,
         itemBuilder: (context, index){
           return Container(
+
             color: Colors.black,
             child: Column(
               children: [
@@ -27,10 +34,10 @@ class PageViewBuilderHomePage extends StatelessWidget {
                   alignment: Alignment.bottomLeft,
                   children: [
                     Container(
-                      height: 220,
+                      height: screenHeight*0.25,
                       decoration: BoxDecoration(
                           image: DecorationImage(
-                              colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.5), BlendMode.dstIn),
+                              colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.4), BlendMode.dstIn),
                               alignment: Alignment.center,
                               fit: BoxFit.cover,
                               image: NetworkImage("${listOfElements.getElementImageLink(index)}")
@@ -43,19 +50,19 @@ class PageViewBuilderHomePage extends StatelessWidget {
                       children: [
                         Padding(
                           padding: const EdgeInsets.only(left:24.0),
-                          child: Text("${listOfElements.getElementNumber(index)}",style: TextStyle(fontSize: 20,color: Colors.white),),
+                          child: Text("${listOfElements.getElementNumber(index)}",style: TextStyle(fontSize: screenHeight* 0.03,color: Colors.white),),
                         ),
                         Padding(
                           padding: const EdgeInsets.only(left:32.0),
-                          child: Text("${listOfElements.getElementSymbol(index)}",style: TextStyle(fontSize: 50,color: Colors.orange),),
+                          child: Text("${listOfElements.getElementSymbol(index)}",style: TextStyle(fontSize: screenHeight* 0.05,color: Colors.orange.shade400),),
                         ),
                         Padding(
                           padding: const EdgeInsets.only(left:32.0,bottom: 5),
-                          child: Text("${listOfElements.getElementFullName(index)}",style: TextStyle(fontSize: 32,color: Colors.white),),
+                          child: Text("${listOfElements.getElementFullName(index)}",style: TextStyle(fontSize: screenHeight * 0.02,color: Colors.white),),
                         ),
                         Padding(
                           padding: const EdgeInsets.only(left:35.0,bottom: 10),
-                          child: Text("${listOfElements.getElementAtomicMass(index)}",style: TextStyle(fontSize: 20,color: Colors.white60),),
+                          child: Text("${listOfElements.getElementAtomicMass(index)}",style: TextStyle(fontSize: screenHeight * 0.015,color: Colors.white60),),
                         ),
                       ],
                     )
@@ -65,38 +72,36 @@ class PageViewBuilderHomePage extends StatelessWidget {
 
 
                 // Group and Periods
-                SizedBox(height: 10,),
+                SizedBox(height: screenHeight * 0.02,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Row(
                       children: [
-                        SizedBox(width: 16,),
                         Text("Group  ",style: TextStyle(
-                            fontSize: 18 ,
+                            fontSize: screenHeight * 0.02 ,
                             color: Colors.grey
                         ),),
-                        Text("IIA",style: TextStyle(
-                            fontSize: 20 ,
+                        Text("${listOfElements.getGroupNumberOfAtom(index)}",style: TextStyle(
+                            fontSize: screenHeight * 0.025 ,
                             color: Colors.orange
                         ),),
                       ],
                     ),
-                    Container(
-                      margin: EdgeInsets.only(top: 10,left: 20),
-                      color: Colors.white,
-                      height: 30,
-                      width: 2,
-                    ), //
+                    // Container(
+                    //   margin: EdgeInsets.only(top: 10,left: 20),
+                    //   color: Colors.white,
+                    //   height: screenHeight * 0.02,
+                    //   width: screenWidth * 0.01,
+                    // ), //
                     Row(
                       children: [
-                        SizedBox(width: 16,),
                         Text("Period   ",style: TextStyle(
-                            fontSize: 18 ,
+                            fontSize: screenHeight * 0.02 ,
                             color: Colors.grey
                         ),),
-                        Text("4",style: TextStyle(
-                            fontSize: 20 ,
+                        Text("${listOfElements.getPeriodNumberOfAtom(index)}",style: TextStyle(
+                            fontSize: screenHeight * 0.025 ,
                             color: Colors.orange
                         ),),
                       ],
@@ -109,58 +114,50 @@ class PageViewBuilderHomePage extends StatelessWidget {
 
                 // Electron Proton and Neutron
                 Container(
-                  padding: EdgeInsets.only(left: 10,right: 10),
+                  height: screenHeight*0.1,
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Card(
-                      color: Colors.red,
+                      color: Colors.red.shade900,
                       child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.only(top :14 ,bottom: 14),
-                            child: Column(
-                              children: [
-                                Text("${listOfElements.getNumberOfElectrons(index)}",style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 24
-                                ),),
-                                Text("electron",style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 12
-                                ),),
-                              ],
-                            ),
+                          Column(
+                            children: [
+                              Text("${listOfElements.getNumberOfElectrons(index)}",style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: screenHeight * 0.03
+                              ),),
+                              Text("electron",style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: screenHeight * 0.013
+                              ),),
+                            ],
                           ),
-                          Padding(
-                            padding: const EdgeInsets.only(top :14 ,bottom: 14),
-                            child: Column(
-                              children: [
-                                Text("${listOfElements.getNumberOfProtons(index)}",style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 24
-                                ),),
-                                Text("proton",style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 12
-                                ),),
-                              ],
-                            ),
+                          Column(
+                            children: [
+                              Text("${listOfElements.getNumberOfProtons(index)}",style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: screenHeight * 0.03
+                              ),),
+                              Text("proton",style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: screenHeight * 0.013
+                              ),),
+                            ],
                           ),
-                          Padding(
-                            padding: const EdgeInsets.only(top :14 ,bottom: 14),
-                            child: Column(
-                              children: [
-                                Text("${listOfElements.getNumberOfNeutron(index)}",style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 24
-                                ),),
-                                Text("neutron",style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 12
-                                ),),
-                              ],
-                            ),
+                          Column(
+                            children: [
+                              Text("${listOfElements.getNumberOfNeutron(index)}",style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: screenHeight * 0.03
+                              ),),
+                              Text("neutron",style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: screenHeight * 0.013
+                              ),),
+                            ],
                           ),
                         ],
                       ),
@@ -177,9 +174,9 @@ class PageViewBuilderHomePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    SizedBox(width: 20),
+                    SizedBox(width: screenWidth* 0.05),
                     Icon(Icons.list,color: Colors.orange,),
-                    SizedBox(width: 10),
+                    SizedBox(width: screenWidth* 0.05),
                     Text("Discovered by :",style: TextStyle(
                         fontSize: 14 ,
                         color: Colors.grey
@@ -219,8 +216,8 @@ class PageViewBuilderHomePage extends StatelessWidget {
 
                 Container(
                   margin: EdgeInsets.only(top: 10,left: 20,bottom: 10),
-                  color: Colors.greenAccent,
-                  height: 0.5,
+                  color: Colors.grey,
+                  height: 0.2,
                 ), //
 
 
@@ -249,13 +246,13 @@ class PageViewBuilderHomePage extends StatelessWidget {
 
                 Container(
                   margin: EdgeInsets.only(top: 10,left: 20,bottom: 10),
-                  color: Colors.blue,
-                  height: 0.5,
+                  color: Colors.grey,
+                  height: 0.2,
                 ), // Divider
 
 
 
-                // Electronic Configuration
+                // Valency
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -279,10 +276,86 @@ class PageViewBuilderHomePage extends StatelessWidget {
 
                 Container(
                   margin: EdgeInsets.only(top: 10,left: 20,bottom: 10),
-                  color: Colors.blue,
-                  height: 0.5,
+                  color: Colors.grey,
+                  height: 0.2,
                 ), // Divider
 
+
+                // Oxidation State
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    SizedBox(width: 20),
+                    Icon(Icons.label_important_outline,color: Colors.blue,),
+                    SizedBox(width: 10),
+                    Text("Electron Affinity :",style: TextStyle(
+                        fontSize: 14 ,
+                        color: Colors.grey
+                    ),), SizedBox(
+                      width: 20,
+                    ),
+                    Text("${listOfElements.getValencyOfAtom(index)}",style: TextStyle(
+                        fontSize: 20 ,
+                        color: Colors.white
+                    ),),
+                  ],
+                ) ,
+
+
+                Container(
+                  margin: EdgeInsets.only(top: 10,left: 20,bottom: 10),
+                  color: Colors.grey,
+                  height: 0.2,
+                ), // Divider
+
+
+                // Oxidation State
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    SizedBox(width: 20),
+                    Icon(Icons.label_important_outline,color: Colors.blue,),
+                    SizedBox(width: 10),
+                    Text("Electron affinity:",style: TextStyle(
+                        fontSize: 14 ,
+                        color: Colors.grey
+                    ),), SizedBox(
+                      width: 20,
+                    ),
+                    Text("${listOfElements.getElectronAffinity(index)}",style: TextStyle(
+                        fontSize: 20 ,
+                        color: Colors.white
+                    ),),
+                  ],
+                ) ,
+
+
+
+                RaisedButton(
+
+                  padding: EdgeInsets.only(left: screenWidth*0.1,right: screenWidth* 0.1),
+                  child: Text("SHOW MORE DETAILS",style: TextStyle(color: Colors.white,fontSize: screenHeight* 0.02),),
+                  color: Colors.red,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(20))
+                  ),
+
+                  onPressed: (){
+                 Navigator.of(context).push(MaterialPageRoute(builder:
+                (context) => DetailedPage(index + 1),
+               ));
+               },),
+
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  // crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Icon(Icons.keyboard_arrow_down_sharp,color: Colors.red,size: 40,),
+                    Text("Swipe for next",style: TextStyle(color: Colors.white,fontSize: 16),),
+                  ],
+                )
 
               ],
             ),
