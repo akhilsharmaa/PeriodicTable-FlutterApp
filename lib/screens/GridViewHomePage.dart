@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:flutter/rendering.dart';
 import 'package:periodic_table/Backend/ElementDetailConstructor.dart';
 import 'package:periodic_table/Backend/ListOfElements.dart';
 import 'package:periodic_table/screens/DetailedPage.dart';
@@ -13,13 +14,15 @@ class GridViewHomePage extends StatelessWidget {
     final screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 50,
-        leading: Icon(Icons.grid_on),
-        title: Text("Periodic Table"),
+        toolbarHeight: screenHeight * 0.05,
+        leading: Icon(Icons.grid_on,size: screenHeight * 0.03,),
+        title: Text("Periodic Table",
+          style: TextStyle(fontSize: screenHeight * 0.03),),
         backgroundColor: Colors.red,
         elevation: 0,
       ),
       body: Container(
+
         color: Colors.grey.shade900,
         child: ListView(
           scrollDirection: Axis.horizontal,
