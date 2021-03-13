@@ -10,6 +10,9 @@ class ElementDetailConstructor{
   final numberOfProtons;
   final numberOfNeutrons;
   final valencyOfAtom;
+  final groupNumberOfAtom;
+  final periodNumberOfAtom;
+  final electronAffinity;
   final imageLink;
 
   ElementDetailConstructor(
@@ -24,6 +27,9 @@ class ElementDetailConstructor{
       this.numberOfProtons,
       this.numberOfNeutrons,
       this.valencyOfAtom,
+      this.groupNumberOfAtom,
+      this.periodNumberOfAtom,
+      this.electronAffinity,
       this.imageLink);
   // ElementDetailConstructor(this.elementNumber,this.elementNameSymbol,this.elementFullName,this.imageLink);
 }
