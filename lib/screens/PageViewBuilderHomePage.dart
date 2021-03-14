@@ -2,11 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:periodic_table/Backend/ListOfElements.dart';
 import 'package:periodic_table/screens/GridViewHomePage.dart';
-
 import 'DetailedPage.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
+
+class PageViewBuilderHomePage extends StatefulWidget {
+  @override
+  _PageViewBuilderHomePageState createState() => _PageViewBuilderHomePageState();
+}
+
+class _PageViewBuilderHomePageState extends State<PageViewBuilderHomePage> {
 
 
-class PageViewBuilderHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
