@@ -1,8 +1,15 @@
+// import 'package:firebase_admob/firebase_admob.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:provider/provider.dart';
+
+import 'package:provider/provider.dart';
 import 'package:periodic_table/Backend/ListOfElements.dart';
+import 'package:periodic_table/adState.dart';
+
 import 'DetailedPage.dart';
-import 'package:firebase_admob/firebase_admob.dart';
+
 
 
 const String testDevices = 'Mobile id';
@@ -15,37 +22,7 @@ class PageViewBuilderHomePage extends StatefulWidget {
 
 class _PageViewBuilderHomePageState extends State<PageViewBuilderHomePage> {
 
-  static const MobileAdTargetingInfo targetingInfo = MobileAdTargetingInfo(
-    testDevices: testDevices != null ? <String> [testDevices] : null ,
-    nonPersonalizedAds: true,
-    keywords: <String> []);
 
-  BannerAd  _bannerAd;
-
-  BannerAd createBannerAd(){
-    return BannerAd(adUnitId:'ca-app-pub-4745993238831334/9152760622',
-        size: AdSize.banner,
-        targetingInfo: targetingInfo,
-        listener: (MobileAdEvent event){
-      print("Banner $event");
-        },);
-  }
-
-  @override
-  void initState() {
-    FirebaseAdMob.instance.initialize(
-        appId: 'ca-app-pub-4745993238831334~4205230863'
-    );
-    _bannerAd = createBannerAd()..load()..show();
-    // TODO: implement initState
-    super.initState();
-  }
-
-  @override
-  void dispose() {
-    _bannerAd.dispose();
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -53,24 +30,7 @@ class _PageViewBuilderHomePageState extends State<PageViewBuilderHomePage> {
     var screenHeight = MediaQuery.of(context).size.height;
     var screenWidth = MediaQuery.of(context).size.width;
 
-    // BannerAd banner;
-    //
-    // @override
-    // void didChangeDependencies(){
-    //   super.didChangeDependencies();
-    //   final adState = Provider.of<AdState>(context);
-    //   adState.initialization.then((status) {
-    //     setState(() {
-    //       banner = BannerAd(
-    //         adUnitId: adState.bannerAdUnitId,
-    //         size: AdSize.banner,
-    //         request: AdRequest(),
-    //         listener: adState.adListener,
-    //       )..load();
-    //     });
-    //   });
-    // }
-    //
+
 
     ListOfElements listOfElements  = ListOfElements();
 
@@ -96,7 +56,7 @@ class _PageViewBuilderHomePageState extends State<PageViewBuilderHomePage> {
                         alignment: Alignment.bottomLeft,
                         children: [
                           Container(
-                            height: screenHeight*0.25,
+                            height: screenHeight*0.2,
                             decoration: BoxDecoration(
                                 image: DecorationImage(
                                     colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.4), BlendMode.dstIn),
@@ -441,12 +401,6 @@ class _PageViewBuilderHomePageState extends State<PageViewBuilderHomePage> {
             ),
             ),
           ),
-          // if(_bannerAd != null )
-          //   Container(
-          //     height: 60,
-          //     child: AdSize(ad: _bannerAd,),
-          //   )
-
 
         ],
       ),
