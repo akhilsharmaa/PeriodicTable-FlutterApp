@@ -38,10 +38,15 @@
         </activity>
         <!-- Don't delete the meta-data below.
              This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
-        <meta-data
 
+       <meta-data
+           android:name="flutterEmbedding"
+           android:value="2" />
+
+        <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-4745993238831334~4205230863"/>
-            android:value="2" />
+
+
     </application>
 </manifest>
