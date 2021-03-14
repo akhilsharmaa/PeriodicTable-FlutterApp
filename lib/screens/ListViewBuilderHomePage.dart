@@ -35,10 +35,6 @@ class _ListViewBuilderHomePageState extends State<ListViewBuilderHomePage> {
     ListOfElements listOfElements  = ListOfElements();
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Periodic list"),
-        backgroundColor: Colors.red,
-      ),
       body: Container(
         color: Colors.black,
         child: Column(
