@@ -1,12 +1,56 @@
+import 'package:firebase_admob/firebase_admob.dart';
 import 'package:flutter/material.dart';
 import 'package:periodic_table/Backend/ListOfElements.dart';
 
-class DetailedPage extends StatelessWidget {
+const String testDevices = '05F58B3D963409FECCCCE6365F6FB23F';
+
+class DetailedPage extends StatefulWidget {
+
+
 
   int elementNumber;
 DetailedPage(this.elementNumber);
 
-int getElementNumber(){ return elementNumber-1;}
+  @override
+  _DetailedPageState createState() => _DetailedPageState();
+}
+
+class _DetailedPageState extends State<DetailedPage> {
+
+  static const MobileAdTargetingInfo targetingInfo = MobileAdTargetingInfo(
+      testDevices: testDevices != null ? <String> [testDevices] : null ,
+      nonPersonalizedAds: true,
+      keywords: <String> []);
+
+  BannerAd  _bannerAd;
+
+  BannerAd createBannerAd(){
+    return BannerAd(adUnitId:'ca-app-pub-4745993238831334/9152760622',
+      size: AdSize.banner,
+      targetingInfo: targetingInfo,
+      listener: (MobileAdEvent event){
+        print("Banner $event");
+      },);
+  }
+
+  @override
+  void initState() {
+    FirebaseAdMob.instance.initialize(
+        appId: 'ca-app-pub-4745993238831334~4205230863'
+    );
+    _bannerAd = createBannerAd()..load()..show();
+    // TODO: implement initState
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _bannerAd.dispose();
+    super.dispose();
+  }
+
+
+  int getElementNumber(){ return widget.elementNumber-1;}
 
   @override
   Widget build(BuildContext context) {
@@ -24,27 +68,6 @@ int getElementNumber(){ return elementNumber-1;}
       body: ListView(
 
         children: [
-
-          // Card(
-          //   color: Colors.black54,
-          //   child: Column(
-          //     mainAxisAlignment: MainAxisAlignment.start,
-          //     crossAxisAlignment: CrossAxisAlignment.start,
-          //     children: [
-          //       Container(
-          //         child: Image.network("${listOfElements.getElementImageLink(getElementNumber())}"),
-          //       ),
-          //       Padding(
-          //         padding: const EdgeInsets.all(8.0),
-          //         child: Text("${listOfElements.getElementFullName(getElementNumber())}",style: TextStyle(
-          //           color: Colors.white,
-          //           fontSize: 32
-          //         ),),
-          //       )
-          //     ],
-          //   ),
-          // ),
-
 
 
           // Image Background
@@ -105,7 +128,7 @@ int getElementNumber(){ return elementNumber-1;}
                       padding: const EdgeInsets.only(top :14 ,bottom: 14),
                       child: Column(
                         children: [
-                          Text("$elementNumber",style: TextStyle(
+                          Text("${widget.elementNumber}",style: TextStyle(
                               color: Colors.white,
                               fontSize: 24
                           ),),
@@ -201,7 +224,7 @@ int getElementNumber(){ return elementNumber-1;}
 
 
           SizedBox(height: 10,),
-          
+
 
 
           Container(
