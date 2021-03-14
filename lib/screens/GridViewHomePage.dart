@@ -10,11 +10,14 @@ class GridViewHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    final screenHeight = MediaQuery.of(context).size.height;
-    final screenWidth = MediaQuery.of(context).size.width;
+    var screenHeight = MediaQuery.of(context).size.height;
+    var screenWidth = MediaQuery.of(context).size.width;
+
+
+    screenHeight = screenHeight * 0.7;
+
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: screenHeight * 0.05,
         leading: Icon(Icons.grid_on,size: screenHeight * 0.03,),
         title: Text("Periodic Table",
           style: TextStyle(fontSize: screenHeight * 0.03),),
@@ -57,9 +60,10 @@ class ElementBlock extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    final screenHeight = MediaQuery.of(context).size.height;
-    final screenWidth = MediaQuery.of(context).size.width;
+    var screenHeight = MediaQuery.of(context).size.height;
+    var screenWidth = MediaQuery.of(context).size.width;
 
+    screenHeight = screenHeight * 0.8;
     String elementSymbol = ListOfElements().getElementSymbol(elementNumber-1);
     String elementFullName = ListOfElements().getElementFullName(elementNumber-1);
     int getElementNumber = ListOfElements().getElementNumber(elementNumber-1);
@@ -114,8 +118,9 @@ class ColumnNumber extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    final screenHeight = MediaQuery.of(context).size.height;
-    final screenWidth = MediaQuery.of(context).size.width;
+    var screenHeight = MediaQuery.of(context).size.height;
+    var screenWidth = MediaQuery.of(context).size.width;
+
 
     return Container(
       alignment: Alignment.center,
@@ -140,8 +145,9 @@ class RowNumber extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final screenHeight = MediaQuery.of(context).size.height;
-    final screenWidth = MediaQuery.of(context).size.width;
+    var screenHeight = MediaQuery.of(context).size.height;
+    var screenWidth = MediaQuery.of(context).size.width;
+    screenHeight = screenHeight * 0.8;
 
     return Container(
       alignment: Alignment.center,
