@@ -1,31 +1,93 @@
 import 'package:flutter/material.dart';
+import 'package:periodic_table/Backend/ListOfElements.dart';
 
 class DetailedPage extends StatelessWidget {
+
+  int elementNumber;
+DetailedPage(this.elementNumber);
+
+int getElementNumber(){ return elementNumber-1;}
+
   @override
   Widget build(BuildContext context) {
+  ListOfElements listOfElements = new ListOfElements();
+
     return Scaffold(
       backgroundColor: Colors.grey.shade900,
+
+      appBar: AppBar(
+        toolbarHeight: 50,
+        elevation: 0,
+        backgroundColor: Colors.red,
+        title: Text("${listOfElements.getElementFullName(getElementNumber())}"),
+      ),
       body: ListView(
+
         children: [
-          Card(
-            color: Colors.black54,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  child: Image.network("https://image.jimcdn.com/app/cms/image/transf/none/path/s21cd3466457ea560/image/ic0391f2e86eeac54/version/1601977690/image.jpg"),
+
+          // Card(
+          //   color: Colors.black54,
+          //   child: Column(
+          //     mainAxisAlignment: MainAxisAlignment.start,
+          //     crossAxisAlignment: CrossAxisAlignment.start,
+          //     children: [
+          //       Container(
+          //         child: Image.network("${listOfElements.getElementImageLink(getElementNumber())}"),
+          //       ),
+          //       Padding(
+          //         padding: const EdgeInsets.all(8.0),
+          //         child: Text("${listOfElements.getElementFullName(getElementNumber())}",style: TextStyle(
+          //           color: Colors.white,
+          //           fontSize: 32
+          //         ),),
+          //       )
+          //     ],
+          //   ),
+          // ),
+
+
+
+          // Image Background
+
+          Stack(
+            alignment: Alignment.bottomLeft,
+            children: [
+              Container(
+                height: 220,
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.5), BlendMode.dstIn),
+                        alignment: Alignment.center,
+                        fit: BoxFit.cover,
+                        image: NetworkImage("${listOfElements.getElementImageLink(getElementNumber())}")
+                    )
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text("Calcium",style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 32
-                  ),),
-                )
-              ],
-            ),
-          ),
+              ),
+              Column(
+
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left:24.0),
+                    child: Text("${listOfElements.getElementNumber(getElementNumber())}",style: TextStyle(fontSize: 20,color: Colors.white),),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left:32.0),
+                    child: Text("${listOfElements.getElementSymbol(getElementNumber())}",style: TextStyle(fontSize: 50,color: Colors.orange),),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left:32.0,bottom: 5),
+                    child: Text("${listOfElements.getElementFullName(getElementNumber())}",style: TextStyle(fontSize: 32,color: Colors.white),),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left:35.0,bottom: 10),
+                    child: Text("${listOfElements.getElementAtomicMass(getElementNumber())}",style: TextStyle(fontSize: 20,color: Colors.white60),),
+                  ),
+                ],
+              )
+            ],),
+
+
 
 
           // Electron Proton and Neutron
@@ -43,7 +105,7 @@ class DetailedPage extends StatelessWidget {
                       padding: const EdgeInsets.only(top :14 ,bottom: 14),
                       child: Column(
                         children: [
-                          Text("20",style: TextStyle(
+                          Text("$elementNumber",style: TextStyle(
                               color: Colors.white,
                               fontSize: 24
                           ),),
@@ -91,13 +153,14 @@ class DetailedPage extends StatelessWidget {
           ),
 
 
-
-
           // Group and Periods
           SizedBox(height: 10,),
+
           Row(
+
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
+
               Row(
                 children: [
                   SizedBox(width: 16,),
@@ -111,12 +174,14 @@ class DetailedPage extends StatelessWidget {
                   ),),
                 ],
               ),
+
               Container(
                 margin: EdgeInsets.only(top: 10,left: 20),
                 color: Colors.white,
                 height: 30,
                 width: 2,
               ), //
+
               Row(
                 children: [
                   SizedBox(width: 16,),
@@ -144,8 +209,8 @@ class DetailedPage extends StatelessWidget {
             color: Colors.grey,
             height: 0.5,
           ), //
-          // Divider
 
+          // Divider
           SizedBox(height: 8),
 
 
@@ -180,8 +245,6 @@ class DetailedPage extends StatelessWidget {
 
           SizedBox(height: 8),
 
-
-
           // Year of Discovery
           Row(
             children: [
@@ -196,8 +259,8 @@ class DetailedPage extends StatelessWidget {
               ),
               Text("1808",style: TextStyle(
                   fontSize: 20 ,
-                  color: Colors.white
-              ),),
+                  color: Colors.white),
+              ),
             ],
           ),
 
@@ -208,7 +271,7 @@ class DetailedPage extends StatelessWidget {
           ), //
 
 
-          // Atomic Number
+          // Electronic Configuration
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -259,7 +322,7 @@ class DetailedPage extends StatelessWidget {
               ) ,
             ],
           ),
-          ElementsListTileListView("Van der waals radius", "231 (pm)"),
+          ElementsListTileListView("Van der waals radius", "231(pm)"),
           ElementsListTileListView("Electron gravity", "1"),
           ElementsListTileListView("Electron gravity", "1"),
           ElementsListTileListView("Electron gravity", "1"),
