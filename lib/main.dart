@@ -7,13 +7,17 @@ import 'screens/DetailedPage.dart';
 import 'screens/GridViewHomePage.dart';
 import 'screens/ListViewBuilderHomePage.dart';
 import 'screens/PageViewBuilderHomePage.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
   final initFuture = MobileAds.instance.initialize();
   final adState = AdState(initFuture);
-  
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    statusBarColor: Colors.red,
+        statusBarIconBrightness: Brightness.light,
+  ));
 
   runApp(MaterialApp(
     themeMode: ThemeMode.dark,
@@ -45,43 +49,73 @@ class _MyAppState extends State<MyApp> {
 
     ];
 
-    return Scaffold(
-      body: tabs[_currentIndex],
-      bottomNavigationBar: BottomNavigationBar(
+    return DefaultTabController(
+      length: 3,
+      initialIndex: _currentIndex,
+      child: Scaffold(
 
-        selectedItemColor: Colors.white,
-        backgroundColor: Colors.red,
-        currentIndex: _currentIndex,
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            title: Text("Grid"),
-            backgroundColor: Colors.red
+        appBar: AppBar(
+          title: Text("Periodic-table"),
+          elevation: 0,
+          backgroundColor: Colors.red,
+          bottom: TabBar(
+
+            tabs: [
+              Tab(text: "Grid view",),
+              Tab(text: "Page view",),
+              Tab(text: "List view",),
+            ],
           ),
+        ),
+        body: TabBarView(
 
-          BottomNavigationBarItem(
-              icon: Icon(Icons.phone_android_sharp ),
-              title: Text("Pages"),
-              backgroundColor: Colors.grey.shade900
-          ),
+          children: [
+            GridViewHomePage(),
+            PageViewBuilderHomePage(),
+            ListViewBuilderHomePage(),
 
-          BottomNavigationBarItem(
-            icon: Icon(Icons.height),
-            title: Text("list"),
-            backgroundColor: Colors.red)
+          ],
+        )
 
-          ,BottomNavigationBarItem(
-            icon: Icon(Icons.settings ),
-            title: Text("detailed"),
-            backgroundColor: Colors.blue
-          ),
-        ],
-        onTap: (index){
-          setState(() {
-            _currentIndex = index;
 
-          });
-        },
+        // tabs[_currentIndex],
+
+        // bottomNavigationBar: BottomNavigationBar(
+        //
+        //   selectedItemColor: Colors.white,
+        //   backgroundColor: Colors.red,
+        //   currentIndex: _currentIndex,
+        //   items: [
+        //     BottomNavigationBarItem(
+        //       icon: Icon(Icons.home),
+        //       title: Text("Grid"),
+        //       backgroundColor: Colors.red
+        //     ),
+        //
+        //     BottomNavigationBarItem(
+        //         icon: Icon(Icons.phone_android_sharp ),
+        //         title: Text("Pages"),
+        //         backgroundColor: Colors.grey.shade900
+        //     ),
+        //
+        //     BottomNavigationBarItem(
+        //       icon: Icon(Icons.height),
+        //       title: Text("list"),
+        //       backgroundColor: Colors.red)
+        //
+        //     ,BottomNavigationBarItem(
+        //       icon: Icon(Icons.settings ),
+        //       title: Text("detailed"),
+        //       backgroundColor: Colors.blue
+        //     ),
+        //   ],
+        //   onTap: (index){
+        //     setState(() {
+        //       _currentIndex = index;
+        //
+        //     });
+        //   },
+        // ),
       ),
     );
   }
