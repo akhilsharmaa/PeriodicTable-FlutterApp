@@ -6,8 +6,6 @@ const String testDevices = '05F58B3D963409FECCCCE6365F6FB23F';
 
 class DetailedPage extends StatefulWidget {
 
-
-
   int elementNumber;
 DetailedPage(this.elementNumber);
 
@@ -20,7 +18,7 @@ class _DetailedPageState extends State<DetailedPage> {
   static const MobileAdTargetingInfo targetingInfo = MobileAdTargetingInfo(
       testDevices: testDevices != null ? <String> [testDevices] : null ,
       nonPersonalizedAds: true,
-      keywords: <String> []);
+      keywords: <String> ['Study','Education','Exams','Chemistry','Physics','Maths']);
 
   BannerAd  _bannerAd;
 
@@ -38,7 +36,9 @@ class _DetailedPageState extends State<DetailedPage> {
     FirebaseAdMob.instance.initialize(
         appId: 'ca-app-pub-4745993238831334~4205230863'
     );
-    _bannerAd = createBannerAd()..load()..show();
+    _bannerAd = createBannerAd()..load()..show(
+
+    );
     // TODO: implement initState
     super.initState();
   }
