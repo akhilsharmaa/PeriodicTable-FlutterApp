@@ -1,18 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:flutter/rendering.dart';
 import 'package:periodic_table/Backend/ElementDetailConstructor.dart';
 import 'package:periodic_table/Backend/ListOfElements.dart';
+import 'package:periodic_table/screens/DetailedPage.dart';
 
 class GridViewHomePage extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
+
+    final screenHeight = MediaQuery.of(context).size.height;
+    final screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
-        title: Text("Periodic Table"),
+        toolbarHeight: screenHeight * 0.05,
+        leading: Icon(Icons.grid_on,size: screenHeight * 0.03,),
+        title: Text("Periodic Table",
+          style: TextStyle(fontSize: screenHeight * 0.03),),
         backgroundColor: Colors.red,
         elevation: 0,
       ),
       body: Container(
+
         color: Colors.grey.shade900,
         child: ListView(
           scrollDirection: Axis.horizontal,
@@ -40,7 +50,6 @@ class GridViewHomePage extends StatelessWidget {
 
 class ElementBlock extends StatelessWidget {
 
-
   var elementNumber = 0;
   ElementBlock(this.elementNumber);
 
@@ -48,43 +57,55 @@ class ElementBlock extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
+    final screenHeight = MediaQuery.of(context).size.height;
+    final screenWidth = MediaQuery.of(context).size.width;
 
     String elementSymbol = ListOfElements().getElementSymbol(elementNumber-1);
     String elementFullName = ListOfElements().getElementFullName(elementNumber-1);
     int getElementNumber = ListOfElements().getElementNumber(elementNumber-1);
 
-    return Container(
-      alignment: Alignment.center,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text("$getElementNumber",style: TextStyle(
-            fontSize: 8,
-            color: Colors.grey,),),
-          Text("$elementSymbol",style: TextStyle(
-            color: Colors.white,),),
-          Text("$elementFullName",style: TextStyle(
-            fontSize: 9,
-            color: Colors.grey,),),
-        ],
-      ),
-      decoration: BoxDecoration(
-          color: Colors.black,
+    return InkWell(
+      onTap: (){
+        Navigator.of(context).push(MaterialPageRoute(builder:
+        (context) => DetailedPage(elementNumber),
+        ));
+      },
+      child: Container(
+        height: screenHeight*0.08,
+        width:  screenWidth*0.147,
+        alignment: Alignment.center,
+        child: Column(
+          // height: 60,
+          // width: 60,
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text("$getElementNumber",style: TextStyle(
+              fontSize: screenHeight*0.012,
+              color: Colors.grey,),),
+            Text("$elementSymbol",style: TextStyle(
+              fontSize: screenHeight*0.025,
+              color: Colors.white,),),
+            Text("$elementFullName",style: TextStyle(
+              fontSize: screenHeight*0.01,
+              color: Colors.grey,),),
+          ],
+        ),
+        decoration: BoxDecoration(
+            color: Colors.black,
 
-        borderRadius: BorderRadius.only(
-            bottomLeft: Radius.circular(1),
-            bottomRight:  Radius.circular(1),
-            topLeft: Radius.circular(1),
-            topRight:  Radius.circular(1),)
+          borderRadius: BorderRadius.only(
+              bottomLeft: Radius.circular(1),
+              bottomRight:  Radius.circular(1),
+              topLeft: Radius.circular(1),
+              topRight:  Radius.circular(1),)
+        ),
       ),
-      height: 60,
-      width: 60,
     );
   }
 }
 
-
+//Verticle
 class ColumnNumber extends StatelessWidget {
 
   int coloumNumber;
@@ -92,22 +113,26 @@ class ColumnNumber extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    final screenHeight = MediaQuery.of(context).size.height;
+    final screenWidth = MediaQuery.of(context).size.width;
+
     return Container(
       alignment: Alignment.center,
       child: Text("$coloumNumber",style: TextStyle(
-        fontSize: 16,
+        fontSize: screenHeight*0.02,
         color: Colors.white,),),
 
       decoration: BoxDecoration(
           color: Colors.red.shade600
       ),
-      height: 30,
-      width: 60,
+      height: screenHeight*0.025,
+      width:  screenWidth*0.147,
     );
   }
 }
 
-
+//Horizontal
 class RowNumber extends StatelessWidget {
 
   var rowNumber;
@@ -115,6 +140,9 @@ class RowNumber extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenHeight = MediaQuery.of(context).size.height;
+    final screenWidth = MediaQuery.of(context).size.width;
+
     return Container(
       alignment: Alignment.center,
       child: Text("$rowNumber",style: TextStyle(
@@ -124,8 +152,8 @@ class RowNumber extends StatelessWidget {
       decoration: BoxDecoration(
           color: Colors.red.shade600
       ),
-      height: 60,
-      width: 20,
+      height: screenHeight*0.08,
+      width:  screenWidth*0.05,
     );
   }
 }
@@ -135,12 +163,14 @@ class RowNumber extends StatelessWidget {
 class EmptyBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final screenHeight = MediaQuery.of(context).size.height;
+    final screenWidth = MediaQuery.of(context).size.width;
     return Container(
       child: Padding(
         padding: const EdgeInsets.all(8.0),
       ),
-      height: 60,
-      width: 60,
+      height: screenHeight*0.025,
+      width:  screenWidth*0.147,
     );
   }
 }
@@ -148,13 +178,18 @@ class EmptyBox extends StatelessWidget {
 class ColumnSeries extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+
+    final screenHeight = MediaQuery.of(context).size.height;
+    final screenWidth = MediaQuery.of(context).size.width;
+
     return  Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         Container(
-      height: 30,
-          width: 20
-          ,decoration: BoxDecoration(
+      height: screenHeight*0.025,
+      width:  screenWidth*0.05,
+
+        decoration: BoxDecoration(
 
           color: Colors.red.shade600
         ),),

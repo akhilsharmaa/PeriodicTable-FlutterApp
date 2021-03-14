@@ -1,14 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:periodic_table/adState.dart';
+import 'package:provider/provider.dart';
 
-import 'DetailedPage.dart';
-import 'GridViewHomePage.dart';
-import 'ListViewBuilderHomePage.dart';
-import 'PageViewBuilderHomePage.dart';
+import 'screens/DetailedPage.dart';
+import 'screens/GridViewHomePage.dart';
+import 'screens/ListViewBuilderHomePage.dart';
+import 'screens/PageViewBuilderHomePage.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  final initFuture = MobileAds.instance.initialize();
+  final adState = AdState(initFuture);
+  
+
   runApp(MaterialApp(
     themeMode: ThemeMode.dark,
-    home: MyApp(),
+    home: Provider.value(
+      value : adState ,
+        builder : (context, child) =>  MyApp()),
+
     debugShowCheckedModeBanner: false,
   ));
 }
@@ -29,7 +41,7 @@ class _MyAppState extends State<MyApp> {
       Center(child: GridViewHomePage()),
       Center(child: PageViewBuilderHomePage()),
       Center(child: ListViewBuilderHomePage()),
-      Center(child: DetailedPage()),
+      Center(child: DetailedPage(1)),
 
     ];
 
@@ -50,15 +62,15 @@ class _MyAppState extends State<MyApp> {
           BottomNavigationBarItem(
               icon: Icon(Icons.phone_android_sharp ),
               title: Text("Pages"),
-              backgroundColor: Colors.red
+              backgroundColor: Colors.grey.shade900
           ),
 
           BottomNavigationBarItem(
             icon: Icon(Icons.height),
             title: Text("list"),
-            backgroundColor: Colors.blue
+            backgroundColor: Colors.red)
 
-          ),BottomNavigationBarItem(
+          ,BottomNavigationBarItem(
             icon: Icon(Icons.settings ),
             title: Text("detailed"),
             backgroundColor: Colors.blue
