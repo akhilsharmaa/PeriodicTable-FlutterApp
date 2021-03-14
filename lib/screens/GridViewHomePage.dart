@@ -17,32 +17,28 @@ class GridViewHomePage extends StatelessWidget {
     screenHeight = screenHeight * 0.7;
 
     return Scaffold(
-      appBar: AppBar(
-        leading: Icon(Icons.grid_on,size: screenHeight * 0.03,),
-        title: Text("Periodic Table",
-          style: TextStyle(fontSize: screenHeight * 0.03),),
-        backgroundColor: Colors.red,
-        elevation: 0,
-      ),
+
       body: Container(
 
         color: Colors.grey.shade900,
         child: ListView(
           scrollDirection: Axis.horizontal,
             children: [
-              Column(
-                children: [
-                  ColumnSeries(),
-                  Row1(),
-                  Row2(),
-                  Row3(),
-                  Row4(),
-                  Row5(),
-                  Row6(),
-                  Row7(),
-                  Padding(padding: EdgeInsets.only(top: 30)),
-                  BlockF()
-                ],
+              Expanded(
+                child: Column(
+                  children: [
+                    ColumnSeries(),
+                    Row1(),
+                    Row2(),
+                    Row3(),
+                    Row4(),
+                    Row5(),
+                    Row6(),
+                    Row7(),
+                    Padding(padding: EdgeInsets.only(top: 30)),
+                    BlockF()
+                  ],
+                ),
               )
             ],
         )
