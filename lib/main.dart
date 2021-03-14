@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:periodic_table/adState.dart';
+import 'package:provider/provider.dart';
 
 import 'screens/DetailedPage.dart';
 import 'screens/GridViewHomePage.dart';
@@ -6,9 +9,18 @@ import 'screens/ListViewBuilderHomePage.dart';
 import 'screens/PageViewBuilderHomePage.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  final initFuture = MobileAds.instance.initialize();
+  final adState = AdState(initFuture);
+  
+
   runApp(MaterialApp(
     themeMode: ThemeMode.dark,
-    home: MyApp(),
+    home: Provider.value(
+      value : adState ,
+        builder : (context, child) =>  MyApp()),
+
     debugShowCheckedModeBanner: false,
   ));
 }
