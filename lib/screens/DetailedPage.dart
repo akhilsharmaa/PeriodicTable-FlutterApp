@@ -363,11 +363,11 @@ class _DetailedPageState extends State<DetailedPage> {
           ) ,
 
 
-          ElementsListTileListView("Van der waals radius", "231(pm)"),
-          ElementsListTileListView("Electron gravity", "1"),
-          ElementsListTileListView("Electron gravity", "1"),
-          ElementsListTileListView("Electron gravity", "1"),
-          ElementsListTileListView("Electron gravity", "1"),
+          ElementsListTileListView("Van der waals radius", "${listOfElements.getVanderWallRadius(getElementNumber())}"),
+          // ElementsListTileListView("Electron gravity", "1"),
+          // ElementsListTileListView("Electron gravity", "1"),
+          // ElementsListTileListView("Electron gravity", "1"),
+          // ElementsListTileListView("Electron gravity", "1"),
         ],
       ),
     );
@@ -386,29 +386,33 @@ class ElementsListTileListView extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          margin: EdgeInsets.only(top: 10,left: 20,bottom: 10),
-          color: Colors.grey,
-          height: 0.2,
-        ), // Divider
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text("$title :",style: TextStyle(
-                fontSize: 14 ,
-                color: Colors.grey
-            ),), SizedBox(
-              width: 20,
-            ),
-            Text("$subtitle",style: TextStyle(
-                fontSize: 20 ,
-                color: Colors.white
-            ),),
-          ],
-        ),
-      ],
+    return Padding(
+      padding: const EdgeInsets.only(left: 40),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            margin: EdgeInsets.only(top: 10,left: 20,bottom: 10),
+            color: Colors.grey,
+            height: 0.2,
+          ), // Divider
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text("$title :",style: TextStyle(
+                  fontSize: 14 ,
+                  color: Colors.grey
+              ),), SizedBox(
+                width: 20,
+              ),
+              Text("$subtitle",style: TextStyle(
+                  fontSize: 20 ,
+                  color: Colors.white
+              ),),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
