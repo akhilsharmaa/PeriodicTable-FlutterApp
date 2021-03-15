@@ -1,12 +1,10 @@
 // import 'package:firebase_admob/firebase_admob.dart';
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
-import 'package:provider/provider.dart';
 
-import 'package:provider/provider.dart';
 import 'package:periodic_table/Backend/ListOfElements.dart';
-import 'package:periodic_table/adState.dart';
 
 import 'DetailedPage.dart';
 
@@ -146,7 +144,7 @@ class _PageViewBuilderHomePageState extends State<PageViewBuilderHomePage> {
                           padding: const EdgeInsets.all(10.0),
                           child: Card(
 
-                            color: Colors.red.shade900,
+                            color: Colors.red.shade600,
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.end,
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -356,21 +354,24 @@ class _PageViewBuilderHomePageState extends State<PageViewBuilderHomePage> {
                                 children: [
 
                                   RaisedButton(
-
-                                    padding: EdgeInsets.only(left: screenWidth*0.1,right: screenWidth* 0.1),
-                                    child: Text("SHOW MORE DETAILS",style: TextStyle(color: Colors.white,fontSize: screenHeight* 0.02),),
-                                    color: Colors.red,
                                     shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.all(Radius.circular(20))
+                                      borderRadius: BorderRadius.all(Radius.circular(20)),
                                     ),
-
-                                    onPressed: (){
+                                    color: Colors.red,
+                                    padding: EdgeInsets.zero
+                                    ,child: Row(
+                                      children: [
+                                        SizedBox(width: 10,),
+                                        Icon(Icons.label_important),
+                                        Text("  SHOW MORE DETAILS    ",
+                                          style: TextStyle(color: Colors.white,fontSize: screenHeight* 0.02),),
+                                      ],
+                                    ),
+                                     onPressed: (){
                                       Navigator.of(context).push(MaterialPageRoute(builder:
                                           (context) => DetailedPage(index + 1),
                                       ));
-                                    },),
-
-
+                                      },),
                                 ],
                               ),
                             ),
