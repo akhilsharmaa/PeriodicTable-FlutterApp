@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "183266314775",
+    "project_id": "periodic-table-a072c",
+    "storage_bucket": "periodic-table-a072c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:183266314775:android:104ac4fe079a717c1f6a52",
+        "android_client_info": {
+          "package_name": "com.gracoder.periodic_table"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "183266314775-atst9cg8bovc9m177ta8u55cu86gn3he.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAx99n6TorFesRffDw9amGu9RMDYmYHCoc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "183266314775-atst9cg8bovc9m177ta8u55cu86gn3he.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
