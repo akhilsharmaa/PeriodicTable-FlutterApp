@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
-import 'package:periodic_table/Backend/ElementDetailConstructor.dart';
 import 'package:periodic_table/Backend/ListOfElements.dart';
 import 'package:periodic_table/screens/DetailedPage.dart';
 
@@ -11,8 +10,6 @@ class GridViewHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
 
     var screenHeight = MediaQuery.of(context).size.height;
-    var screenWidth = MediaQuery.of(context).size.width;
-
 
     screenHeight = screenHeight * 0.7;
 
