@@ -60,6 +60,8 @@ class ListOfElements{
     // return elementList[elementNumber].imageLink;
 
 
+
+
   List elementList = [
 
     ElementDetailConstructor(0, "?", "Welcome","Year of Discovery","Discovered by","elementAtomicMass","electronConfiguration","valency","Group number","perid num",
@@ -72,13 +74,13 @@ class ListOfElements{
     ElementDetailConstructor(2, "He", "Helium","1868"," Pierre Janssen"," 4.002602 u","1s²","2","2","2","0","VIIA","1","0 kJ/mol","140 pm",
         "https://science4fun.info/wp-content/uploads/2019/02/glowing-helium-gas.jpg"),
 
-    ElementDetailConstructor(3, "Li", "Lithium","1817","Johan August Arfvedson","6.941 u","[He] 2s1","3","3","4","1","IA","2","59.6 kJ/mol","182 pm",
+    ElementDetailConstructor(3, "Li", "Lithium","1817","Johan A. Arfvedson","6.941 u","[He] 2s1","3","3","4","1","IA","2","59.6 kJ/mol","182 pm",
         "https://newscenter.lbl.gov/wp-content/uploads/sites/2/2019/05/iStock-898893998.jpg"),
 
-    ElementDetailConstructor(4, "Be", "Beryllium","1798","Louis Nicolas Vauquelin","9.012182 u","[He] 2s²","4","4","5","2","IIA","2","0 kJ/mol","153 pm",
+    ElementDetailConstructor(4, "Be", "Beryllium","1798","Louis N. Vauquelin","9.012182 u","[He] 2s²","4","4","5","2","IIA","2","0 kJ/mol","153 pm",
         "https://www.chemicalbook.com/NewsImg/2020-02-06/20202617414959100.jpg"),
 
-    ElementDetailConstructor(5, "B", "Boron","1808"," Joseph Louis Gay-Lussac","10.811 u","[He] 2s²2p1","5","5","6","3","IIIA","2","26.7 kJ/mol","192 pm",
+    ElementDetailConstructor(5, "B", "Boron","1808"," Joseph Louis","10.811 u","[He] 2s²2p1","5","5","6","3","IIIA","2","26.7 kJ/mol","192 pm",
         "https://upload.wikimedia.org/wikipedia/commons/1/19/Boron_R105.jpg"),
 
     ElementDetailConstructor(6, "C", "Carbon","1789","Antoine Lavoisier","12.011 u","[He] 2s² 2p2","6","6","6","4","IVA","2","153.9 kJ/mol","170 pm",
@@ -169,7 +171,7 @@ class ListOfElements{
     ElementDetailConstructor(33, "As", "Arsenic", "1250", "Albertus Magnus", "74.9216 u", "[Ar] 3d¹⁰4s²4p³","33","33","42","3","VA","4","78 kJ/mol","185 pm",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Arsen_1a.jpg/220px-Arsen_1a.jpg"),
 
-    ElementDetailConstructor(34, "Se","Selenium", "1817", "Johan Gottlieb Gahn", "78.96 u", "[Ar] 3d104s24p4","34","34","45","2","VIA","4","195 kJ/mol","190 pm",
+    ElementDetailConstructor(34, "Se","Selenium", "1817", "Johan G. Gahn", "78.96 u", "[Ar] 3d104s24p4","34","34","45","2","VIA","4","195 kJ/mol","190 pm",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/SeBlackRed.jpg/220px-SeBlackRed.jpg"),
 
     ElementDetailConstructor(35, "Br", "Bromine", "1826", " Antoine Jérôme", "79.904 u", "[Ar] 4s²3d¹⁰4p⁵","35","35","45","1","VIIA","4","324.6 kJ/mol","185 pm",
@@ -207,7 +209,7 @@ class ListOfElements{
         "https://upload.wikimedia.org/wikipedia/en/thumb/8/89/Technetium.jpg/220px-Technetium.jpg"),
 
 
-    ElementDetailConstructor(44, "Ru", "Ruthenium", "1844", " Karl Ernst Claus", "101.07 u", "[Kr] 4d75s1","44","44","57","-","VIIIB","5","101.3 kJ/mol ","N/A",
+    ElementDetailConstructor(44, "Ru", "Ruthenium", "1844", " Karl E. Claus", "101.07 u", "[Kr] 4d75s1","44","44","57","-","VIIIB","5","101.3 kJ/mol ","N/A",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Ruthenium_a_half_bar.jpg/220px-Ruthenium_a_half_bar.jpg"),
 
     ElementDetailConstructor(45, "Rh", "Rhodium", "1803", "William H. Wollaston", "102.9055u", "Kr 4d8 5s1","45","45","58","3","VIIIB","5","109.3 kJ/mol ","N/A",
@@ -216,7 +218,7 @@ class ListOfElements{
     ElementDetailConstructor(46, "Pd", "Palladium", "1803 ", "William H. Wollaston", "106.42u", "[Kr] 4d¹⁰","46","46","60","2","VIIIB","5","53.7 kJ/mol ","163 pm",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Palladium_%2846_Pd%29.jpg/220px-Palladium_%2846_Pd%29.jpg"),
 
-    ElementDetailConstructor(47, "Ag", "Silver", "before 5000 BC", "unknown", "107.8682 u", "[Kr] 4d¹⁰5s¹","47","47","61","3","IB","5","125.6 kJ/mol ","172 pm",
+    ElementDetailConstructor(47, "Ag", "Silver", "5000 BC", "N/A", "107.8682 u", "[Kr] 4d¹⁰5s¹","47","47","61","3","IB","5","125.6 kJ/mol ","172 pm",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Silver_crystal.jpg/220px-Silver_crystal.jpg"),
 
     ElementDetailConstructor(48, "Cd", "Cadmium", "1817", "Friedrich Stromeyer", "112.411u", "[Kr] 4d¹⁰5s²","48","48","64","2","IIB","5","0 kJ/mol ","158 pm",
@@ -290,7 +292,7 @@ class ListOfElements{
     ElementDetailConstructor(69, "Tm", "Tulium", "1879", "Per Teodor Cleve", "168.93421 u", "[Xe] 4f13 6s2","69","69","100","3","IIBB","6","50 kJ/mol ","N/A",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Thulium_sublimed_dendritic_and_1cm3_cube.jpg/220px-Thulium_sublimed_dendritic_and_1cm3_cube.jpg"),
 
-    ElementDetailConstructor(70, "Yb", "Ytterbium", "1878", "Jean Charles Galissard de", "173.04 u", "[Xe] 4f14 6s2","70","70","103","3","IVB","6","50 kJ/mol ","N/A",
+    ElementDetailConstructor(70, "Yb", "Ytterbium", "1878", "J. Charles G. de", "173.04 u", "[Xe] 4f14 6s2","70","70","103","3","IVB","6","50 kJ/mol ","N/A",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Ytterbium-3.jpg/220px-Ytterbium-3.jpg"),
 
     ElementDetailConstructor(71, "Lu","Lutetium", "1907", "Carl A. von Welsbach", "174.967 u", "[Xe] 4f14 5d16 s2","71","71","104","3","IVB","6","50 kJ/mol ","N/A",
