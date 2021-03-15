@@ -163,7 +163,7 @@ class _DetailedPageState extends State<DetailedPage> {
 
           // Electron Proton and Neutron
           Container(
-            height: screenHeight*0.11,
+            height: screenHeight*0.13,
             child: Padding(
               padding: const EdgeInsets.all(10.0),
               child: Card(
