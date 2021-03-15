@@ -61,10 +61,10 @@ class ListOfElements{
 
     ElementDetailConstructor(0, "?", "Welcome","Year of Discovery","Discovered by","elementAtomicMass","electronConfiguration","valency","Group number","perid num",
        "" ,"","","Electron affinity",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9CWS313Sxa5SiT4_ODJIihYrlGQPwGYEsQA&usqp=CAU"),
+        "https://images.unsplash.com/photo-1603126857599-f6e157fa2fe6?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Njh8fGh5ZHJvZ2VuJTIwZnVlbHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"),
 
     ElementDetailConstructor(1, "H", "Hydrogen","1766"," Henry Cavendish","4.002602 u","1s1","1","1","0","1","IA","1","72.8 kJ/mol",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9CWS313Sxa5SiT4_ODJIihYrlGQPwGYEsQA&usqp=CAU"),
+        "https://images.unsplash.com/photo-1530908295418-a12e326966ba?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"),
 
     ElementDetailConstructor(2, "He", "Helium","1868"," Pierre Janssen"," 4.002602 u","1s²","2","2","2","0","VIIA","1","0 kJ/mol",
         "https://science4fun.info/wp-content/uploads/2019/02/glowing-helium-gas.jpg"),
@@ -295,7 +295,23 @@ class ListOfElements{
 
 
 
-
+  //
+  // ElementDetailConstructor(
+  //     this.elementNumber,
+  //     this.elementNameSymbol,
+  //     this.elementFullName,
+  //     this.yearOfDiscovery,
+  //     this.elementDiscoveryBy,
+  //     this.elementAtomicMass,
+  //     this.electronConfiguration,
+  //     this.numberOfElectrons,
+  //     this.numberOfProtons,
+  //     this.numberOfNeutrons,
+  //     this.valencyOfAtom,
+  //     this.groupNumberOfAtom,
+  //     this.periodNumberOfAtom,
+  //     this.electronAffinity,
+  //     this.imageLink);
 
 
 
@@ -363,7 +379,7 @@ class ListOfElements{
     ElementDetailConstructor(91, "Pa", "Protactinium", "1913", "Otto Hahn", "231.03 u", "[Rn] 5f2 6d1 7s2","91","91","140","5","IIIB","7","N/A ",
         "https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Protactinium.jpg/220px-Protactinium.jpg"),
 
-    ElementDetailConstructor(92, "U", "", "Uranium", "1789", "238.02 u", " [Rn] 5f3 6d1 7s2", "92","92","146","6","IIIB","7"," N/A",
+    ElementDetailConstructor(92, "U", "", "Uranium", "1789", "Martin Heinrich", "238.02 u", " [Rn] 5f3 6d1 7s2", "92","92","146","6","IIIB","7"," N/A",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/HEUraniumC.jpg/220px-HEUraniumC.jpg"),
 
     ElementDetailConstructor(93, "Np", "Neptunium", "1940", "Edwin McMillan", " 237.04 u", "[Rn] 5f4 6d1 7s2","93","93","144","6","IIIB","7","N/A ",
@@ -403,53 +419,89 @@ class ListOfElements{
     // 6 7 8 13 14 15  16  17 27
 
 
+  // ElementDetailConstructor(
+  //     this.elementNumber,
+  //     this.elementNameSymbol,
+  //     this.elementFullName,
+  //     this.yearOfDiscovery,
+  //     this.elementDiscoveryBy,
+  //     this.elementAtomicMass,
+  //     this.electronConfiguration,
+  //     this.numberOfElectrons,
+  //     this.numberOfProtons,
+  //     this.numberOfNeutrons,
+  //     this.valencyOfAtom,
+  //     this.groupNumberOfAtom,
+  //     this.periodNumberOfAtom,
+  //     this.electronAffinity,
+  //     this.imageLink);
 
-    ElementDetailConstructor(104, "Rf", "Ratherfordium", "1964", "Albert Ghiorso", "261.1 u", " [Rn] 5f14 6d27 s2","104","104","157","4","","7","N/A ",
+
+
+    ElementDetailConstructor(104, "Rf", "Ratherfordium", "1964", "Albert Ghiorso", "261.1 u", "[Rn] 5f14 6d27 s2","104","104","157","4","IVB","7",
+        "N/A ",
         ""),
 
-    ElementDetailConstructor(105, "Db", "Dubnium", "1967", "Albert Ghiorso", "[Rn] 5f14 6d3 7s2", "262.11 u","105","105","157","5","","7","N/A ",
+    ElementDetailConstructor(105, "Db", "Dubnium", "1967", "Albert Ghiorso","262 u", "[Rn] 5f14 6d3 7s2", "105","105","157","5","VB","7",
+        "N/A ",
         ""),
 
-    ElementDetailConstructor(106, "Sg", "Seaborg", "1974", "Albert Ghiorso", "263.11 u", "[Rn] 5f14 6d4 7s2[1]","106","106","163","","","7","N/A ",
+    ElementDetailConstructor(106, "Sg", "Seaborgium", "1974", "Albert Ghiorso", "-", "[Rn] 5f14 6d4 7s2[1]","106","106","163","6","VIB","7","N/A ",
         ""),
 
-    ElementDetailConstructor(107, "Bh", "Bohium", "", "", "", "262.11 u","107","107","160","","","7","N/A ",
+    ElementDetailConstructor(107, "Bh", "Bohrium", "1981", "	Gesellschaft für", "264 u", " u","107","107","160","7","VIIB","7","N/A ",
         ""),
 
-    ElementDetailConstructor(108, "Mt", "Meitnerium", "", "", "", "269 u","108","108","161","","","7","N/A ",
+    ElementDetailConstructor(108, "Mt", "Hassium", "1982", "Peter Armbruster", "277 u", "-","108","108","161","N/A","VIIIB","7","N/A ",
         ""),
 
-    ElementDetailConstructor(109, "Uun", "Ununnillium", "", "", "", "278 u","109","109","169","","","7","N/A ",
+    ElementDetailConstructor(109, "Uun", "Meitnerium", "1982", "Gesellschaft für", "278 u", "[Rn] 5f14 6d7 7s2","109","109","169","N/A","VIIIB","7","N/A ",
         ""),
 
-    ElementDetailConstructor(110, "Uun", "Unununbium", "", "", "", "281 u","110","110","171","","","7","N/A ",
+    ElementDetailConstructor(110, "Uun", "Darmstadtium", "1994", " Sigurd Hofmann", "281 u", "[Rn] 5f14 6d8 7s2 ","110","110","171","N/A","VIIIB","7","N/A ",
         ""),
 
-    ElementDetailConstructor(111, "Rf", "Ununbium", "", "", "", "281 u","111","111","171","","","7","N/A ",
+    ElementDetailConstructor(111, "Rf", "Roentgenium", "1994", "Gesellschaft für", "[Rn] 5f14 6d9 7s2", "281 u","111","111","171","N/A","IB","7","N/A ",
         ""),
 
-    ElementDetailConstructor(112, "Db", "Dubnium", "", "", "", "285.17 u","112","112","173","","","7"," N/A",
+    ElementDetailConstructor(112, "Cn", "Copernicium", "1996", "	Gesellschaft für", "285 u", "[Rn] 5f14 6d10 7s2","112","112","173","N/A","IIB","7"," N/A",
         ""),
 
 
+  // ElementDetailConstructor(
+  //     this.elementNumber,
+  //     this.elementNameSymbol,
+  //     this.elementFullName,
+  //     this.yearOfDiscovery,
+  //     this.elementDiscoveryBy,
+  //     this.elementAtomicMass,
+  //     this.electronConfiguration,
+  //     this.numberOfElectrons,
+  //     this.numberOfProtons,
+  //     this.numberOfNeutrons,
+  //     this.valencyOfAtom,
+  //     this.groupNumberOfAtom,
+  //     this.periodNumberOfAtom,
+  //     this.electronAffinity,
+  //     this.imageLink);
 
 
-    ElementDetailConstructor(113, "", "","", "", "", "", "","","","","","7"," ",
+    ElementDetailConstructor(113, "Nh", "Nihonium","2003", "-", "286 u", "[Rn] 5f14 6d10 7s2 7p1", "113","113","173","N/A","IIIA","7","N/A",
       "",),
 
-    ElementDetailConstructor(114, "Uuq", "Ununquadium", "", "", "", "","114","114","175","","","7","N/A ",
+    ElementDetailConstructor(114, "Fl", "Flerovium", "1998", "Yuri Oganessian", "289 u", "[Rn]7s2 5f14 6d10 7p2","114","114","175","N/A","IVA","7","N/A ",
         ""),
 
-    ElementDetailConstructor(115, "", "", "", "", "", "","","","","","VA","7","N/A ",
+    ElementDetailConstructor(115, "Mc", "Moscovium", "2003", "Yuri Oganessian", "289 u", "[Rn] 5f14 6d10 7s2 7p3","115","115","174","N/A","VA","7","N/A ",
         ""),
 
-    ElementDetailConstructor(116, "Uuh", "Ununhexium", "", "", "", "","116","116","177","","","7","N/A ",
+    ElementDetailConstructor(116, "Lv", "Livermorium", "2000", "Yuri Oganessian", "293 u", "[Rn] 5f14 6d10 7s2 7p4","116","116","177","N/A","VIA","7","N/A ",
         ""),
 
-    ElementDetailConstructor(117, "", "", "", "", "", "","","","","","","7","N/A ",
+    ElementDetailConstructor(117, "Ts", "Tennessine", "2010", " Yuri Oganessian", "293 u", "[Rn] 5f14 6d10 7s2 7p5","117","117","177","N/A","VIIA","7","N/A ",
         ""),
 
-    ElementDetailConstructor(118, "", "", "", "", "", "","","","","","","7","N/A ",
+    ElementDetailConstructor(118, "Og", "Oganesson", "2006", "Yuri Oganesson", "294 u", "[Rn] 5f14 6d10 7s2 7p6","118","118","176","N/A","VIIIA","7","N/A ",
         ""),
 
   ];
