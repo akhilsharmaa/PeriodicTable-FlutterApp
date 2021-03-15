@@ -54,7 +54,13 @@ class _DetailedPageState extends State<DetailedPage> {
 
   @override
   Widget build(BuildContext context) {
-  ListOfElements listOfElements = new ListOfElements();
+
+
+    var screenHeight = MediaQuery.of(context).size.height;
+    var screenWidth = MediaQuery.of(context).size.width;
+
+
+    ListOfElements listOfElements = new ListOfElements();
 
     return Scaffold(
       backgroundColor: Colors.grey.shade900,
@@ -69,102 +75,145 @@ class _DetailedPageState extends State<DetailedPage> {
 
         children: [
 
-
-          // Image Background
-
+          // Stack Image
           Stack(
             alignment: Alignment.bottomLeft,
             children: [
               Container(
-                height: 220,
+                height: screenHeight*0.2,
                 decoration: BoxDecoration(
                     image: DecorationImage(
-                        colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.5), BlendMode.dstIn),
+                        colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.4), BlendMode.dstIn),
                         alignment: Alignment.center,
                         fit: BoxFit.cover,
                         image: NetworkImage("${listOfElements.getElementImageLink(getElementNumber())}")
                     )
                 ),
               ),
-              Column(
 
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left:24.0),
-                    child: Text("${listOfElements.getElementNumber(getElementNumber())}",style: TextStyle(fontSize: 20,color: Colors.white),),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left:32.0),
-                    child: Text("${listOfElements.getElementSymbol(getElementNumber())}",style: TextStyle(fontSize: 50,color: Colors.orange),),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left:32.0,bottom: 5),
-                    child: Text("${listOfElements.getElementFullName(getElementNumber())}",style: TextStyle(fontSize: 32,color: Colors.white),),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left:35.0,bottom: 10),
-                    child: Text("${listOfElements.getElementAtomicMass(getElementNumber())}",style: TextStyle(fontSize: 20,color: Colors.white60),),
-                  ),
-                ],
-              )
+              Positioned(
+                left: 10,
+                bottom: 10,
+                child: Column(
+
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left:24.0),
+                      child: Text("${listOfElements.getElementNumber(getElementNumber())}",style: TextStyle(fontSize: screenHeight* 0.03,color: Colors.white),),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left:32.0),
+                      child: Text("${listOfElements.getElementSymbol(getElementNumber())}",style: TextStyle(fontSize: screenHeight* 0.05,color: Colors.orange.shade400),),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left:32.0,bottom: 5),
+                      child: Text("${listOfElements.getElementFullName(getElementNumber())}",style: TextStyle(fontSize: screenHeight * 0.02,color: Colors.white),),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left:35.0,bottom: 10),
+                      child: Text("${listOfElements.getElementAtomicMass(getElementNumber())}",style: TextStyle(fontSize: screenHeight * 0.015,color: Colors.white60),),
+                    ),
+                  ],
+                ),
+              ),
             ],),
+
+
+          // Group and Periods
+          SizedBox(height: screenHeight * 0.02,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Row(
+                children: [
+                  Text("Group  ",style: TextStyle(
+                      fontSize: screenHeight * 0.02 ,
+                      color: Colors.grey
+                  ),),
+                  Text("${listOfElements.getGroupNumberOfAtom(getElementNumber())}",style: TextStyle(
+                      fontSize: screenHeight * 0.025 ,
+                      color: Colors.orange
+                  ),),
+                ],
+              ),
+              // Container(
+              //   margin: EdgeInsets.only(top: 10,left: 20),
+              //   color: Colors.white,
+              //   height: screenHeight * 0.02,
+              //   width: screenWidth * 0.01,
+              // ), //
+              Row(
+                children: [
+                  Text("Period   ",style: TextStyle(
+                      fontSize: screenHeight * 0.02 ,
+                      color: Colors.grey
+                  ),),
+                  Text("${listOfElements.getPeriodNumberOfAtom(getElementNumber())}",style: TextStyle(
+                      fontSize: screenHeight * 0.025 ,
+                      color: Colors.orange
+                  ),),
+                ],
+              ),
+            ],
+          ),
 
 
 
 
           // Electron Proton and Neutron
-
           Container(
-            padding: EdgeInsets.only(left: 10,right: 10),
+            height: screenHeight*0.11,
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(10.0),
               child: Card(
-                color: Colors.red,
+
+                color: Colors.red.shade600,
                 child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.end,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(top :14 ,bottom: 14),
+                      padding: const EdgeInsets.all(8.0),
                       child: Column(
                         children: [
-                          Text("${widget.elementNumber}",style: TextStyle(
+                          Text("${listOfElements.getNumberOfElectrons(getElementNumber())}",style: TextStyle(
                               color: Colors.white,
-                              fontSize: 24
+                              fontSize: screenHeight * 0.03
                           ),),
                           Text("electron",style: TextStyle(
                               color: Colors.white,
-                              fontSize: 12
+                              fontSize: screenHeight * 0.013
                           ),),
                         ],
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(top :14 ,bottom: 14),
+                      padding: const EdgeInsets.all(8.0),
                       child: Column(
                         children: [
-                          Text("20",style: TextStyle(
+                          Text("${listOfElements.getNumberOfProtons(getElementNumber())}",style: TextStyle(
                               color: Colors.white,
-                              fontSize: 24
+                              fontSize: screenHeight * 0.03
                           ),),
                           Text("proton",style: TextStyle(
                               color: Colors.white,
-                              fontSize: 12
+                              fontSize: screenHeight * 0.013
                           ),),
                         ],
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(top :14 ,bottom: 14),
+                      padding: const EdgeInsets.all(8.0),
                       child: Column(
                         children: [
-                          Text("20",style: TextStyle(
+                          Text("${listOfElements.getNumberOfNeutron(getElementNumber())}",style: TextStyle(
                               color: Colors.white,
-                              fontSize: 24
+                              fontSize: screenHeight * 0.03
                           ),),
                           Text("neutron",style: TextStyle(
                               color: Colors.white,
-                              fontSize: 12
+                              fontSize: screenHeight * 0.013
                           ),),
                         ],
                       ),
@@ -176,97 +225,34 @@ class _DetailedPageState extends State<DetailedPage> {
           ),
 
 
-          // Group and Periods
-          SizedBox(height: 10,),
-
-          Row(
-
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-
-              Row(
-                children: [
-                  SizedBox(width: 16,),
-                  Text("Group  ",style: TextStyle(
-                    fontSize: 18 ,
-                    color: Colors.grey
-                  ),),
-                  Text("IIA",style: TextStyle(
-                    fontSize: 20 ,
-                    color: Colors.orange
-                  ),),
-                ],
-              ),
-
-              Container(
-                margin: EdgeInsets.only(top: 10,left: 20),
-                color: Colors.white,
-                height: 30,
-                width: 2,
-              ), //
-
-              Row(
-                children: [
-                  SizedBox(width: 16,),
-                  Text("Period   ",style: TextStyle(
-                      fontSize: 18 ,
-                      color: Colors.grey
-                  ),),
-                  Text("4",style: TextStyle(
-                      fontSize: 20 ,
-                      color: Colors.orange
-                  ),),
-                ],
-              ),
-            ],
-          ),
 
 
 
-          SizedBox(height: 10,),
-
-
-
-          Container(
-            margin: EdgeInsets.only(top: 10,left: 20),
-            color: Colors.grey,
-            height: 0.5,
-          ), //
-
-          // Divider
-          SizedBox(height: 8),
-
-
-
-          // Atomic Number
+          // Discovery By
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(width: 20),
+              SizedBox(width: screenWidth* 0.05),
               Icon(Icons.list,color: Colors.orange,),
-              SizedBox(width: 10),
-              Text("Atomic number :",style: TextStyle(
+              SizedBox(width: screenWidth* 0.05),
+              Text("Discovered by :",style: TextStyle(
                   fontSize: 14 ,
                   color: Colors.grey
               ),), SizedBox(
                 width: 20,
               ),
-              Text("20",style: TextStyle(
-                  fontSize: 20 ,
+              Text("${listOfElements.getElementDiscoveryBy(getElementNumber())}",style: TextStyle(
+                  fontSize: 14 ,
                   color: Colors.white
               ),),
             ],
           ) ,
 
 
-          Container(
-            margin: EdgeInsets.only(top: 10,left: 20),
-            color: Colors.orange,
-            height: 0.5,
-          ), // Divider
-
           SizedBox(height: 8),
+
+
 
           // Year of Discovery
           Row(
@@ -280,18 +266,19 @@ class _DetailedPageState extends State<DetailedPage> {
               ),), SizedBox(
                 width: 20,
               ),
-              Text("1808",style: TextStyle(
+              Text("${listOfElements.getYearOfDiscovery(getElementNumber())}",style: TextStyle(
                   fontSize: 20 ,
-                  color: Colors.white),
-              ),
+                  color: Colors.white
+              ),),
             ],
           ),
 
           Container(
             margin: EdgeInsets.only(top: 10,left: 20,bottom: 10),
-            color: Colors.greenAccent,
-            height: 0.5,
+            color: Colors.grey,
+            height: 0.2,
           ), //
+
 
 
           // Electronic Configuration
@@ -300,15 +287,15 @@ class _DetailedPageState extends State<DetailedPage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SizedBox(width: 20),
-              Icon(Icons.circle,color: Colors.blue,),
+              Icon(Icons.label_important_outline,color: Colors.blue,),
               SizedBox(width: 10),
-              Text("Electronic configuration :",style: TextStyle(
+              Text("Ele - config :",style: TextStyle(
                   fontSize: 14 ,
                   color: Colors.grey
               ),), SizedBox(
                 width: 20,
               ),
-              Text("[Ar]4s2",style: TextStyle(
+              Text("${listOfElements.getElementElectronConfiguration(getElementNumber())}",style: TextStyle(
                   fontSize: 20 ,
                   color: Colors.white
               ),),
@@ -318,33 +305,64 @@ class _DetailedPageState extends State<DetailedPage> {
 
           Container(
             margin: EdgeInsets.only(top: 10,left: 20,bottom: 10),
-            color: Colors.blue,
-            height: 0.5,
+            color: Colors.grey,
+            height: 0.2,
           ), // Divider
 
+
+
+          // Valency
           Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  SizedBox(width: 20),
-                  Icon(Icons.circle,color: Colors.blue,),
-                  SizedBox(width: 10),
-                  Text("Atomic radius :",style: TextStyle(
-                      fontSize: 14 ,
-                      color: Colors.grey
-                  ),), SizedBox(
-                    width: 20,
-                  ),
-                  Text("197 (pm)",style: TextStyle(
-                      fontSize: 20 ,
-                      color: Colors.white
-                  ),),
-                ],
-              ) ,
+              SizedBox(width: 20),
+              Icon(Icons.label_important_outline,color: Colors.blue,),
+              SizedBox(width: 10),
+              Text("Valency :",style: TextStyle(
+                  fontSize: 14 ,
+                  color: Colors.grey
+              ),), SizedBox(
+                width: 20,
+              ),
+              Text("${listOfElements.getValencyOfAtom(getElementNumber())}",style: TextStyle(
+                  fontSize: 20 ,
+                  color: Colors.white
+              ),),
             ],
-          ),
+          ) ,
+
+
+          Container(
+            margin: EdgeInsets.only(top: 10,left: 20,bottom: 10),
+            color: Colors.grey,
+            height: 0.2,
+          ), // Divider
+
+
+
+          // Electron affinity:
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              SizedBox(width: 20),
+              Icon(Icons.label_important_outline,color: Colors.blue,),
+              SizedBox(width: 10),
+              Text("Electron affinity:",style: TextStyle(
+                  fontSize: 14 ,
+                  color: Colors.grey
+              ),), SizedBox(
+                width: 20,
+              ),
+              Text("${listOfElements.getElectronAffinity(getElementNumber())}",style: TextStyle(
+                  fontSize: 20 ,
+                  color: Colors.white
+              ),),
+            ],
+          ) ,
+
+
           ElementsListTileListView("Van der waals radius", "231(pm)"),
           ElementsListTileListView("Electron gravity", "1"),
           ElementsListTileListView("Electron gravity", "1"),
