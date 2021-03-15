@@ -61,7 +61,7 @@ class _MyAppState extends State<MyApp> {
           bottom: TabBar(
 
             tabs: [
-              Tab(text: "Grid view",),
+              Tab(text: "Modern table",),
               Tab(text: "Page view",),
               Tab(text: "List view",),
             ],
