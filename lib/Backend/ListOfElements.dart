@@ -53,6 +53,9 @@ class ListOfElements{
   String  getElectronAffinity(int elementNumber) {return elementList[elementNumber+1].electronAffinity;}
     // return elementList[elementNumber].imageLink;}
 
+  String  getVanderWallRadius(int elementNumber) {return elementList[elementNumber+1].vanDerWallsRadius;}
+    // return elementList[elementNumber].imageLink;}
+
   String  getElementImageLink(int elementNumber) {return elementList[elementNumber+1].imageLink;}
     // return elementList[elementNumber].imageLink;
 
@@ -284,8 +287,8 @@ class ListOfElements{
     ElementDetailConstructor(68, "Er", "Erbium", "1842", "Carl Gustaf Mosander", "167.259 u","[Xe] 4f12 6s2", "68","68","99","3","IIIB","6","50 kJ/mol ","N/A",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Erbium-crop.jpg/170px-Erbium-crop.jpg"),
 
-    ElementDetailConstructor(69, "Tm","Thulium", "1879", "Per Teodor Cleve", "168.93421 u", "[Xe] 4f13 6s2","69","69","100","3","IIIB","6","50 kJ/mol ","N/A",
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Thulium_sublimed_dendritic_and_1cm3_cube.jpg/220px-Thulium_sublimed_dendritic_and_1cm3_cube.jpg"),"N/A",
+    ElementDetailConstructor(69, "Tm", "Tulium", "1879", "Per Teodor Cleve", "168.93421 u", "[Xe] 4f13 6s2","69","69","100","3","IIBB","6","50 kJ/mol ","N/A",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Thulium_sublimed_dendritic_and_1cm3_cube.jpg/220px-Thulium_sublimed_dendritic_and_1cm3_cube.jpg"),
 
     ElementDetailConstructor(70, "Yb", "Ytterbium", "1878", "Jean Charles Galissard de", "173.04 u", "[Xe] 4f14 6s2","70","70","103","3","IVB","6","50 kJ/mol ","N/A",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Ytterbium-3.jpg/220px-Ytterbium-3.jpg"),
