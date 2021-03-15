@@ -13,6 +13,7 @@ class ElementDetailConstructor{
   final groupNumberOfAtom;
   final periodNumberOfAtom;
   final electronAffinity;
+  final vanDerWallsRadius;
   final imageLink;
 
   ElementDetailConstructor(
@@ -30,6 +31,6 @@ class ElementDetailConstructor{
       this.groupNumberOfAtom,
       this.periodNumberOfAtom,
       this.electronAffinity,
+      this.vanDerWallsRadius,
       this.imageLink);
-  // ElementDetailConstructor(this.elementNumber,this.elementNameSymbol,this.elementFullName,this.imageLink);
 }
