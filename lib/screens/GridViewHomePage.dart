@@ -21,21 +21,19 @@ class GridViewHomePage extends StatelessWidget {
         child: ListView(
           scrollDirection: Axis.horizontal,
             children: [
-              Expanded(
-                child: Column(
-                  children: [
-                    ColumnSeries(),
-                    Row1(),
-                    Row2(),
-                    Row3(),
-                    Row4(),
-                    Row5(),
-                    Row6(),
-                    Row7(),
-                    Padding(padding: EdgeInsets.only(top: 30)),
-                    BlockF()
-                  ],
-                ),
+              Column(
+                children: [
+                  ColumnSeries(),
+                  Row1(),
+                  Row2(),
+                  Row3(),
+                  Row4(),
+                  Row5(),
+                  Row6(),
+                  Row7(),
+                  Padding(padding: EdgeInsets.only(top: 30)),
+                  BlockF()
+                ],
               )
             ],
         )
