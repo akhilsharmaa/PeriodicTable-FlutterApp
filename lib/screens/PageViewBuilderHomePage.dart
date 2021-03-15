@@ -40,6 +40,7 @@ class _PageViewBuilderHomePageState extends State<PageViewBuilderHomePage> {
             child: Container(
               decoration: BoxDecoration(),
               child: PageView.builder(
+                itemCount: listOfElements.elementList.length-1,
                 scrollDirection: Axis.vertical,
               itemBuilder: (context, index){
                 return Container(
@@ -139,7 +140,7 @@ class _PageViewBuilderHomePageState extends State<PageViewBuilderHomePage> {
 
                       // Electron Proton and Neutron
                       Container(
-                        height: screenHeight*0.11,
+                        height: screenHeight*0.13,
                         child: Padding(
                           padding: const EdgeInsets.all(10.0),
                           child: Card(
@@ -272,7 +273,7 @@ class _PageViewBuilderHomePageState extends State<PageViewBuilderHomePage> {
                             width: 20,
                           ),
                           Text("${listOfElements.getElementElectronConfiguration(index)}",style: TextStyle(
-                              fontSize: 20 ,
+                              fontSize: screenHeight*0.015,
                               color: Colors.white
                           ),),
                         ],
@@ -280,7 +281,7 @@ class _PageViewBuilderHomePageState extends State<PageViewBuilderHomePage> {
 
 
                       Container(
-                        margin: EdgeInsets.only(top: 10,left: 20,bottom: 10),
+                        margin: EdgeInsets.only(top: screenHeight*0.005,left: 20,bottom: 10),
                         color: Colors.grey,
                         height: 0.2,
                       ), // Divider
@@ -308,9 +309,8 @@ class _PageViewBuilderHomePageState extends State<PageViewBuilderHomePage> {
                         ],
                       ) ,
 
-
                       Container(
-                        margin: EdgeInsets.only(top: 10,left: 20,bottom: 10),
+                        margin: EdgeInsets.only(top: screenHeight*0.005,left: 20,bottom: 10),
                         color: Colors.grey,
                         height: 0.2,
                       ), // Divider
@@ -332,7 +332,7 @@ class _PageViewBuilderHomePageState extends State<PageViewBuilderHomePage> {
                             width: 20,
                           ),
                           Text("${listOfElements.getElectronAffinity(index)}",style: TextStyle(
-                              fontSize: 20 ,
+                              fontSize: screenHeight* 0.015 ,
                               color: Colors.white
                           ),),
                         ],
