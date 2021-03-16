@@ -1,5 +1,8 @@
 import 'package:periodic_table/Backend/ElementDetailConstructor.dart';
 
+
+//Version 1.0.0 +1 completed.
+
 class ListOfElements{
 
   void main(){
@@ -295,7 +298,7 @@ class ListOfElements{
     ElementDetailConstructor(70, "Yb", "Ytterbium", "1878", "J. Charles G. de", "173.04 u", "[Xe] 4f14 6s2","70","70","103","3","IVB","6","50 kJ/mol ","N/A",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Ytterbium-3.jpg/220px-Ytterbium-3.jpg"),
 
-    ElementDetailConstructor(71, "Lu","Lutetium", "1907", "Carl A. von Welsbach", "174.967 u", "[Xe] 4f14 5d16 s2","71","71","104","3","IVB","6","50 kJ/mol ","N/A",
+    ElementDetailConstructor(71, "Lu","Lutetium", "1907", "Carl A. Welsbach", "174.967 u", "[Xe] 4f14 5d16 s2","71","71","104","3","IVB","6","50 kJ/mol ","N/A",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Lutetium_sublimed_dendritic_and_1cm3_cube.jpg/220px-Lutetium_sublimed_dendritic_and_1cm3_cube.jpg"),
 
 

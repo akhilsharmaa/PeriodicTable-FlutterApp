@@ -2,6 +2,8 @@ import 'dart:io';
 
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
+//Version 1.0.0 +1 completed.
+
 class AdState{
   Future<InitializationStatus> initialization ;
 

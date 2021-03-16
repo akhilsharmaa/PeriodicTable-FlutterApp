@@ -1,3 +1,7 @@
+
+//Version 1.0.0 +1 completed.
+
+
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:periodic_table/adState.dart';

@@ -1,3 +1,5 @@
+//Version 1.0.0 +1 completed.
+
 class ElementDetailConstructor{
   final elementNameSymbol;
   final elementFullName;

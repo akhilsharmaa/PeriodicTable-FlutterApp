@@ -1,3 +1,7 @@
+
+//Version 1.0.0 +1 completed.
+
+
 import 'package:firebase_admob/firebase_admob.dart';
 import 'package:flutter/material.dart';
 import 'package:periodic_table/Backend/ListOfElements.dart';
