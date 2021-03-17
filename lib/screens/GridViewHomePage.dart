@@ -21,7 +21,7 @@ class GridViewHomePage extends StatelessWidget {
 
       body: Container(
 
-        color: Colors.grey.shade900,
+          color: const Color(0xFF002936),
         child: ListView(
           scrollDirection: Axis.horizontal,
             children: [
