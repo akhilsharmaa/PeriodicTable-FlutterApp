@@ -17,6 +17,7 @@ class ElementDetailConstructor{
   final electronAffinity;
   final vanDerWallsRadius;
   final atomDensity;
+  final wikipediaLink;
   final imageLink;
 
   ElementDetailConstructor(
@@ -36,5 +37,6 @@ class ElementDetailConstructor{
       this.electronAffinity,
       this.vanDerWallsRadius,
       this.atomDensity,
+      this.wikipediaLink,
       this.imageLink);
 }

@@ -5,6 +5,7 @@
 import 'package:firebase_admob/firebase_admob.dart';
 import 'package:flutter/material.dart';
 import 'package:periodic_table/Backend/ListOfElements.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 const String testDevices = '05F58B3D963409FECCCCE6365F6FB23F';
 
@@ -70,6 +71,18 @@ class _DetailedPageState extends State<DetailedPage> {
       backgroundColor: Colors.grey.shade900,
 
       appBar: AppBar(
+        actions: [
+          InkWell(
+            child: Container(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text("Wikipedia"),
+              ),
+            ),
+
+            onTap:()=> launch("${listOfElements.getWikipediaLink(getElementNumber())}"),
+          )
+        ],
         toolbarHeight: 50,
         elevation: 0,
         backgroundColor: Colors.red,
@@ -118,10 +131,22 @@ class _DetailedPageState extends State<DetailedPage> {
                       padding: const EdgeInsets.only(left:35.0,bottom: 10),
                       child: Text("${listOfElements.getElementAtomicMass(getElementNumber())}",style: TextStyle(fontSize: screenHeight * 0.015,color: Colors.white60),),
                     ),
+
+
                   ],
                 ),
               ),
-            ],),
+              //
+              // Positioned(
+              //   right: 15,
+              //   top: 10,
+              //   child: RaisedButton(
+              //     onPressed:()=> launch("${listOfElements.getWikipediaLink(getElementNumber())}"),
+              //     child: Text("Wikipedia"),
+              // ),)
+            ],
+
+          ),
 
 
           // Group and Periods

@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 import 'package:periodic_table/Backend/ListOfElements.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'DetailedPage.dart';
 
