@@ -368,10 +368,9 @@ class _DetailedPageState extends State<DetailedPage> {
 
 
           ElementsListTileListView("Van der waals radius", "${listOfElements.getVanderWallRadius(getElementNumber())}"),
-          // ElementsListTileListView("Electron gravity", "1"),
-          // ElementsListTileListView("Electron gravity", "1"),
-          // ElementsListTileListView("Electron gravity", "1"),
-          // ElementsListTileListView("Electron gravity", "1"),
+          HeadingProperties("C properties"),
+          ElementsListTileListView("Atom density", "${listOfElements.getAtomDensity(getElementNumber())}"),
+
         ],
       ),
     );
@@ -420,3 +419,35 @@ class ElementsListTileListView extends StatelessWidget {
     );
   }
 }
+
+
+class HeadingProperties extends StatelessWidget {
+
+
+  var heading;
+
+  HeadingProperties(this.heading);
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(top:8.0),
+      child: Container(
+        height: 45,
+        color: Colors.greenAccent,
+        child: Row(
+          children: [
+            SizedBox(width: 10,),
+            Icon(Icons.pending_rounded),
+            SizedBox(width: 10,),
+            Text("$heading",style: TextStyle(
+              color: Colors.black
+            ),),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
