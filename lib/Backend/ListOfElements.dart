@@ -568,39 +568,39 @@ class ListOfElements{
 
 
     ElementDetailConstructor(104, "Rf", "Ratherfordium", "1964", "Albert Ghiorso", "261.1 u", "[Rn] 5f14 6d27 s2","104","104","157","4","IVB","7", "N/A ","N/A","--",
-        "https://en.wikipedia.org/wiki/Ratherfordium","N/A","N/A","",
+        "https://en.wikipedia.org/wiki/Ratherfordium","N/A","N/A","N/A",
         ""),
 
     ElementDetailConstructor(105, "Db", "Dubnium", "1967", "Albert Ghiorso","262 u", "[Rn] 5f14 6d3 7s2", "105","105","157","5","VB","7","N/A", "N/A ","29 (g/cm³)",
-        "https://en.wikipedia.org/wiki/Dubnium","N/A","N/A","",
+        "https://en.wikipedia.org/wiki/Dubnium","N/A","N/A","N/A",
         ""),
 
     ElementDetailConstructor(106, "Sg", "Seaborgium", "1974", "Albert Ghiorso", "-", "[Rn] 5f14 6d4 7s2[1]","106","106","163","6","VIB","7","N/A ","N/A","35 (g/cm³)",
-        "https://en.wikipedia.org/wiki/Seaborgium","N/A","N/A","0.98",
+        "https://en.wikipedia.org/wiki/Seaborgium","N/A","N/A","N/A",
         ""),
 
     ElementDetailConstructor(107, "Bh", "Bohrium", "1981", "	Gesellschaft für", "264 u", " u","107","107","160","7","VIIB","7","N/A ","N/A","37 (g/cm³)",
-        "https://en.wikipedia.org/wiki/Bohrium","N/A","N/A","",
+        "https://en.wikipedia.org/wiki/Bohrium","N/A","N/A","N/A",
         ""),
 
     ElementDetailConstructor(108, "Mt", "Hassium", "1982", "Peter Armbruster", "277 u", "-","108","108","161","N/A","VIIIB","7","N/A ","N/A","--",
-        "https://en.wikipedia.org/wiki/Hassium","N/A","N/A","2.04",
+        "https://en.wikipedia.org/wiki/Hassium","N/A","N/A","N/A",
         ""),
 
     ElementDetailConstructor(109, "Uun", "Meitnerium", "1982", "Gesellschaft für", "278 u", "[Rn] 5f14 6d7 7s2","109","109","169","N/A","VIIIB","7","N/A ","N/A","37.4 (g/cm³)",
-        "https://en.wikipedia.org/wiki/Meitnerium","N/A","N/A","",
+        "https://en.wikipedia.org/wiki/Meitnerium","N/A","N/A","N/A",
         ""),
 
     ElementDetailConstructor(110, "Uun", "Darmstadtium", "1994", " Sigurd Hofmann", "281 u", "[Rn] 5f14 6d8 7s2 ","110","110","171","N/A","VIIIB","7","N/A ","N/A","34.8 (g/cm³)",
-        "https://en.wikipedia.org/wiki/Darmstadtium","N/A","N/A","",
+        "https://en.wikipedia.org/wiki/Darmstadtium","N/A","N/A","N/A",
         ""),
 
     ElementDetailConstructor(111, "Rf", "Roentgenium", "1994", "Gesellschaft für", "[Rn] 5f14 6d9 7s2", "281 u","111","111","171","N/A","IB","7","N/A ","N/A","--",
-        "https://en.wikipedia.org/wiki/Roentgenium","N/A","N/A","",
+        "https://en.wikipedia.org/wiki/Roentgenium","N/A","N/A","N/A",
         ""),
 
     ElementDetailConstructor(112, "Cn", "Copernicium", "1996", "	Gesellschaft für", "285 u", "[Rn] 5f14 6d10 7s2","112","112","173","N/A","IIB","7"," N/A","N/A","20 (g/cm³)",
-        "https://en.wikipedia.org/wiki/Copernicium","N/A","N/A","",
+        "https://en.wikipedia.org/wiki/Copernicium","N/A","N/A","N/A",
         ""),
 
 
@@ -623,27 +623,27 @@ class ListOfElements{
 
 
     ElementDetailConstructor(113, "Nh", "Nihonium","2003", "-", "286 u", "[Rn] 5f14 6d10 7s2 7p1", "113","113","173","N/A","IIIA","7","N/A","N/A","16 (g/cm³)",
-      "https://en.wikipedia.org/wiki/Nihonium","N/A","N/A","",
+      "https://en.wikipedia.org/wiki/Nihonium","N/A","N/A","N/A",
       "",),
 
     ElementDetailConstructor(114, "Fl", "Flerovium", "1998", "Yuri Oganessian", "289 u", "[Rn]7s2 5f14 6d10 7p2","114","114","175","N/A","IVA","7","N/A ","N/A","14 (g/cm³)",
-        "https://en.wikipedia.org/wiki/Flerovium","N/A","N/A","",
+        "https://en.wikipedia.org/wiki/Flerovium","N/A","N/A","N/A",
         ""),
 
     ElementDetailConstructor(115, "Mc", "Moscovium", "2003", "Yuri Oganessian", "289 u", "[Rn] 5f14 6d10 7s2 7p3","115","115","174","N/A","VA","7","N/A ","N/A","13.5 (g/cm³)",
-        "https://en.wikipedia.org/wiki/Moscovium","N/A","N/A","",
+        "https://en.wikipedia.org/wiki/Moscovium","N/A","N/A","N/A",
         ""),
 
     ElementDetailConstructor(116, "Lv", "Livermorium", "2000", "Yuri Oganessian", "293 u", "[Rn] 5f14 6d10 7s2 7p4","116","116","177","N/A","VIA","7","N/A ","N/A","--",
-        "https://en.wikipedia.org/wiki/Livermorium","N/A","N/A","",
+        "https://en.wikipedia.org/wiki/Livermorium","N/A","N/A","N/A",
         ""),
 
     ElementDetailConstructor(117, "Ts", "Tennessine", "2010", " Yuri Oganessian", "293 u", "[Rn] 5f14 6d10 7s2 7p5","117","117","177","N/A","VIIA","7","N/A ","N/A","--",
-        "https://en.wikipedia.org/wiki/Tennessine","N/A","N/A","",
+        "https://en.wikipedia.org/wiki/Tennessine","N/A","N/A","N/A",
         ""),
 
     ElementDetailConstructor(118, "Og", "Oganesson", "2006", "Yuri Oganesson", "294 u", "[Rn] 5f14 6d10 7s2 7p6","118","118","176","N/A","VIIIA","7","N/A ","N/A","5 (g/cm³)",
-        "https://en.wikipedia.org/wiki/Oganesson","N/A","N/A","",
+        "https://en.wikipedia.org/wiki/Oganesson","N/A","N/A","N/A",
         ""),
 
   ];
