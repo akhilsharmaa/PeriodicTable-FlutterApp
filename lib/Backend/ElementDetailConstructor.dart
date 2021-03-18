@@ -20,6 +20,7 @@ class ElementDetailConstructor{
   final wikipediaLink;
   final phaseOfMatter;
   final atomicRadius;
+  final electronegativity;
   final imageLink;
 
   ElementDetailConstructor(
@@ -42,5 +43,6 @@ class ElementDetailConstructor{
       this.wikipediaLink,
       this.phaseOfMatter,
       this.atomicRadius,
+      this.electronegativity,
       this.imageLink);
 }
