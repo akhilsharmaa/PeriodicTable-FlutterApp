@@ -19,6 +19,7 @@ class ElementDetailConstructor{
   final atomDensity;
   final wikipediaLink;
   final phaseOfMatter;
+  final atomicRadius;
   final imageLink;
 
   ElementDetailConstructor(
@@ -40,5 +41,6 @@ class ElementDetailConstructor{
       this.atomDensity,
       this.wikipediaLink,
       this.phaseOfMatter,
+      this.atomicRadius,
       this.imageLink);
 }

@@ -396,6 +396,7 @@ class _DetailedPageState extends State<DetailedPage> {
           HeadingProperties("C properties"),
           ElementsListTileListView("Atom density", "${listOfElements.getAtomDensity(getElementNumber())}"),
           ElementsListTileListView("Phase of Matter", "${listOfElements.getPhaseOfMatter(getElementNumber())}"),
+          ElementsListTileListView("Atomic Radius", "${listOfElements.getAtomicRadius(getElementNumber())}"),
           ElementsListTileListView("", ""),
 
         ],
