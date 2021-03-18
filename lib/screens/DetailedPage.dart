@@ -68,7 +68,9 @@ class _DetailedPageState extends State<DetailedPage> {
     ListOfElements listOfElements = new ListOfElements();
 
     return Scaffold(
-      backgroundColor: Colors.grey.shade900,
+      backgroundColor: const Color(0xFF1C0E0E),
+      // backgroundColor: const Color(0xFF290013),
+
 
       appBar: AppBar(
         actions: [
@@ -89,9 +91,7 @@ class _DetailedPageState extends State<DetailedPage> {
         title: Text("${listOfElements.getElementFullName(getElementNumber())}"),
       ),
       body: ListView(
-
         children: [
-
           // Stack Image
           Stack(
             alignment: Alignment.bottomLeft,
@@ -459,16 +459,23 @@ class HeadingProperties extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top:8.0),
       child: Container(
-        height: 45,
-        color: Colors.greenAccent,
+        // elevation: 5,
+        // shadowColor: Colors.white,
+        // decoration: BoxDecoration(),
+        // height: 45,
+        color: Color(0xFF393939),
+        // color: Colors.black26,
         child: Row(
           children: [
             SizedBox(width: 10,),
-            Icon(Icons.pending_rounded),
+            Icon(Icons.pending_rounded ,color: Colors.greenAccent,),
             SizedBox(width: 10,),
-            Text("$heading",style: TextStyle(
-              color: Colors.black
-            ),),
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Text("$heading",style: TextStyle(
+                color: Colors.white
+              ),),
+            ),
           ],
         ),
       ),
