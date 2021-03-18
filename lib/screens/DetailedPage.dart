@@ -395,6 +395,8 @@ class _DetailedPageState extends State<DetailedPage> {
           ElementsListTileListView("Van der waals radius", "${listOfElements.getVanderWallRadius(getElementNumber())}"),
           HeadingProperties("C properties"),
           ElementsListTileListView("Atom density", "${listOfElements.getAtomDensity(getElementNumber())}"),
+          ElementsListTileListView("Phase of Matter", "${listOfElements.getPhaseOfMatter(getElementNumber())}"),
+          ElementsListTileListView("", ""),
 
         ],
       ),

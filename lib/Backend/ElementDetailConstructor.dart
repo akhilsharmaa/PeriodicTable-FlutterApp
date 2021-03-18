@@ -18,6 +18,7 @@ class ElementDetailConstructor{
   final vanDerWallsRadius;
   final atomDensity;
   final wikipediaLink;
+  final phaseOfMatter;
   final imageLink;
 
   ElementDetailConstructor(
@@ -38,5 +39,6 @@ class ElementDetailConstructor{
       this.vanDerWallsRadius,
       this.atomDensity,
       this.wikipediaLink,
+      this.phaseOfMatter,
       this.imageLink);
 }
