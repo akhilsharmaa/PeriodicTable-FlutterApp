@@ -68,7 +68,7 @@ class _DetailedPageState extends State<DetailedPage> {
     ListOfElements listOfElements = new ListOfElements();
 
     return Scaffold(
-      backgroundColor: const Color(0xFF1C0E0E),
+      backgroundColor: const Color(0xFF161616),
       // backgroundColor: const Color(0xFF290013),
 
 

@@ -143,7 +143,6 @@ class _PageViewBuilderHomePageState extends State<PageViewBuilderHomePage> {
 
                       // Electron Proton and Neutron
                       Container(
-                        height: screenHeight*0.13,
                         child: Padding(
                           padding: const EdgeInsets.all(10.0),
                           child: Card(
@@ -351,7 +350,7 @@ class _PageViewBuilderHomePageState extends State<PageViewBuilderHomePage> {
                           alignment: Alignment.topCenter,
                           children: [
                             Positioned(
-                              top: screenWidth * 0.15,
+                              top: 10,
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
@@ -382,17 +381,17 @@ class _PageViewBuilderHomePageState extends State<PageViewBuilderHomePage> {
 
 
 
-                            Positioned(
-                              bottom: screenWidth * 0.01,
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                // crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Icon(Icons.keyboard_arrow_down_sharp,color: Colors.red,size: 40,),
-                                  Text("Swipe for next",style: TextStyle(color: Colors.grey,fontSize: 16),),
-                                ],
-                              ),
-                            ),
+                            // Positioned(
+                            //   bottom: screenWidth * 0.01,
+                            //   child: Row(
+                            //     mainAxisAlignment: MainAxisAlignment.center,
+                            //     // crossAxisAlignment: CrossAxisAlignment.center,
+                            //     children: [
+                            //       Icon(Icons.keyboard_arrow_down_sharp,color: Colors.red,size: 40,),
+                            //       Text("Swipe for next",style: TextStyle(color: Colors.grey,fontSize: 16),),
+                            //     ],
+                            //   ),
+                            // ),
                           ],),
                       ),
 
