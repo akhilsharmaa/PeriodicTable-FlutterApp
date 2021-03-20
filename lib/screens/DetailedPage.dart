@@ -7,6 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:periodic_table/Backend/ListOfElements.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import 'ImageFullView.dart';
+
 const String testDevices = '05F58B3D963409FECCCCE6365F6FB23F';
 
 class DetailedPage extends StatefulWidget {
@@ -19,6 +21,7 @@ DetailedPage(this.elementNumber);
 }
 
 class _DetailedPageState extends State<DetailedPage> {
+
 
   static const MobileAdTargetingInfo targetingInfo = MobileAdTargetingInfo(
       testDevices: testDevices != null ? <String> [testDevices] : null ,
@@ -93,59 +96,66 @@ class _DetailedPageState extends State<DetailedPage> {
       body: ListView(
         children: [
           // Stack Image
-          Stack(
-            alignment: Alignment.bottomLeft,
-            children: [
-              Container(
-                height: screenHeight*0.2,
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.4), BlendMode.dstIn),
-                        alignment: Alignment.center,
-                        fit: BoxFit.cover,
-                        image: NetworkImage("${listOfElements.getElementImageLink(getElementNumber())}")
-                    )
+          InkWell(
+          onTap: (){
+            Navigator.of(context).push(MaterialPageRoute(builder:
+                (context) => ImageFullView(getElementNumber()),
+            ));
+            },
+            child: Stack(
+              alignment: Alignment.bottomLeft,
+              children: [
+                Container(
+                  height: screenHeight*0.2,
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.4), BlendMode.dstIn),
+                          alignment: Alignment.center,
+                          fit: BoxFit.cover,
+                          image: NetworkImage("${listOfElements.getElementImageLink(getElementNumber())}")
+                      )
+                  ),
                 ),
-              ),
 
-              Positioned(
-                left: 10,
-                bottom: 10,
-                child: Column(
+                Positioned(
+                  left: 10,
+                  bottom: 10,
+                  child: Column(
 
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left:24.0),
-                      child: Text("${listOfElements.getElementNumber(getElementNumber())}",style: TextStyle(fontSize: screenHeight* 0.03,color: Colors.white),),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left:32.0),
-                      child: Text("${listOfElements.getElementSymbol(getElementNumber())}",style: TextStyle(fontSize: screenHeight* 0.05,color: Colors.orange.shade400),),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left:32.0,bottom: 5),
-                      child: Text("${listOfElements.getElementFullName(getElementNumber())}",style: TextStyle(fontSize: screenHeight * 0.02,color: Colors.white),),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left:35.0,bottom: 10),
-                      child: Text("${listOfElements.getElementAtomicMass(getElementNumber())}",style: TextStyle(fontSize: screenHeight * 0.015,color: Colors.white60),),
-                    ),
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left:24.0),
+                        child: Text("${listOfElements.getElementNumber(getElementNumber())}",style: TextStyle(fontSize: screenHeight* 0.03,color: Colors.white),),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left:32.0),
+                        child: Text("${listOfElements.getElementSymbol(getElementNumber())}",style: TextStyle(fontSize: screenHeight* 0.05,color: Colors.orange.shade400),),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left:32.0,bottom: 5),
+                        child: Text("${listOfElements.getElementFullName(getElementNumber())}",style: TextStyle(fontSize: screenHeight * 0.02,color: Colors.white),),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left:35.0,bottom: 10),
+                        child: Text("${listOfElements.getElementAtomicMass(getElementNumber())}",style: TextStyle(fontSize: screenHeight * 0.015,color: Colors.white60),),
+                      ),
 
 
-                  ],
+                    ],
+                  ),
                 ),
-              ),
-              //
-              // Positioned(
-              //   right: 15,
-              //   top: 10,
-              //   child: RaisedButton(
-              //     onPressed:()=> launch("${listOfElements.getWikipediaLink(getElementNumber())}"),
-              //     child: Text("Wikipedia"),
-              // ),)
-            ],
+                //
+                // Positioned(
+                //   right: 15,
+                //   top: 10,
+                //   child: RaisedButton(
+                //     onPressed:()=> launch("${listOfElements.getWikipediaLink(getElementNumber())}"),
+                //     child: Text("Wikipedia"),
+                // ),)
+              ],
 
+            ),
           ),
 
 

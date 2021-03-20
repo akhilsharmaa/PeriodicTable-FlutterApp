@@ -15,13 +15,13 @@ class ListViewBuilderHomePage extends StatefulWidget {
 }
 
 class _ListViewBuilderHomePageState extends State<ListViewBuilderHomePage> {
-
-  BannerAd bannerAd;
+  //
+  // BannerAd bannerAd;
   //
   // @override
   // void didChangeDependencies(){
   //   super.didChangeDependencies();
-  //   // final adState = Provider.of<AdState>(context);
+  //   final adState = Provider.of<AdState>(context);
   //   adState.initialization.then((status) {
   //     setState(() {
   //       bannerAd = BannerAd(
@@ -123,11 +123,11 @@ class _ListViewBuilderHomePageState extends State<ListViewBuilderHomePage> {
                 },
               ),
             ),
-            if(bannerAd != null )
-             Container(
-              height: 60,
-              child: AdWidget(ad: bannerAd,),
-            )
+            // if(bannerAd != null )
+            //  Container(
+            //   height: 60,
+            //   child: AdWidget(ad: bannerAd,),
+            // )
           ],
         ),
       )

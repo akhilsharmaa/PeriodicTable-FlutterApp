@@ -10,6 +10,7 @@ import 'package:periodic_table/Backend/ListOfElements.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'DetailedPage.dart';
+import 'ImageFullView.dart';
 
 
 
@@ -52,50 +53,56 @@ class _PageViewBuilderHomePageState extends State<PageViewBuilderHomePage> {
                   child: Column(
                     children: [
 
-
                       // Image Background
-                      Stack(
-                        alignment: Alignment.bottomLeft,
-                        children: [
-                          Container(
-                            height: screenHeight*0.2,
-                            decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.4), BlendMode.dstIn),
-                                    alignment: Alignment.center,
-                                    fit: BoxFit.cover,
-                                    image: NetworkImage("${listOfElements.getElementImageLink(index)}")
-                                )
+                      InkWell(
+                       onTap: (){
+                         Navigator.of(context).push(MaterialPageRoute(builder:
+                             (context) => ImageFullView(index),
+                         ));
+                         },
+                        child: Stack(
+                          alignment: Alignment.bottomLeft,
+                          children: [
+                            Container(
+                              height: screenHeight*0.2,
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.4), BlendMode.dstIn),
+                                      alignment: Alignment.center,
+                                      fit: BoxFit.cover,
+                                      image: NetworkImage("${listOfElements.getElementImageLink(index)}")
+                                  )
+                              ),
                             ),
-                          ),
 
-                          Positioned(
-                            left: 10,
-                            bottom: 10,
-                            child: Column(
+                            Positioned(
+                              left: 10,
+                              bottom: 10,
+                              child: Column(
 
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(left:24.0),
-                                  child: Text("${listOfElements.getElementNumber(index)}",style: TextStyle(fontSize: screenHeight* 0.03,color: Colors.white),),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left:32.0),
-                                  child: Text("${listOfElements.getElementSymbol(index)}",style: TextStyle(fontSize: screenHeight* 0.05,color: Colors.orange.shade400),),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left:32.0,bottom: 5),
-                                  child: Text("${listOfElements.getElementFullName(index)}",style: TextStyle(fontSize: screenHeight * 0.02,color: Colors.white),),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left:35.0,bottom: 10),
-                                  child: Text("${listOfElements.getElementAtomicMass(index)}",style: TextStyle(fontSize: screenHeight * 0.015,color: Colors.white60),),
-                                ),
-                              ],
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(left:24.0),
+                                    child: Text("${listOfElements.getElementNumber(index)}",style: TextStyle(fontSize: screenHeight* 0.03,color: Colors.white),),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left:32.0),
+                                    child: Text("${listOfElements.getElementSymbol(index)}",style: TextStyle(fontSize: screenHeight* 0.05,color: Colors.orange.shade400),),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left:32.0,bottom: 5),
+                                    child: Text("${listOfElements.getElementFullName(index)}",style: TextStyle(fontSize: screenHeight * 0.02,color: Colors.white),),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left:35.0,bottom: 10),
+                                    child: Text("${listOfElements.getElementAtomicMass(index)}",style: TextStyle(fontSize: screenHeight * 0.015,color: Colors.white60),),
+                                  ),
+                                ],
+                              ),
                             ),
-                          ),
-                        ],),
+                          ],),
+                      ),
 
 
 
