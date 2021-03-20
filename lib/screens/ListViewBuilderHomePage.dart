@@ -17,22 +17,22 @@ class ListViewBuilderHomePage extends StatefulWidget {
 class _ListViewBuilderHomePageState extends State<ListViewBuilderHomePage> {
 
   BannerAd bannerAd;
-
-  @override
-  void didChangeDependencies(){
-    super.didChangeDependencies();
-    final adState = Provider.of<AdState>(context);
-    adState.initialization.then((status) {
-      setState(() {
-        bannerAd = BannerAd(
-          adUnitId: adState.bannerAdUnitId,
-          size: AdSize.banner,
-          request: AdRequest(),
-          listener: adState.adListener,
-        )..load();
-      });
-    });
-  }
+  //
+  // @override
+  // void didChangeDependencies(){
+  //   super.didChangeDependencies();
+  //   // final adState = Provider.of<AdState>(context);
+  //   adState.initialization.then((status) {
+  //     setState(() {
+  //       bannerAd = BannerAd(
+  //         adUnitId: adState.bannerAdUnitId,
+  //         size: AdSize.banner,
+  //         request: AdRequest(),
+  //         listener: adState.adListener,
+  //       )..load();
+  //     });
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {

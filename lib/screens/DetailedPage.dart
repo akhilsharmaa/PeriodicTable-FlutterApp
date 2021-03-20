@@ -334,7 +334,7 @@ class _DetailedPageState extends State<DetailedPage> {
 
           Container(
             margin: EdgeInsets.only(top: 10,left: 20,bottom: 10),
-            color: Colors.grey,
+            color: Colors.grey.shade600,
             height: 0.2,
           ), // Divider
 

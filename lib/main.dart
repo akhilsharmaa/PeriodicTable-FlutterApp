@@ -17,7 +17,7 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
   final initFuture = MobileAds.instance.initialize();
-  final adState = AdState(initFuture);
+  // final adState = AdState(initFuture);
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
     statusBarColor: Colors.red,
         statusBarIconBrightness: Brightness.light,
@@ -26,7 +26,7 @@ void main() {
   runApp(MaterialApp(
     themeMode: ThemeMode.dark,
     home: Provider.value(
-      value : adState ,
+      // value : adState ,
         builder : (context, child) =>  MyApp()),
 
     debugShowCheckedModeBanner: false,
