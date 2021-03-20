@@ -144,15 +144,15 @@ class ListOfElements{
         "https://en.wikipedia.org/wiki/Silicon","solid","111 pm","1.9",
         "https://cdn.mos.cms.futurecdn.net/4FvnXe9VBTHj6nJag6tNKL-1200-80.jpg"),
 
-    ElementDetailConstructor(15, "P", "Phosphorus","1669","Hennig Brandt","30.973762 u","[Ne] 3s²3p³","15","15","15", "3","VA","3","71 kJ/mol","180 pm","2.83 (g/cm³)",
+    ElementDetailConstructor(15, "P", "Phosphorus","1669","Hennig Brandt","30.973762 u","[Ne] 3s²3p³","15","15","15", "5","VA","3","71 kJ/mol","180 pm","2.83 (g/cm³)",
         "https://en.wikipedia.org/wiki/Phosphorus","solid","98 pm","2.19",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/White_phosphorus_glowing_e17.png/200px-White_phosphorus_glowing_e17.png"),
 
-    ElementDetailConstructor(16, "S","Sulfur","1809","Joseph Gay-Lussac","32.06 u","[Ne] 3s2 3p4","16","16","16","2","VIA","3","200 kJ/mol","180 pm","2.070 (g/cm³)",
+    ElementDetailConstructor(16, "S","Sulfur","1809","Joseph Gay-Lussac","32.06 u","[Ne] 3s2 3p4","16","16","16","6","VIA","3","200 kJ/mol","180 pm","2.070 (g/cm³)",
         "https://en.wikipedia.org/wiki/Sulfur","solid","87 pm","2.58",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Sulfur-sample.jpg/220px-Sulfur-sample.jpg"),
 
-    ElementDetailConstructor(17, "Cl", "Chlorine","1774","Carl Wilhelm Scheele","35.453 u","[Ne] 3s²3p⁵","17","17","17","1","VIIA","3","349 kJ/mol","175 pm","0.0032 (g/cm³)",
+    ElementDetailConstructor(17, "Cl", "Chlorine","1774","Carl Wilhelm Scheele","35.453 u","[Ne] 3s²3p⁵","17","17","17","5","VIIA","3","349 kJ/mol","175 pm","0.0032 (g/cm³)",
         "https://en.wikipedia.org/wiki/Chlorine","gas","79 pm","3.16",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Chlorine_ampoule.jpg/220px-Chlorine_ampoule.jpg"),
 
@@ -164,7 +164,7 @@ class ListOfElements{
         "https://en.wikipedia.org/wiki/Potassium","solid","243 pm","0.82",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Potassium-2.jpg/220px-Potassium-2.jpg"),
 
-    ElementDetailConstructor(20, "Ca", "Calcium","1808","Humphry Davy","40.078 u","[Ar] 4s²","20","20","20", "2","IIA","4","2.37 kJ/mol ","231 pm","1.55 (g/cm³)",
+    ElementDetailConstructor(20, "Ca", "Calcium","1808","Humphry Davy","40.078 u","[Ar] 4s²","20","20","20", "2","IIA","2","2.37 kJ/mol ","231 pm","1.55 (g/cm³)",
         "https://en.wikipedia.org/wiki/Calcium","solid","194 pm","1",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Calcium_unter_Argon_Schutzgasatmosph%C3%A4re.jpg/220px-Calcium_unter_Argon_Schutzgasatmosph%C3%A4re.jpg"),
 
@@ -180,15 +180,15 @@ class ListOfElements{
         "https://en.wikipedia.org/wiki/Titanium","solid","176 pm","1.54",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Titan-crystal_bar.JPG/220px-Titan-crystal_bar.JPG"),
 
-    ElementDetailConstructor(23, "V", "Vanadium","1801", "Andrés Manuel", "50.9415 u", "[Ar] 3d34s2","23","23","23","4","VB","4","50.6 kJ/mol ","N/A","6.11 (g/cm³)",
+    ElementDetailConstructor(23, "V", "Vanadium","1801", "Andrés Manuel", "50.9415 u", "[Ar] 3d34s2","23","23","23","5","VB","4","50.6 kJ/mol ","N/A","6.11 (g/cm³)",
         "https://en.wikipedia.org/wiki/Vanadium","solid","171 pm","1.63",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Vanadium_etched.jpg/220px-Vanadium_etched.jpg"),
 
-    ElementDetailConstructor(24, "Cr", "Chromium","1797"," Louis Nicolas","51.9961 u","[Ar] 3d⁵4s¹","24","24","24", "2","VIB","4","64.3 kJ/mol ","N/A","7.19 (g/cm³)",
+    ElementDetailConstructor(24, "Cr", "Chromium","1797"," Louis Nicolas","51.9961 u","[Ar] 3d⁵4s¹","24","24","24", "6","VIB","4","64.3 kJ/mol ","N/A","7.19 (g/cm³)",
         "https://en.wikipedia.org/wiki/Chromium","solid","166 pm","1.66",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Chromium_crystals_and_1cm3_cube.jpg/220px-Chromium_crystals_and_1cm3_cube.jpg"),
 
-    ElementDetailConstructor(25, "Mn", "Manganese", "1774", " Jhan Gottlieb ", "54.938044 u", "[Ar] 3d54s2","25","25","25", "2","VIIB","4","	0 kJ/mol ","N/A","7.21 (g/cm³)",
+    ElementDetailConstructor(25, "Mn", "Manganese", "1774", " Jhan Gottlieb ", "54.938044 u", "[Ar] 3d54s2","25","25","25", "4","VIIB","4","	0 kJ/mol ","N/A","7.21 (g/cm³)",
         "https://en.wikipedia.org/wiki/Manganese","solid","161 pm","1.55",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Mangan_1-crop.jpg/200px-Mangan_1-crop.jpg"),
 
@@ -196,7 +196,7 @@ class ListOfElements{
         "https://en.wikipedia.org/wiki/Iron","solid","156 pm","1.83",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Iron_electrolytic_and_1cm3_cube.jpg/220px-Iron_electrolytic_and_1cm3_cube.jpg"),
 
-    ElementDetailConstructor(27, "Co", "Cobalt ", "1735", " Georg Brandt", "58.933195 u", "[Ar] 3d74s2","27","27","27", "2","VIIIB","4","63.7 kJ/mol","N/A","8.9 (g/cm³)",
+    ElementDetailConstructor(27, "Co", "Cobalt ", "1735", " Georg Brandt", "58.933195 u", "[Ar] 3d74s2","27","27","27", "4","VIIIB","4","63.7 kJ/mol","N/A","8.9 (g/cm³)",
         "https://en.wikipedia.org/wiki/Cobalt","solid","152 pm","1.88",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Cobalt%28II%29-chloride-hexahydrate-sample.jpg/220px-Cobalt%28II%29-chloride-hexahydrate-sample.jpg"),
 
@@ -204,7 +204,7 @@ class ListOfElements{
         "https://en.wikipedia.org/wiki/Nickel","solid","149 pm","1.91",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Nickel_chunk.jpg/190px-Nickel_chunk.jpg"),
 
-    ElementDetailConstructor(29, "Cu", "Copper", "9000 BC", "Unknown", "63.546 u", "[Ar] 3d¹⁰4s¹","29","29","29","1","IB","4","118.4 kJ/mol","140 pm","8.546 (g/cm³)",
+    ElementDetailConstructor(29, "Cu", "Copper", "9000 BC", "Unknown", "63.546 u", "[Ar] 3d¹⁰4s¹","29","29","29","2","IB","4","118.4 kJ/mol","140 pm","8.546 (g/cm³)",
         "https://en.wikipedia.org/wiki/Copper","solid","145 pm","1.9",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/NatCopper.jpg/220px-NatCopper.jpg"),
 
@@ -212,7 +212,7 @@ class ListOfElements{
         "https://en.wikipedia.org/wiki/Zinc","solid","142 pm","1.65",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Zinc_fragment_sublimed_and_1cm3_cube.jpg/220px-Zinc_fragment_sublimed_and_1cm3_cube.jpg"),
 
-    ElementDetailConstructor(31, "Ga", "Gallium", "1875", "Lecoq de Boisbaudran", "69.723 u", " [Ar] 3d104s24p1","31","31","39","+3","IIIA","4","28.9 kJ/mol","187 pm","5.91 (g/cm³)",
+    ElementDetailConstructor(31, "Ga", "Gallium", "1875", "Lecoq de Boisbaudran", "69.723 u", " [Ar] 3d104s24p1","31","31","39","3","IIIA","4","28.9 kJ/mol","187 pm","5.91 (g/cm³)",
         "https://en.wikipedia.org/wiki/Gallium","solid","136 pm","1.81",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Gallium_crystals.jpg/220px-Gallium_crystals.jpg"),
 
@@ -220,19 +220,19 @@ class ListOfElements{
         "https://en.wikipedia.org/wiki/Germanium","solid","125 pm","2.01",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Polycrystalline-germanium.jpg/220px-Polycrystalline-germanium.jpg"),
 
-    ElementDetailConstructor(33, "As", "Arsenic", "1250", "Albertus Magnus", "74.9216 u", "[Ar] 3d¹⁰4s²4p³","33","33","42","3","VA","4","78 kJ/mol","185 pm","5.72 (g/cm³)",
+    ElementDetailConstructor(33, "As", "Arsenic", "1250", "Albertus Magnus", "74.9216 u", "[Ar] 3d¹⁰4s²4p³","33","33","42","5","VA","4","78 kJ/mol","185 pm","5.72 (g/cm³)",
         "https://en.wikipedia.org/wiki/Arsenic","solid","114 pm","2.18",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Arsen_1a.jpg/220px-Arsen_1a.jpg"),
 
-    ElementDetailConstructor(34, "Se","Selenium", "1817", "Johan G. Gahn", "78.96 u", "[Ar] 3d104s24p4","34","34","45","2","VIA","4","195 kJ/mol","190 pm","4.79 (g/cm³)",
+    ElementDetailConstructor(34, "Se","Selenium", "1817", "Johan G. Gahn", "78.96 u", "[Ar] 3d104s24p4","34","34","45","6","VIA","4","195 kJ/mol","190 pm","4.79 (g/cm³)",
         "https://en.wikipedia.org/wiki/Selenium","solid","103 pm","2.55",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/SeBlackRed.jpg/220px-SeBlackRed.jpg"),
 
-    ElementDetailConstructor(35, "Br", "Bromine", "1826", " Antoine Jérôme", "79.904 u", "[Ar] 4s²3d¹⁰4p⁵","35","35","45","1","VIIA","4","324.6 kJ/mol","185 pm","3.14 (g/cm³)",
+    ElementDetailConstructor(35, "Br", "Bromine", "1826", " Antoine Jérôme", "79.904 u", "[Ar] 4s²3d¹⁰4p⁵","35","35","45","5","VIIA","4","324.6 kJ/mol","185 pm","3.14 (g/cm³)",
         "https://en.wikipedia.org/wiki/Bromine","liquid","94 pm","2.96",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Bromine_vial_in_acrylic_cube.jpg/220px-Bromine_vial_in_acrylic_cube.jpg"),
 
-    ElementDetailConstructor(36, "Kr", "Krypton", "1898", " Morris Travers", "83.798 u", "[Ar] 3d¹⁰4s²4p⁶","36","36","48","0","VIIIA","4","0 kJ/mol","202 pm","0.0037 (g/cm³)",
+    ElementDetailConstructor(36, "Kr", "Krypton", "1898", " Morris Travers", "83.798 u", "[Ar] 3d¹⁰4s²4p⁶","36","36","48","2","VIIIA","4","0 kJ/mol","202 pm","0.0037 (g/cm³)",
         "https://en.wikipedia.org/wiki/Krypton","gas","87 pm","3",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/KrTube.jpg/220px-KrTube.jpg"),
 
@@ -246,7 +246,7 @@ class ListOfElements{
         "https://en.wikipedia.org/wiki/Strontium","solid","219 pm","0.95",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Strontium_destilled_crystals.jpg/220px-Strontium_destilled_crystals.jpg"),
 
-    ElementDetailConstructor(39, "Y", "Yttrium", "1794", "Johan Gadolin", "88.90585 u", "[Kr] 4d15s2","39","39","50","+3","IIIB","5","29.6 kJ/mol ","N/A","4.47 (g/cm³)",
+    ElementDetailConstructor(39, "Y", "Yttrium", "1794", "Johan Gadolin", "88.90585 u", "[Kr] 4d15s2","39","39","50","3","IIIB","5","29.6 kJ/mol ","N/A","4.47 (g/cm³)",
         "https://en.wikipedia.org/wiki/Yttrium","solid","212 pm","1.22",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Yttrium_sublimed_dendritic_and_1cm3_cube.jpg/220px-Yttrium_sublimed_dendritic_and_1cm3_cube.jpg"),
 
@@ -259,32 +259,32 @@ class ListOfElements{
 
 
 
-    ElementDetailConstructor(41, "Nb","Niobium", "1801", " Charles Hatchett", "92.90638 u", "[Kr] 4d⁴5s¹","41","41","52","3","VB","5","86.1 kJ/mol ","N/A","8.58 (g/cm³)",
+    ElementDetailConstructor(41, "Nb","Niobium", "1801", " Charles Hatchett", "92.90638 u", "[Kr] 4d⁴5s¹","41","41","52","5","VB","5","86.1 kJ/mol ","N/A","8.58 (g/cm³)",
         "https://en.wikipedia.org/wiki/Niobium","solid","198 pm","1.6",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Niobium_crystals_and_1cm3_cube.jpg/220px-Niobium_crystals_and_1cm3_cube.jpg"),
 
-    ElementDetailConstructor(42, "Mo", "Molybdenum", "1778", " Carl Wilhelm ", "95.95 u", "[Kr] 4d₅5s₁","42","42","54","-","VIB","5","71.9 kJ/mol","N/A","10.22 (g/cm³)",
+    ElementDetailConstructor(42, "Mo", "Molybdenum", "1778", " Carl Wilhelm ", "95.95 u", "[Kr] 4d₅5s₁","42","42","54","6","VIB","5","71.9 kJ/mol","N/A","10.22 (g/cm³)",
         "https://en.wikipedia.org/wiki/Molybdenum","solid","190 pm","2.16",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Molybdenum_crystaline_fragment_and_1cm3_cube.jpg/220px-Molybdenum_crystaline_fragment_and_1cm3_cube.jpg"),
 
-    ElementDetailConstructor(43, "Tc", "Technetium", "1937", " Carlo Perrier", "98 u", "[Kr] 4d55s2","43","43","55","1","VIIB","5","53 kJ/mol ","N/A","11.49 (g/cm³)",
+    ElementDetailConstructor(43, "Tc", "Technetium", "1937", " Carlo Perrier", "98 u", "[Kr] 4d55s2","43","43","55","6","VIIB","5","53 kJ/mol ","N/A","11.49 (g/cm³)",
         "https://en.wikipedia.org/wiki/Technetium","solid","183 pm","1.9",
         "https://upload.wikimedia.org/wikipedia/en/thumb/8/89/Technetium.jpg/220px-Technetium.jpg"),
 
 
-    ElementDetailConstructor(44, "Ru", "Ruthenium", "1844", " Karl E. Claus", "101.07 u", "[Kr] 4d75s1","44","44","57","-","VIIIB","5","101.3 kJ/mol ","N/A","12.41 (g/cm³)",
+    ElementDetailConstructor(44, "Ru", "Ruthenium", "1844", " Karl E. Claus", "101.07 u", "[Kr] 4d75s1","44","44","57","6","VIIIB","5","101.3 kJ/mol ","N/A","12.41 (g/cm³)",
         "https://en.wikipedia.org/wiki/Ruthenium","solid","178 pm","2.2",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Ruthenium_a_half_bar.jpg/220px-Ruthenium_a_half_bar.jpg"),
 
-    ElementDetailConstructor(45, "Rh", "Rhodium", "1803", "William H. Wollaston", "102.9055u", "Kr 4d8 5s1","45","45","58","3","VIIIB","5","109.3 kJ/mol ","N/A","12.41 (g/cm³)",
+    ElementDetailConstructor(45, "Rh", "Rhodium", "1803", "William H. Wollaston", "102.9055u", "Kr 4d8 5s1","45","45","58","6","VIIIB","5","109.3 kJ/mol ","N/A","12.41 (g/cm³)",
         "https://en.wikipedia.org/wiki/Rhodium","solid","173 pm","2.28",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Rhodium_powder_pressed_melted.jpg/220px-Rhodium_powder_pressed_melted.jpg"),
 
-    ElementDetailConstructor(46, "Pd", "Palladium", "1803 ", "William H. Wollaston", "106.42u", "[Kr] 4d¹⁰","46","46","60","2","VIIIB","5","53.7 kJ/mol ","163 pm","12.02 (g/cm³)",
+    ElementDetailConstructor(46, "Pd", "Palladium", "1803 ", "William H. Wollaston", "106.42u", "[Kr] 4d¹⁰","46","46","60","4","VIIIB","5","53.7 kJ/mol ","163 pm","12.02 (g/cm³)",
         "https://en.wikipedia.org/wiki/Palladium","solid","169 pm","2.2",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Palladium_%2846_Pd%29.jpg/220px-Palladium_%2846_Pd%29.jpg"),
 
-    ElementDetailConstructor(47, "Ag", "Silver", "5000 BC", "N/A", "107.8682 u", "[Kr] 4d¹⁰5s¹","47","47","61","3","IB","5","125.6 kJ/mol ","172 pm","10.49 (g/cm³)",
+    ElementDetailConstructor(47, "Ag", "Silver", "5000 BC", "N/A", "107.8682 u", "[Kr] 4d¹⁰5s¹","47","47","61","1","IB","5","125.6 kJ/mol ","172 pm","10.49 (g/cm³)",
         "https://en.wikipedia.org/wiki/Silver","solid","165 pm","1.93",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Silver_crystal.jpg/220px-Silver_crystal.jpg"),
 
@@ -334,7 +334,7 @@ class ListOfElements{
         "https://en.wikipedia.org/wiki/Lanthanum","solid","N/A","1.1",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Lanthanum-2.jpg/220px-Lanthanum-2.jpg"),
 
-    ElementDetailConstructor(58, "Ba" , "Cerium", "1803", "Jöns Berzelius ", "140.116 u", " [Xe] 4f¹5d¹6s²","58","58","","3","IIIB","6","50 kJ/mol ","N/A","6.77 (g/cm³)",
+    ElementDetailConstructor(58, "Ba" , "Cerium", "1803", "Jöns Berzelius ", "140.116 u", " [Xe] 4f¹5d¹6s²","58","58","","4","IIIB","6","50 kJ/mol ","N/A","6.77 (g/cm³)",
         "https://en.wikipedia.org/wiki/Cerium","solid","N/A","1.12",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Cerium2.jpg/220px-Cerium2.jpg"),
 
@@ -424,7 +424,7 @@ class ListOfElements{
         "https://en.wikipedia.org/wiki/Tungsten","solid","193 pm","2.36",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Wolfram_evaporated_crystals_and_1cm3_cube.jpg/220px-Wolfram_evaporated_crystals_and_1cm3_cube.jpg"),
 
-    ElementDetailConstructor(75, "Re", "Rhenium", "1781", "Ida Noddack", " 183.84 u", "[Xe] 4f14 5d5 6s2","75","75","111","6","VIIIB","6","14.5 kJ/mol ","N/A","21.03 (g/cm³)",
+    ElementDetailConstructor(75, "Re", "Rhenium", "1781", "Ida Noddack", " 183.84 u", "[Xe] 4f14 5d5 6s2","75","75","111","7","VIIIB","6","14.5 kJ/mol ","N/A","21.03 (g/cm³)",
         "https://en.wikipedia.org/wiki/Rhenium","solid","188 pm","1.9",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Rhenium_single_crystal_bar_and_1cm3_cube.jpg/220px-Rhenium_single_crystal_bar_and_1cm3_cube.jpg"),
 
@@ -528,7 +528,7 @@ class ListOfElements{
         "https://en.wikipedia.org/wiki/Einsteinium","solid","N/A","1.3",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Einsteinium.jpg/130px-Einsteinium.jpg"),
 
-    ElementDetailConstructor(100, "Fm", "Fermium", "1953", "Glenn T. Seaborg", "257 u", "[Rn] 5f12 7s2","101","101","157","4","IIIB","7","N/A ","N/A","19.050 (g/cm³)",
+    ElementDetailConstructor(100, "Fm", "Fermium", "1953", "Glenn T. Seaborg", "257 u", "[Rn] 5f12 7s2","101","101","157","3","IIIB","7","N/A ","N/A","19.050 (g/cm³)",
         "https://en.wikipedia.org/wiki/Fermium","N/A","N/A","1.3",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Ivy_Mike_-_mushroom_cloud.jpg/220px-Ivy_Mike_-_mushroom_cloud.jpg"),
 
@@ -536,7 +536,7 @@ class ListOfElements{
         "https://en.wikipedia.org/wiki/Mendelevium","N/A","N/A","1.3",
         "https://www.thoughtco.com/thmb/BK6ZvgOWVUdu9CwfI0xwg7-JpmE=/768x0/filters:no_upscale():max_bytes(150000):strip_icc()/mendelevium-chemical-element-186451093-5893b2573df78caebcf6df9e.jpg"),
 
-    ElementDetailConstructor(102, "No	", "Nobelium", "1958", " Glenn T. Seaborg", "259 u", " [Rn] 5f14 7s2","102","102","157","4","IIIB","7","N/AN/A ","N/A","--",
+    ElementDetailConstructor(102, "No	", "Nobelium", "1958", " Glenn T. Seaborg", "259 u", " [Rn] 5f14 7s2","102","102","157","3","IIIB","7","N/AN/A ","N/A","--",
         "https://en.wikipedia.org/wiki/Nobelium","N/A","N/A","1.3",
         ""),
 
