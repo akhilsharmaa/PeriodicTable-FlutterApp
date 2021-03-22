@@ -1,12 +1,10 @@
-# periodic_table
+# Periadic-table App
 
 This app is very useful to all the students which have to remember Modern Periodic Table(Mendeleev's Periodic Table) for their examinations or knowledge..
 
-## Dowload link https://play.google.com/store/apps/details?id=com.gracoder.periodic_table
+## Dowload link from Play-Store https://play.google.com/store/apps/details?id=com.gracoder.periodic_table
 
 This project is a starting point for a Flutter application.
-
-This app is very useful to all the students which have to remember Modern Periodic Table(Mendeleev's Periodic Table) for their examinations or knowledge.
 
 The app provides you the details about element -
 • Element Number
