@@ -401,14 +401,19 @@ class _DetailedPageState extends State<DetailedPage> {
             ],
           ) ,
 
-
+          // C property
           ElementsListTileListView("Van der waals radius", "${listOfElements.getVanderWallRadius(getElementNumber())}"),
-          HeadingProperties("C properties"),
+          HeadingProperties("°C properties"),
           ElementsListTileListView("Atom density", "${listOfElements.getAtomDensity(getElementNumber())}"),
           ElementsListTileListView("Phase of Matter", "${listOfElements.getPhaseOfMatter(getElementNumber())}"),
           ElementsListTileListView("Atomic Radius", "${listOfElements.getAtomicRadius(getElementNumber())}"),
+          ElementsListTileListView("Melting point", "${listOfElements.getMeltingPoint(getElementNumber())}"),
+          ElementsListTileListView("Boiling point", "${listOfElements.getBoilingPoint(getElementNumber())}"),
           ElementsListTileListView("Electro-negativity", "${listOfElements.getElectronegativity(getElementNumber())}"),
-          ElementsListTileListView("More properties are in development", "Coming soon"),
+
+
+          //Atomic properties
+          HeadingProperties("Atomic properties"),
           ElementsListTileListView("", ""),
 
         ],

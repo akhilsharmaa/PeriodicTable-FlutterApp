@@ -21,6 +21,8 @@ class ElementDetailConstructor{
   final phaseOfMatter;
   final atomicRadius;
   final electronegativity;
+  final meltingPoint;
+  final boilingPoint;
   final imageLink;
 
   ElementDetailConstructor(
@@ -44,5 +46,7 @@ class ElementDetailConstructor{
       this.phaseOfMatter,
       this.atomicRadius,
       this.electronegativity,
+      this.meltingPoint,
+      this.boilingPoint,
       this.imageLink);
 }
