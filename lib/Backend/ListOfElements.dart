@@ -497,7 +497,7 @@ class ListOfElements{
         "https://en.wikipedia.org/wiki/Darmstadtium","N/A","N/A","N/A","N/A","N/A",
         "https://images.pexels.com/photos/356079/pexels-photo-356079.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"),
 
-    ElementDetailConstructor(111, "Rf", "Roentgenium", "1994", "Gesellschaft für", "[Rn] 5f14 6d9 7s2", "281 u","111","111","171","N/A","IB","7","N/A ","N/A","--",
+    ElementDetailConstructor(111, "Rf", "Roentgenium", "1994", "Gesellschaft für", "281 u", "Rn] 5f14 6d9 7s2","111","111","171","N/A","IB","7","N/A ","N/A","--",
         "https://en.wikipedia.org/wiki/Roentgenium","N/A","N/A","N/A","N/A","N/A",
         "https://images.pexels.com/photos/356079/pexels-photo-356079.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"),
 
