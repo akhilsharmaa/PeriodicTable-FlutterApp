@@ -49,6 +49,208 @@ class GridViewHomePage extends StatelessWidget {
 
 class ElementBlock extends StatelessWidget {
 
+
+  // Alert Dialog
+  createAlertDialog(BuildContext context){
+    ListOfElements listOfElements = new ListOfElements();
+    var screenWidth = MediaQuery.of(context).size.width;
+    var screenHeight = MediaQuery.of(context).size.height;
+
+    return showDialog(context: context,
+      useSafeArea: true,
+      builder: (context){
+      return Center(
+        child: Container(
+          width: screenWidth * 0.8,
+          height: screenWidth ,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Stack(
+
+                alignment: Alignment.bottomLeft,
+                children: [
+                  Container(
+                    height: screenHeight*0.2,
+                    decoration: BoxDecoration(
+                        //
+                        // image: DecorationImage(
+                        //     colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.5), BlendMode.dstATop),
+                        //     alignment: Alignment.center,
+                        //     fit: BoxFit.cover,
+                        //     image: NetworkImage("${listOfElements.getElementImageLink(elementNumber-1)}")
+                        // )
+                    ),
+                  ),
+
+                  Positioned(
+                    left: 10,
+                    bottom: 10,
+                    child: Column(
+
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left:24.0),
+                          child: Text("${listOfElements.getElementNumber(elementNumber-1)}",style: TextStyle(fontSize: screenHeight* 0.03,color: Colors.white),),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left:32.0),
+                          child: Text("${listOfElements.getElementSymbol(elementNumber-1)}",style: TextStyle(fontSize: screenHeight* 0.05,color: Colors.orange.shade400),),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left:32.0,bottom: 5),
+                          child: Text("${listOfElements.getElementFullName(elementNumber-1)}",style: TextStyle(fontSize: screenHeight * 0.02,color: Colors.white),),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left:35.0,bottom: 10),
+                          child: Text("${listOfElements.getElementAtomicMass(elementNumber-1)}",style: TextStyle(fontSize: screenHeight * 0.015,color: Colors.white60),),
+                        ),
+
+
+                      ],
+                    ),
+                  ),
+                  //
+                  // Positioned(
+                  //   right: 15,
+                  //   top: 10,
+                  //   child: RaisedButton(
+                  //     onPressed:()=> launch("${listOfElements.getWikipediaLink(getElementNumber())}"),
+                  //     child: Text("Wikipedia"),
+                  // ),)
+
+
+
+
+                ],
+
+              ),
+              // Electron Proton and Neutron
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Card(
+                  color: Colors.black38,
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          children: [
+                            Text("${listOfElements.getNumberOfElectrons(elementNumber-1)}",style: TextStyle(
+                                color: Colors.white,
+                                fontSize: screenHeight * 0.03
+                            ),),
+                            Text("electron",style: TextStyle(
+                                color: Colors.white,
+                                fontSize: screenHeight * 0.013
+                            ),),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          children: [
+                            Text("${listOfElements.getNumberOfProtons(elementNumber-1)}",style: TextStyle(
+                                color: Colors.white,
+                                fontSize: screenHeight * 0.03
+                            ),),
+                            Text("proton",style: TextStyle(
+                                color: Colors.white,
+                                fontSize: screenHeight * 0.013
+                            ),),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          children: [
+                            Text("${listOfElements.getNumberOfNeutron(elementNumber-1)}",style: TextStyle(
+                                color: Colors.white,
+                                fontSize: screenHeight * 0.03
+                            ),),
+                            Text("neutron",style: TextStyle(
+                                color: Colors.white,
+                                fontSize: screenHeight * 0.013
+                            ),),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+
+
+              // Electronic Configuration
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  SizedBox(width: 20),
+                  Icon(Icons.label_important_outline,color: Colors.blue,),
+                  SizedBox(width: 10),
+                  Text("Ele - config :",style: TextStyle(
+                      fontSize: 14 ,
+                      color: Colors.grey
+                  ),), SizedBox(
+                    width: 20,
+                  ),
+                  Text("${listOfElements.getElementElectronConfiguration(elementNumber-1)}",style: TextStyle(
+                      fontSize: screenHeight*0.015,
+                      color: Colors.white
+                  ),),
+                ],
+              ) ,
+
+
+
+
+
+              SizedBox(height: 8),
+
+
+
+              // Year of Discovery
+              Row(
+                children: [
+                  SizedBox(width: 20),
+                  Icon(Icons.search_rounded,color: Colors.greenAccent,),
+                  SizedBox(width: 10),
+                  Text("Year of discovery : ",style: TextStyle(
+                      fontSize: 10 ,
+                      color: Colors.grey
+                  ),), SizedBox(
+                    width: 20,
+                  ),
+                  Text("${listOfElements.getYearOfDiscovery(elementNumber-1)}",style: TextStyle(
+                      fontSize: 20 ,
+                      color: Colors.white
+                  ),),
+                ],
+              ),
+
+
+            ],
+          ),
+          decoration: BoxDecoration(
+              color: Colors.red.shade800,
+              borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(20),
+                bottomRight:  Radius.circular(20),
+                topLeft: Radius.circular(20),
+                topRight:  Radius.circular(20),)
+          ),
+        ),
+      );
+      }
+    );
+  }
+
   var elementNumber = 0;
   ElementBlock(this.elementNumber);
 
@@ -65,6 +267,13 @@ class ElementBlock extends StatelessWidget {
     int getElementNumber = ListOfElements().getElementNumber(elementNumber-1);
 
     return InkWell(
+
+
+
+      onLongPress: (){
+        createAlertDialog(context);
+      },
+
       onTap: (){
         Navigator.of(context).push(MaterialPageRoute(builder:
         (context) => DetailedPage(elementNumber),
@@ -82,7 +291,7 @@ class ElementBlock extends StatelessWidget {
           children: [
             Text("$getElementNumber",style: TextStyle(
               fontSize: screenHeight*0.012,
-              color: Colors.grey,),),
+              color: Colors.white,),),
             Text("$elementSymbol",style: TextStyle(
               fontSize: screenHeight*0.025,
               color: Colors.white,),),
