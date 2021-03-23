@@ -488,7 +488,7 @@ class HeadingProperties extends StatelessWidget {
         child: Row(
           children: [
             SizedBox(width: 10,),
-            Icon(Icons.pending_rounded ,color: Colors.greenAccent,),
+            // Icon(Icons.pending_rounded ,color: Colors.greenAccent,),
             SizedBox(width: 10,),
             Padding(
               padding: const EdgeInsets.all(20.0),
