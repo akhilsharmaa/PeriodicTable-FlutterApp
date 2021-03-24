@@ -1,3 +1,6 @@
+
+//Version 1.2.0 +3 completed.
+
 import 'package:flutter/material.dart';
 import 'package:periodic_table/Backend/ListOfElements.dart';
 

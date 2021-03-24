@@ -1,5 +1,5 @@
 
-//Version 1.0.0 +1 completed.
+//Version 1.2.0 +3 completed.
 
 
 import 'package:firebase_admob/firebase_admob.dart';
