@@ -1,11 +1,10 @@
-
 //Version 1.2.0 +3 completed.
 
-
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
-import 'package:periodic_table/adState.dart';
-import 'package:provider/provider.dart';
+// import 'package:periodic_table/adState.dart';
+// import 'package:provider/provider.dart';
 
 import 'screens/DetailedPage.dart';
 import 'screens/GridViewHomePage.dart';
@@ -20,15 +19,15 @@ void main() {
   // final adState = AdState(initFuture);
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
     statusBarColor: Colors.red,
-        statusBarIconBrightness: Brightness.light,
+    statusBarIconBrightness: Brightness.light,
   ));
 
   runApp(MaterialApp(
     themeMode: ThemeMode.dark,
-    home: Provider.value(
-      // value : adState ,
-        builder : (context, child) =>  MyApp()),
-
+    // home: Provider.value(
+    //     // value : adState ,
+    //     builder: (context, child) => MyApp()),
+    home: MyApp(),
     debugShowCheckedModeBanner: false,
   ));
 }
@@ -44,48 +43,45 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-
     final tabs = [
       Center(child: GridViewHomePage()),
       Center(child: PageViewBuilderHomePage()),
       Center(child: ListViewBuilderHomePage()),
       Center(child: DetailedPage(1)),
-
     ];
 
     return DefaultTabController(
       length: 3,
       initialIndex: _currentIndex,
       child: Scaffold(
-
-        appBar: AppBar(
-          title: Text("Periodic-table"),
-          elevation: 0,
-          backgroundColor: Colors.red,
-          bottom: TabBar(
-
-            tabs: [
-              Tab(text: "Modern table",),
-              Tab(text: "Page view",),
-              Tab(text: "List view",),
-            ],
+          appBar: AppBar(
+            title: Text("Periodic-table",style: GoogleFonts.lato(fontWeight: FontWeight.bold),),
+            elevation: 0,
+            backgroundColor: Colors.red,
+            bottom: TabBar(
+              tabs: [
+                Tab(
+                  text: "Modern table",
+                ),
+                Tab(
+                  text: "Page view",
+                ),
+                Tab(
+                  text: "List view",
+                ),
+              ],
+            ),
           ),
-        ),
-        body: TabBarView(
+          body: TabBarView(
+            children: [
+              GridViewHomePage(),
+              PageViewBuilderHomePage(),
+              ListViewBuilderHomePage(),
+            ],
+          )
 
-          children: [
-            GridViewHomePage(),
-            PageViewBuilderHomePage(),
-            ListViewBuilderHomePage(),
-
-          ],
-        )
-
-        // ),
-      ),
+          // ),
+          ),
     );
   }
 }
-
-
-
