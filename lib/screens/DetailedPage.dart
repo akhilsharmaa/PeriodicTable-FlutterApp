@@ -2,8 +2,11 @@
 //Version 1.2.0 +3 completed.
 
 
+import 'dart:ui';
+
 import 'package:firebase_admob/firebase_admob.dart';
 import 'package:flutter/material.dart';
+import 'package:periodic_table/Backend/ElementDescription.dart';
 import 'package:periodic_table/Backend/ListOfElements.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -69,6 +72,7 @@ class _DetailedPageState extends State<DetailedPage> {
 
 
     ListOfElements listOfElements = new ListOfElements();
+    ElementDescription elementDescription = ElementDescription();
 
     return Scaffold(
       backgroundColor: const Color(0xFF161616),
@@ -202,12 +206,11 @@ class _DetailedPageState extends State<DetailedPage> {
 
           // Electron Proton and Neutron
           Container(
-            height: screenHeight*0.13,
             child: Padding(
               padding: const EdgeInsets.all(10.0),
               child: Card(
 
-                color: Colors.red.shade600,
+                color: Colors.red.shade900,
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -218,7 +221,7 @@ class _DetailedPageState extends State<DetailedPage> {
                         children: [
                           Text("${listOfElements.getNumberOfElectrons(getElementNumber())}",style: TextStyle(
                               color: Colors.white,
-                              fontSize: screenHeight * 0.03
+                              fontSize: 24
                           ),),
                           Text("electron",style: TextStyle(
                               color: Colors.white,
@@ -233,7 +236,7 @@ class _DetailedPageState extends State<DetailedPage> {
                         children: [
                           Text("${listOfElements.getNumberOfProtons(getElementNumber())}",style: TextStyle(
                               color: Colors.white,
-                              fontSize: screenHeight * 0.03
+                              fontSize: 24
                           ),),
                           Text("proton",style: TextStyle(
                               color: Colors.white,
@@ -248,7 +251,7 @@ class _DetailedPageState extends State<DetailedPage> {
                         children: [
                           Text("${listOfElements.getNumberOfNeutron(getElementNumber())}",style: TextStyle(
                               color: Colors.white,
-                              fontSize: screenHeight * 0.03
+                              fontSize: 24
                           ),),
                           Text("neutron",style: TextStyle(
                               color: Colors.white,
@@ -267,6 +270,38 @@ class _DetailedPageState extends State<DetailedPage> {
 
 
 
+          // Fun fact
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Card(
+              color: Colors.grey.shade900,
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 20 ,right: 20,top: 30,bottom: 20),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Icon(Icons.lightbulb,color: Colors.yellow,),
+                          Text("  Fun fact",
+                            style: TextStyle(color: Colors.yellow,fontSize: 24,
+                            fontWeight: FontWeight.bold),),
+                        ],
+                      ),
+                      SizedBox(height: 10,),
+                      Text("${elementDescription.getElementDescription(getElementNumber())}",
+                        style: TextStyle(
+                          color: Colors.grey.shade300,
+
+                        ),),
+                    ],
+                  ),
+                )),
+          ),
+
+
+
+
           // Discovery By
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -275,7 +310,7 @@ class _DetailedPageState extends State<DetailedPage> {
               SizedBox(width: screenWidth* 0.05),
               Icon(Icons.list,color: Colors.orange,),
               SizedBox(width: screenWidth* 0.05),
-              Text("Discovered by :",style: TextStyle(
+              Text("Discovered by :",style: TextStyle(                                                                                                                                                                                                                                                                                                                                                                            
                   fontSize: 14 ,
                   color: Colors.grey
               ),), SizedBox(
@@ -403,6 +438,9 @@ class _DetailedPageState extends State<DetailedPage> {
 
           // C property
           ElementsListTileListView("Van der waals radius", "${listOfElements.getVanderWallRadius(getElementNumber())}"),
+
+
+
           HeadingProperties("°C properties"),
           ElementsListTileListView("Atom density", "${listOfElements.getAtomDensity(getElementNumber())}"),
           ElementsListTileListView("Phase of Matter", "${listOfElements.getPhaseOfMatter(getElementNumber())}"),
@@ -413,8 +451,10 @@ class _DetailedPageState extends State<DetailedPage> {
 
 
           //Atomic properties
-          HeadingProperties("Atomic properties"),
+          // HeadingProperties("Atomic properties"),
+          ElementsListTileListView("more properties in development", "update application if available "),
           ElementsListTileListView("", ""),
+          // ElementsListTileListView("", ""),
 
         ],
       ),
@@ -483,7 +523,7 @@ class HeadingProperties extends StatelessWidget {
         // shadowColor: Colors.white,
         // decoration: BoxDecoration(),
         // height: 45,
-        color: Color(0xFF393939),
+        color: Colors.grey.shade900,
         // color: Colors.black26,
         child: Row(
           children: [
@@ -502,4 +542,5 @@ class HeadingProperties extends StatelessWidget {
     );
   }
 }
+
 
