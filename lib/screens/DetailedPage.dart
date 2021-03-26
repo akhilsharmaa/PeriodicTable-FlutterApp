@@ -91,7 +91,8 @@ class _DetailedPageState extends State<DetailedPage> {
                     style: GoogleFonts.alata(
                     fontSize: 18,
                     fontWeight: FontWeight.w400,
-                    color: Colors.white),),
+                    color: Colors.white),
+                ),
               ),
             ),
             onTap: () => launch(
@@ -108,6 +109,11 @@ class _DetailedPageState extends State<DetailedPage> {
               fontWeight: FontWeight.bold, color: Colors.white),
         ),
       ),
+
+
+
+
+
       body: ListView(
         children: [
           // Stack Image
@@ -129,7 +135,8 @@ class _DetailedPageState extends State<DetailedPage> {
                           alignment: Alignment.center,
                           fit: BoxFit.cover,
                           image: NetworkImage(
-                              "${listOfElements.getElementImageLink(getElementNumber())}"))),
+                              "${listOfElements.getElementImageLink(getElementNumber())}"
+                          ))),
                 ),
 
                 Positioned(
@@ -248,7 +255,7 @@ class _DetailedPageState extends State<DetailedPage> {
             child: Padding(
               padding: const EdgeInsets.all(10.0),
               child: Card(
-                color: Colors.red.shade900,
+                color: Colors.grey.shade900,
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -436,7 +443,7 @@ class _DetailedPageState extends State<DetailedPage> {
               ),
               Text(
                 "${listOfElements.getElementElectronConfiguration(getElementNumber())}",
-                style: GoogleFonts.alef(
+                style: GoogleFonts.alegreyaSc(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                     color: Colors.white),
@@ -482,6 +489,11 @@ class _DetailedPageState extends State<DetailedPage> {
             color: Colors.grey,
             height: 0.2,
           ), // Divider
+
+
+
+
+
 
           // Electron affinity:
           Row(
@@ -576,7 +588,7 @@ class ElementsListTileListView extends StatelessWidget {
               ),
               Text(
                 "$subtitle",
-                style: GoogleFonts.alata(
+                style: GoogleFonts.andika(
                     fontSize: 18,
                     fontWeight: FontWeight.w400,
                     color: Colors.white),
