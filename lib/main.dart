@@ -1,6 +1,7 @@
 //Version 2.0.0 +4 completed.
 
 import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 // import 'package:periodic_table/adState.dart';
@@ -38,50 +39,101 @@ class MyApp extends StatefulWidget {
   _MyAppState createState() => _MyAppState();
 }
 
+
 class _MyAppState extends State<MyApp> {
   int _currentIndex = 0;
 
+
+
   @override
   Widget build(BuildContext context) {
-    final tabs = [
-      Center(child: GridViewHomePage()),
-      Center(child: PageViewBuilderHomePage()),
-      Center(child: ListViewBuilderHomePage()),
-      Center(child: DetailedPage(1)),
-    ];
 
-    return DefaultTabController(
-      length: 3,
-      initialIndex: _currentIndex,
-      child: Scaffold(
-          appBar: AppBar(
-            title: Text("Periodic-table",style: GoogleFonts.lato(fontWeight: FontWeight.bold),),
-            elevation: 0,
-            backgroundColor: Colors.red,
-            bottom: TabBar(
-              tabs: [
-                Tab(
-                  text: "Modern table",
-                ),
-                Tab(
-                  text: "Page view",
-                ),
-                Tab(
-                  text: "List view",
-                ),
-              ],
+
+    if (MediaQuery.of(context).orientation == Orientation.portrait){
+      return DefaultTabController(
+        length: 3,
+        initialIndex: _currentIndex,
+        child: Scaffold(
+            appBar: AppBar(
+              toolbarHeight: 80,
+              title: Text("Periodic-table",style: GoogleFonts.lato(fontWeight: FontWeight.bold),),
+              elevation: 10,
+              backgroundColor: Colors.red,
+              bottom: TabBar(
+                tabs: [
+                  Tab(
+                    text: "Modern table",
+                  ),
+                  Tab(
+                    text: "Page view",
+                  ),
+                  Tab(
+                    text: "List view",
+                  ),
+                ],
+              ),
             ),
-          ),
-          body: TabBarView(
-            children: [
-              GridViewHomePage(),
-              PageViewBuilderHomePage(),
-              ListViewBuilderHomePage(),
-            ],
-          )
+            body:
+            TabBarView(
+              children: [
+                GridViewHomePage(),
+                PageViewBuilderHomePage(),
+                ListViewBuilderHomePage(),
+              ],
+            )
 
           // ),
-          ),
-    );
+        ),
+      );
+    }else{
+      return Scaffold(
+        body: GridViewHomePage(),
+      );
+        // is landscape
+    }
+
+    // final tabs = [
+    //   Center(child: GridViewHomePage()),
+    //   Center(child: PageViewBuilderHomePage()),
+    //   Center(child: ListViewBuilderHomePage()),
+    //   Center(child: DetailedPage(1)),
+    // ];
+    //
+    // return DefaultTabController(
+    //   length: 3,
+    //   initialIndex: _currentIndex,
+    //   child: Scaffold(
+    //       appBar: AppBar(
+    //         toolbarHeight: 80,
+    //         title: Text("Periodic-table",style: GoogleFonts.lato(fontWeight: FontWeight.bold),),
+    //         elevation: 10,
+    //         backgroundColor: Colors.red,
+    //         bottom: TabBar(
+    //           tabs: [
+    //             Tab(
+    //               text: "Modern table",
+    //             ),
+    //             Tab(
+    //               text: "Page view",
+    //             ),
+    //             Tab(
+    //               text: "List view",
+    //             ),
+    //           ],
+    //         ),
+    //       ),
+    //       body:
+    //       TabBarView(
+    //         children: [
+    //           GridViewHomePage(),
+    //           PageViewBuilderHomePage(),
+    //           ListViewBuilderHomePage(),
+    //         ],
+    //       )
+    //
+    //       // ),
+    //       ),
+    // );
   }
 }
+

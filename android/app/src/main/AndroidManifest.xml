@@ -7,7 +7,7 @@
         android:label="Periodic-table app"
         android:icon="@mipmap/ic_launcher">
         <activity
-            android:screenOrientation="portrait"
+            android:screenOrientation="user"
             android:name=".MainActivity"
             android:launchMode="singleTop"
             android:theme="@style/LaunchTheme"

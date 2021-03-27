@@ -21,26 +21,30 @@ class GridViewHomePage extends StatelessWidget {
     return Scaffold(
 
       body: Container(
-
           color: const Color(0xFF161616),
         // color: Colors.greenAccent,
           child: ListView(
           scrollDirection: Axis.horizontal,
             children: [
-              Column(
-                children: [
-                  ColumnSeries(),
-                  Row1(),
-                  Row2(),
-                  Row3(),
-                  Row4(),
-                  Row5(),
-                  Row6(),
-                  Row7(),
-                  Padding(padding: EdgeInsets.only(top: 30)),
-                  BlockF()
-                ],
-              )
+              SingleChildScrollView(
+                scrollDirection: Axis.vertical,
+                child: Column(
+                  children: [
+                    ColumnSeries(),
+                    Row1(),
+                    Row2(),
+                    Row3(),
+                    Row4(),
+                    Row5(),
+                    Row6(),
+                    Row7(),
+                    Padding(padding: EdgeInsets.only(top: 50)),
+                    BlockF(),
+                    Padding(padding: EdgeInsets.only(top: 120)),
+                  ],
+                ),
+              ),
+
             ],
         )
       ),
@@ -272,8 +276,11 @@ class ElementBlock extends StatelessWidget {
         ));
       },
       child: Container(
-        height: screenHeight*0.085,
-        width:  screenWidth*0.147,
+        // height: screenHeight*0.085,
+
+        // width:  screenWidth*0.147,
+        height: 60,
+        width: 60,
         alignment: Alignment.center,
         child: Column(
           // height: 60,
@@ -282,13 +289,13 @@ class ElementBlock extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text("$getElementNumber",style: GoogleFonts.alata(
-              fontSize: screenHeight*0.012,
+              fontSize: 10,
               color: Colors.white,),),
             Text("$elementSymbol",style: GoogleFonts.alike(
-              fontSize: screenHeight*0.025,
+              fontSize: 16,
               color: Colors.white,),),
             Text("$elementFullName",style: GoogleFonts.amiko(
-              fontSize: screenHeight*0.01,
+              fontSize: 7,
               color: Colors.grey.shade100,),),
           ],
         ),
@@ -322,14 +329,17 @@ class ColumnNumber extends StatelessWidget {
     return Container(
       alignment: Alignment.center,
       child: Text("$coloumNumber",style: TextStyle(
-        fontSize: screenHeight*0.02,
+        fontSize: 12,
         color: Colors.white,),),
 
       decoration: BoxDecoration(
           color: Colors.red.shade600
       ),
-      height: screenHeight*0.025,
-      width:  screenWidth*0.147,
+      // height: screenHeight*0.025,
+      // width:  screenWidth*0.147,
+
+      height: 20,
+      width: 60,
     );
   }
 }
@@ -355,8 +365,11 @@ class RowNumber extends StatelessWidget {
       decoration: BoxDecoration(
           color: Colors.red.shade600
       ),
-      height: screenHeight*0.085,
-      width:  screenWidth*0.05,
+      // height: screenHeight*0.085,
+      // width:  screenWidth*0.05,
+      width: 20,
+      height: 60,
+
     );
   }
 }
@@ -372,8 +385,12 @@ class EmptyBox extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(8.0),
       ),
-      height: screenHeight*0.025,
-      width:  screenWidth*0.147,
+      // height: screenHeight*0.025,
+      // width:  screenWidth*0.147,
+
+      height: 60,
+      width: 60 ,
+
     );
   }
 }
@@ -389,8 +406,10 @@ class ColumnSeries extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         Container(
-      height: screenHeight*0.025,
-      width:  screenWidth*0.05,
+      // height: screenHeight*0.025,
+      // width:  screenWidth*0.05,
+          height: 20,
+          width: 20,
 
         decoration: BoxDecoration(
 
