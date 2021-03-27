@@ -1,4 +1,4 @@
-//Version 1.2.0 +3 completed.
+//Version 2.0.0 +4 completed.
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';

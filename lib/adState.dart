@@ -2,7 +2,8 @@
 //
 // import 'package:google_mobile_ads/google_mobile_ads.dart';
 //
-//  Version 1.2.0 +3 completed.
+//Version 2.0.0 +4 completed.
+
 
 //
 // class AdState{

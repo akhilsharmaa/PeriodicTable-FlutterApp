@@ -1,10 +1,11 @@
 
-//Version 1.2.0 +3 completed.
+//Version 2.0.0 +4 completed.
 
 
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:periodic_table/Backend/ListOfElements.dart';
 import 'package:periodic_table/screens/DetailedPage.dart';
 
@@ -61,7 +62,7 @@ class ElementBlock extends StatelessWidget {
       builder: (context){
       return Center(
         child: Container(
-          width: screenWidth * 0.8,
+          width: screenWidth * 0.85,
           height: screenWidth ,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -72,15 +73,6 @@ class ElementBlock extends StatelessWidget {
                 children: [
                   Container(
                     height: screenHeight*0.2,
-                    decoration: BoxDecoration(
-                        //
-                        // image: DecorationImage(
-                        //     colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.5), BlendMode.dstATop),
-                        //     alignment: Alignment.center,
-                        //     fit: BoxFit.cover,
-                        //     image: NetworkImage("${listOfElements.getElementImageLink(elementNumber-1)}")
-                        // )
-                    ),
                   ),
 
                   Positioned(
@@ -92,7 +84,7 @@ class ElementBlock extends StatelessWidget {
                       children: [
                         Padding(
                           padding: const EdgeInsets.only(left:24.0),
-                          child: Text("${listOfElements.getElementNumber(elementNumber-1)}",style: TextStyle(fontSize: screenHeight* 0.03,color: Colors.white),),
+                          child: Text("${listOfElements.getElementNumber(elementNumber-1)}",style: GoogleFonts.alegreya(fontSize: screenHeight* 0.03,color: Colors.white),),
                         ),
                         Padding(
                           padding: const EdgeInsets.only(left:32.0),
@@ -280,7 +272,7 @@ class ElementBlock extends StatelessWidget {
         ));
       },
       child: Container(
-        height: screenHeight*0.08,
+        height: screenHeight*0.085,
         width:  screenWidth*0.147,
         alignment: Alignment.center,
         child: Column(
@@ -289,15 +281,15 @@ class ElementBlock extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("$getElementNumber",style: TextStyle(
+            Text("$getElementNumber",style: GoogleFonts.alata(
               fontSize: screenHeight*0.012,
               color: Colors.white,),),
-            Text("$elementSymbol",style: TextStyle(
+            Text("$elementSymbol",style: GoogleFonts.alike(
               fontSize: screenHeight*0.025,
               color: Colors.white,),),
-            Text("$elementFullName",style: TextStyle(
+            Text("$elementFullName",style: GoogleFonts.amiko(
               fontSize: screenHeight*0.01,
-              color: Colors.grey,),),
+              color: Colors.grey.shade100,),),
           ],
         ),
         decoration: BoxDecoration(
@@ -363,7 +355,7 @@ class RowNumber extends StatelessWidget {
       decoration: BoxDecoration(
           color: Colors.red.shade600
       ),
-      height: screenHeight*0.08,
+      height: screenHeight*0.085,
       width:  screenWidth*0.05,
     );
   }
