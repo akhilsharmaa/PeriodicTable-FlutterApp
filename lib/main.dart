@@ -57,7 +57,7 @@ class _MyAppState extends State<MyApp> {
             appBar: AppBar(
               toolbarHeight: 80,
               title: Text("Periodic-table",style: GoogleFonts.lato(fontWeight: FontWeight.bold),),
-              elevation: 10,
+              elevation: 0,
               backgroundColor: Colors.red,
               bottom: TabBar(
                 tabs: [

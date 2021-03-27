@@ -38,6 +38,7 @@ class GridViewHomePage extends StatelessWidget {
                     Row5(),
                     Row6(),
                     Row7(),
+                    SubShell_SPD(),
                     Padding(padding: EdgeInsets.only(top: 50)),
                     BlockF(),
                     Padding(padding: EdgeInsets.only(top: 120)),
@@ -395,6 +396,72 @@ class EmptyBox extends StatelessWidget {
   }
 }
 
+
+class SubShell_SPD extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Row(
+        children: [
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                margin: EdgeInsets.only(bottom: 4),
+                color: Colors.white,
+                height: 3,
+                width: 140,
+              ),
+              Text("Block - S",style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold,color: Colors.white),),
+            ],
+          ),  Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                margin: EdgeInsets.only(bottom: 4),
+                color: Colors.red,
+                height: 3,
+                width: 600,
+              ),
+              Text("Block - D",style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold,color: Colors.red),),
+            ],
+          ),  Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                margin: EdgeInsets.only(bottom: 4),
+                color: Colors.white,
+                  height: 3,
+                  width: 360,
+              ),
+              Text("Block - P",style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold,color: Colors.white),),
+            ],
+          ),
+
+          // Container(
+          //   color: Colors.red.shade900,
+          //   height: 10,
+          //   width: 600,
+          //   child: Text("Block - S",style: TextStyle(fontSize: 9,color: Colors.white,fontWeight: FontWeight.bold),),
+          //   alignment: Alignment.center,
+          // ),    Container(
+          //   color: Colors.white,
+          //   height: 10,
+          //   width: 360,
+          //   child: Text("Block - S",style: TextStyle(fontSize: 9,fontWeight: FontWeight.bold),),
+          //   alignment: Alignment.center,
+          // ),
+
+
+        ],
+      ),
+    );
+  }
+}
+
+
+
+
 class ColumnSeries extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -671,6 +738,14 @@ class BlockF extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        Text("Block - F",style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold,color: Colors.white),),
+        SizedBox(height: 3,),
+        Container(
+          margin: EdgeInsets.only(bottom: 4),
+          color: Colors.white,
+          height: 3,
+          width: 840,
+        ),
         Row(
           children: [
             ElementBlock(58),
