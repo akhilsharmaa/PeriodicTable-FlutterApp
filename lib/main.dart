@@ -1,13 +1,12 @@
-//Version 2.0.0 +4 completed.
+//Version 2.0.1 +5 completed.
 
-import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 // import 'package:periodic_table/adState.dart';
 // import 'package:provider/provider.dart';
 
-import 'screens/DetailedPage.dart';
+// import 'screens/DetailedPage.dart';
 import 'screens/GridViewHomePage.dart';
 import 'screens/ListViewBuilderHomePage.dart';
 import 'screens/PageViewBuilderHomePage.dart';
@@ -16,7 +15,7 @@ import 'package:flutter/services.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
-  final initFuture = MobileAds.instance.initialize();
+  // final initFuture = MobileAds.instance.initialize();
   // final adState = AdState(initFuture);
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
     statusBarColor: Colors.red,
@@ -39,24 +38,22 @@ class MyApp extends StatefulWidget {
   _MyAppState createState() => _MyAppState();
 }
 
-
 class _MyAppState extends State<MyApp> {
   int _currentIndex = 0;
 
-
-
   @override
   Widget build(BuildContext context) {
-
-
-    if (MediaQuery.of(context).orientation == Orientation.portrait){
+    if (MediaQuery.of(context).orientation == Orientation.portrait) {
       return DefaultTabController(
         length: 3,
         initialIndex: _currentIndex,
         child: Scaffold(
             appBar: AppBar(
               toolbarHeight: 80,
-              title: Text("Periodic-table",style: GoogleFonts.lato(fontWeight: FontWeight.bold),),
+              title: Text(
+                "Periodic-table",
+                style: GoogleFonts.lato(fontWeight: FontWeight.bold),
+              ),
               elevation: 0,
               backgroundColor: Colors.red,
               bottom: TabBar(
@@ -73,23 +70,19 @@ class _MyAppState extends State<MyApp> {
                 ],
               ),
             ),
-            body:
-            TabBarView(
+            body: TabBarView(
               children: [
                 GridViewHomePage(),
                 PageViewBuilderHomePage(),
                 ListViewBuilderHomePage(),
               ],
-            )
-
-          // ),
-        ),
+            )),
       );
-    }else{
+    } else {
       return Scaffold(
         body: GridViewHomePage(),
       );
-        // is landscape
+      // is landscape
     }
 
     // final tabs = [
@@ -136,4 +129,3 @@ class _MyAppState extends State<MyApp> {
     // );
   }
 }
-

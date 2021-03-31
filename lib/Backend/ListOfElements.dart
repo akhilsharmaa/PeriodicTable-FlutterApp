@@ -1,7 +1,7 @@
 import 'package:periodic_table/Backend/ElementDetailConstructor.dart';
 
 
-//Version 2.0.0 +4 completed.
+//Version 2.0.1 +5 completed.
 
 class ListOfElements{
 
