@@ -543,10 +543,15 @@ class _DetailedPageState extends State<DetailedPage> {
           ElementsListTileListView("Electro-negativity",
               "${listOfElements.getElectronegativity(getElementNumber())}"),
 
+          HeadingProperties("Electromagnetic Properties"),
+
+          ElementsListTileListView("Electrical Conductivity",
+              "${listOfElements.getElectricalConductivity(getElementNumber())}"),
+
           //Atomic properties
           // HeadingProperties("Atomic properties"),
-          ElementsListTileListView("more properties in development",
-              "update application if available "),
+          ElementsListTileListView("--",
+              "--"),
           ElementsListTileListView("", ""),
           // ElementsListTileListView("", ""),
         ],

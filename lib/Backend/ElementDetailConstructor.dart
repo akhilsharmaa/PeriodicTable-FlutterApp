@@ -23,6 +23,7 @@ class ElementDetailConstructor{
   final electronegativity;
   final meltingPoint;
   final boilingPoint;
+  final electricalConductivity;
   final imageLink;
 
   ElementDetailConstructor(
@@ -48,5 +49,6 @@ class ElementDetailConstructor{
       this.electronegativity,
       this.meltingPoint,
       this.boilingPoint,
+      this.electricalConductivity,
       this.imageLink);
 }
