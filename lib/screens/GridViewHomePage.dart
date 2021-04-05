@@ -280,7 +280,7 @@ class ElementBlock extends StatelessWidget {
         // height: screenHeight*0.085,
 
         // width:  screenWidth*0.147,
-        height: 60,
+        height: 50,
         width: 60,
         alignment: Alignment.center,
         child: Column(
@@ -369,7 +369,7 @@ class RowNumber extends StatelessWidget {
       // height: screenHeight*0.085,
       // width:  screenWidth*0.05,
       width: 20,
-      height: 60,
+      height: 50,
 
     );
   }
@@ -389,7 +389,7 @@ class EmptyBox extends StatelessWidget {
       // height: screenHeight*0.025,
       // width:  screenWidth*0.147,
 
-      height: 60,
+      height: 50,
       width: 60 ,
 
     );

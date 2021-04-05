@@ -49,7 +49,7 @@ class _MyAppState extends State<MyApp> {
         initialIndex: _currentIndex,
         child: Scaffold(
             appBar: AppBar(
-              toolbarHeight: 80,
+              toolbarHeight: 90,
               title: Text(
                 "Periodic-table",
                 style: GoogleFonts.lato(fontWeight: FontWeight.bold),
