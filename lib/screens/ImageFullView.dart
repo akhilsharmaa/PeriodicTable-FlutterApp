@@ -1,4 +1,4 @@
-//Version 2.0.1 +5 completed.
+//Version 2.1.1 + 6 completed.
 
 import 'package:flutter/material.dart';
 import 'package:periodic_table/Backend/ListOfElements.dart';

@@ -1,4 +1,5 @@
-//Version 2.0.1 +5 completed.
+//Version 2.1.1 + 6 completed.
+
 
 
 
@@ -107,7 +108,7 @@ class _DetailedPageState extends State<DetailedPage> {
                         decoration: BoxDecoration(
                             image: DecorationImage(
                                 colorFilter: new ColorFilter.mode(
-                                    Colors.black.withOpacity(0.1), BlendMode.dstIn),
+                                    Colors.black.withOpacity(0), BlendMode.dstIn),
                                 alignment: Alignment.center,
                                 fit: BoxFit.cover,
                                 image: NetworkImage(
@@ -182,94 +183,7 @@ class _DetailedPageState extends State<DetailedPage> {
         color: Colors.black,
         child: ListView(
           children: [
-            // Stack Image
-            // InkWell(
-            //   onTap: () {
-            //     Navigator.of(context).push(MaterialPageRoute(
-            //       builder: (context) => ImageFullView(getElementNumber()),
-            //     ));
-            //   },
-            //   child: Stack(
-            //     alignment: Alignment.bottomLeft,
-            //     children: [
-            //       Container(
-            //         height: 170,
-            //         decoration: BoxDecoration(
-            //             image: DecorationImage(
-            //                 colorFilter: new ColorFilter.mode(
-            //                     Colors.black.withOpacity(0.4), BlendMode.dstIn),
-            //                 alignment: Alignment.center,
-            //                 fit: BoxFit.cover,
-            //                 image: NetworkImage(
-            //                     "${listOfElements.getElementImageLink(getElementNumber())}"
-            //                 ))),
-            //       ),
-            //
-            //       Positioned(
-            //         left: 10,
-            //         bottom: 10,
-            //         child: Column(
-            //           crossAxisAlignment: CrossAxisAlignment.start,
-            //           children: [
-            //             Padding(
-            //               padding: const EdgeInsets.only(left: 24.0),
-            //               child: Text(
-            //                 "${listOfElements.getElementNumber(getElementNumber())}",
-            //                 style: GoogleFonts.alata(
-            //                     fontSize: 18,
-            //                     fontWeight: FontWeight.w400,
-            //                     color: Colors.white),
-            //               ),
-            //             ),
-            //             Padding(
-            //               padding: const EdgeInsets.only(left: 32.0),
-            //               child: Text(
-            //                 "${listOfElements.getElementSymbol(getElementNumber())}",
-            //                 style: GoogleFonts.mavenPro(
-            //                     fontSize: 40,
-            //                     fontWeight: FontWeight.w300,
-            //                     color: Colors.yellow),
-            //               ),
-            //             ),
-            //             Padding(
-            //               padding: const EdgeInsets.only(left: 32.0, bottom: 5),
-            //               child: Text(
-            //                 "${listOfElements.getElementFullName(getElementNumber())}",
-            //                 style: GoogleFonts.alata(
-            //                     fontSize: 18,
-            //                     fontWeight: FontWeight.w400,
-            //                     color: Colors.white),
-            //               ),
-            //             ),
-            //             Padding(
-            //               padding: const EdgeInsets.only(left: 35.0, bottom: 10),
-            //               child: Text(
-            //                 "${listOfElements.getElementAtomicMass(getElementNumber())}",
-            //                 style:  GoogleFonts.mavenPro(
-            //                     fontSize: 15,
-            //                     // fontSize: screenHeight * 0.015,
-            //                     color: Colors.white),
-            //               ),
-            //             ),
-            //           ],
-            //         ),
-            //       ),
-            //       //
-            //       // Positioned(
-            //       //   right: 15,
-            //       //   top: 10,
-            //       //   child: RaisedButton(
-            //       //     onPressed:()=> launch("${listOfElements.getWikipediaLink(getElementNumber())}"),
-            //       //     child: Text("Wikipedia"),
-            //       // ),)
-            //     ],
-            //   ),
-            // ),
 
-            // Group and Periods
-            // SizedBox(
-            //   height: 20,
-            // ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
