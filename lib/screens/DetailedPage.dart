@@ -536,6 +536,9 @@ class _DetailedPageState extends State<DetailedPage> {
           ElementsListTileListView("Electrical Conductivity",
               "${listOfElements.getElectricalConductivity(getElementNumber())}"),
 
+          ElementsListTileListView("Electrical Conductivity",
+              "${listOfElements.getElectricalType(getElementNumber())}"),
+
           //Atomic properties
           // HeadingProperties("Atomic properties"),
           ElementsListTileListView("--", "--"),

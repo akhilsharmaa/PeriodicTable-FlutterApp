@@ -1,6 +1,6 @@
 //Version 2.1.1 + 6 completed.
 
-class ElementDetailConstructor{
+class ElementDetailConstructor {
   final elementNameSymbol;
   final elementFullName;
   final elementNumber;
@@ -24,6 +24,7 @@ class ElementDetailConstructor{
   final meltingPoint;
   final boilingPoint;
   final electricalConductivity;
+  final electricalType;
   final imageLink;
 
   ElementDetailConstructor(
@@ -50,5 +51,6 @@ class ElementDetailConstructor{
       this.meltingPoint,
       this.boilingPoint,
       this.electricalConductivity,
+      this.electricalType,
       this.imageLink);
 }
