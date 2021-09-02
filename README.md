@@ -1,4 +1,4 @@
-# Periadic-table App
+# Periodic-Table App
 
 This app is very useful to all the students which have to remember Modern Periodic Table(Mendeleev's Periodic Table) for their examinations or knowledge..
 
